@@ -1,0 +1,60 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">The SQL SELECT Statement</h2>
+          <p>The SQL SELECT Statement is used to fetch the data from a database table which returns this data in the form of a table.
+            These tables are called result-sets.</p>
+
+      <h2 class="text-xl font-semibold my-4">Syntax</h2>
+          <p>The basic syntax of the SELECT Query is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-5 my-4">
+            SELECT column1, column2, columnN FROM table_name;
+        </pre>
+
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Example Query</h2>
+            <p class="text-gray-600 mb-2">SQL Statement:</p>
+            <code class="bg-gray-200 p-2 block mb-2">SELECT * FROM Customers;</code>
+            <a href="/query_editor?query=SELECT * FROM Customers;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 my-4">Try this example in Query editor.</p>
+
+      <h2 class="text-xl font-semibold my-2">Examples</h2>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+      <h5 class="text-gray-600 mb-2">Query 1: Select All</h5>
+         <code class="bg-gray-200 p-2 block my-4">
+           SELECT * FROM customers;
+         </code>
+            <a href="/query_editor?query=SELECT * FROM Customers;" target="_blank" class="px-4 py-3 bg-blue-500 text-white rounded-lg mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+            <p>It retrieves all the data from every column in the table and presents it in a result set.</p>
+        <div class="bg-green-100 p-5 my-4">
+          <p>Here's a breakdown:</p>
+          <ul class="my-4">
+            <li><span class="text-blue-500 " >SELECT *</span> :- keyword instructs the database to retrieve all columns from the specified table.</p></li>
+            <li><span class="text-blue-500 " >FROM customers</span> :- This clause specifies the name of the table from which data needs to be retrieved.</li>
+            <li><span class="text-blue-500 " >;</span> :- Semicolon to terminate the statement.</li>
+          </ul>
+        </div>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+       <h5 class="text-gray-600 mb-2">Query 2: Select Specific Columns</h5>
+         <code class="bg-gray-200 p-2 block my-4">
+           SELECT Customer_name,age FROM customers;
+       </code>
+            <a href="/query_editor?query=SELECT Customer_name,age FROM customers;" target="_blank" class="px-4 py-3 bg-blue-500 text-white rounded-lg mb-4 ">Query editor »</a>        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <p>This query selects specific columns (name, age) from the table named customers
+        <br>It retrieves only the data for those two columns and presents them in a result set.</p>
+        <div class="bg-green-100 p-5 my-4">
+          <p>Here's a breakdown:</p>
+          <ul class="mb-4">
+            <li><span class="text-blue-500 " >SELECT Customer_name, age</span> :- This clause specifies the individual columns that we want to retrieve data from. You can list multiple columns separated by commas.</li>
+            <li><span class="text-blue-500 " >FROM customers</span> :- Similar to the first query, this clause specifies the target table</li>
+            <li><span class="text-blue-500 " >;</span> :- Semicolon to terminate the statement.</li>
+          </ul>
+        </div>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-data-types', '/sql-data-types')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-distinct', '/sql-distinct')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

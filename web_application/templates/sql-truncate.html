@@ -1,0 +1,30 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">SQL TRUNCATE Statement</h2>
+        <p class="my-4">The SQL TRUNCATE statement is used to remove all records from a table in a more efficient and faster way compared to the DELETE statement. It also resets any auto-increment fields to their initial values.</p>
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <pre class="bg-gray-200 p-4 rounded-md my-4">
+            TRUNCATE TABLE table_name;
+        </pre>
+        <p class="my-4">The TRUNCATE statement follows a simple syntax where you specify the name of the table from which you want to remove all records.</p>
+
+        <h2 class="text-xl font-semibold mb-4">Example</h2>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Truncate all records from the 'students' table:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                TRUNCATE TABLE students;
+            </code>
+            <a href="/query_editor?query=TRUNCATE TABLE students;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+
+        <h2 class="text-xl font-semibold my-4">Benefits of TRUNCATE</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Efficiency:</span> TRUNCATE is faster and more efficient than using the DELETE statement to remove all records from a table, especially when dealing with large datasets.</li>
+            <li><span class="text-blue-500">Auto-increment Reset:</span> TRUNCATE resets any auto-increment fields in the table to their initial values, whereas DELETE does not.</li>
+            <li><span class="text-blue-500">Transaction Log:</span> TRUNCATE generates less transaction log compared to DELETE, which can help in conserving system resources.</li>
+        </ul>
+{% endblock content %}
+        {% block button %}
+        <button onclick="navigateTo('/sql-drop-table', '/sql-drop-table')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-subqueries', '/sql-subqueries')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+        {% endblock button %}

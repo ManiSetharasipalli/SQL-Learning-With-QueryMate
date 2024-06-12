@@ -1,0 +1,26 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL Functions</h2>
+        <p class="my-4">SQL functions are built-in operations that perform specific tasks on data values. They can be used in SELECT, WHERE, and HAVING clauses to manipulate data or perform calculations.</p>
+        <p class="my-4">Commonly used SQL functions include:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><strong>Aggregate Functions:</strong> Functions such as SUM(), AVG(), COUNT(), MIN(), and MAX() perform calculations on sets of values and return a single result.</li>
+            <li><strong>String Functions:</strong> Functions like CONCAT(), SUBSTRING(), LENGTH(), UPPER(), LOWER(), and TRIM() manipulate strings.</li>
+            <li><strong>Numeric Functions:</strong> Functions such as ROUND(), CEIL(), FLOOR(), ABS(), and MOD() perform operations on numeric values.</li>
+            <li><strong>Date and Time Functions:</strong> Functions like NOW(), DATE(), TIME(), YEAR(), MONTH(), DAY(), HOUR(), MINUTE(), SECOND(), and DATE_FORMAT() handle date and time values.</li>
+            <li><strong>Conditional Functions:</strong> Functions like IF(), CASE WHEN, and COALESCE() provide conditional logic to perform different actions based on specified conditions.</li>
+            <li><strong>Conversion Functions:</strong> Functions such as CAST() and CONVERT() convert data types from one format to another.</li>
+            <li><strong>Window Functions:</strong> Functions like ROW_NUMBER(), RANK(), DENSE_RANK(), and NTILE() operate on a set of rows defined by a window or group.</li>
+            <li><strong>User-Defined Functions (UDFs):</strong> Custom functions defined by users to perform specific tasks that are not available in standard SQL.</li>
+        </ul>
+        <h2 class="text-3xl font-semibold">Benefits of SQL Functions</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Data Manipulation:</span> Functions enable manipulation and transformation of data values to meet specific requirements.</li>
+            <li><span class="text-blue-500">Efficiency:</span> They allow for efficient computation and processing of data directly within SQL queries.</li>
+            <li><span class="text-blue-500">Flexibility:</span> Functions provide a wide range of capabilities, allowing for complex data operations and calculations.</li>
+            <li><span class="text-blue-500">Consistency:</span> Standardized functions ensure consistent behavior across different database systems.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-case-statements','/sql-case-statements')" class="px-6 py-3 bg-blue-500 text-white mr-auto rounded-full">Previous</button>
+{% endblock button %}

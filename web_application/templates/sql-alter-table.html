@@ -1,0 +1,89 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold">ALTER TABLE in SQL</h2>
+        <p class="my-4">In SQL, the ALTER TABLE statement is used to modify an existing table structure.</p>
+        <p class="my-4">It allows you to add, modify, or drop columns, as well as add or drop constraints.</p>
+        <p class="my-4">Additional points about altering tables in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The ALTER TABLE statement is used to modify an existing table structure.</li>
+            <li>It can add new columns, modify existing columns, or drop columns from the table.</li>
+            <li>Constraints such as PRIMARY KEY, FOREIGN KEY, NOT NULL, etc., can also be added, modified, or dropped.</li>
+            <li>The ALTER TABLE statement can also be used to rename the table itself.</li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">1. Add a New Column</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Add a new column "email" to the Students table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                ALTER TABLE Students
+                <br>ADD COLUMN email VARCHAR(100);
+            </code>
+            <a href="/query_editor?query=ALTER TABLE Students%0AADD COLUMN email VARCHAR(100);" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <h5 class="font-semibold text-gray-600 mb-2">2. Modify Column Data Type</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Modify the data type of the "age" column to INTEGER:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                ALTER TABLE Students
+                <br>ALTER COLUMN age SET DATA TYPE INTEGER;
+            </code>
+            <a href="/query_editor?query=ALTER TABLE Students%0AALTER COLUMN age SET DATA TYPE INTEGER;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <h5 class="font-semibold text-gray-600 mb-2">3. Drop a Column</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Drop the "city" column from the Students table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                ALTER TABLE Students
+                <br>DROP COLUMN city;
+            </code>
+            <a href="code_editor.html?query=ALTER TABLE Students%0ADROP COLUMN city;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">4. Add Constraint</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Add a NOT NULL constraint to the "name" column:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                ALTER TABLE Students
+                <br>ADD CONSTRAINT name_not_null CHECK (name IS NOT NULL);
+            </code>
+            <a href="/query_editor?query=ALTER TABLE Students%0AADD CONSTRAINT name_not_null CHECK (name IS NOT NULL);" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">5. Rename Table</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Rename the "Students" table to "NewStudents":</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                ALTER TABLE Students
+                <br>RENAME TO NewStudents;
+            </code>
+            <a href="/query_editor?query=ALTER TABLE Students%0ARENAME TO NewStudents;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">6. Rename Column</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Rename the "age" column to "student_age":</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                ALTER TABLE Students
+                <br>RENAME COLUMN age TO student_age;
+            </code>
+            <div class="text-with-gap"></div>
+            <a href="query_editor?query=ALTER TABLE Students%0ARENAME COLUMN age TO student_age;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h2 class="text-2xl font-semibold">Benefits of ALTER TABLE</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Flexibility:</span> ALTER TABLE provides flexibility in modifying the structure of existing tables as per changing requirements.</li>
+            <li><span class="text-blue-500">Efficiency:</span> It allows efficient management of database schema changes without needing to recreate the entire table.</li>
+            <li><span class="text-blue-500">Data Integrity:</span> Modifications made using ALTER TABLE can help maintain data integrity and consistency within the database.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-create-table', '/sql-create-table')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-drop-table', '/sql-drop-table')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

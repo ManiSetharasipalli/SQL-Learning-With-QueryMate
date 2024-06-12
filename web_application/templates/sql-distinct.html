@@ -1,0 +1,91 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold">The SQL DISTINCT Keyword</h2>
+        <div class="my-4">
+            <p>The SQL DISTINCT keyword is used in conjunction with the SELECT statement to fetch unique records from a table.<br>
+We use DISTINCT keyword with the SELECT statetment when there is a need to avoid duplicate values present in any specific columns. When we use DISTINCT keyword, SELECT statement returns only the unique records available in the table. The SQL DISTINCT Keyword can be associated with SELECT statement to fetch unique records from single or multiple columns.</p>
+        </div>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+      <div class="bg-white-100 p-10 rounded-md my-4">
+            SELECT DISTINCT column1, column2,.....columnN
+            FROM table_name;
+      </div>
+       <p class="my-4">Where, column1, column2, etc. are the columns we want to retrieve the unique or distinct values from; and table_name represents the name of the table containing the data.</p>
+        <h2 class="my-4"><b>Explanation</b></h2>
+        <div class="bg-yellow-100 rounded-lg p-10 my-4">
+            <ul>
+                <li><span class="text-green-500 font-semibold">DISTINCT</span>: Keyword indicating the removal of duplicate rows.</li>
+                <li><span class="text-green-500 font-semibold ">column1, column2, .....columnN</span>: Comma-separated list of columns to be retrieved.</li>
+                <li><span class="text-green-500 font-semibold ">table_name</span>: Name of the table containing the data.</li>
+            </ul>
+        </div>
+
+        <h3 class="text-xl font-semibold my-4">Examples</h3>
+        <h3 class="text-xl font-semibold my-4">DISTINCT Keyword on Single Columns</h3>
+        <p>We can use the DISTINCT keyword on a single column to retrieve all unique values in that column, i.e. with duplicates removed. This is often used to get a summary of the distinct values in a particular column or to eliminate redundant data.</p>
+
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md my-4">
+            <h2 class="text-xl font-semibold mb-4">Example Query</h2>
+            <p class="text-gray-600  mb-2">SQL Statement:</p>
+            <code class="bg-gray-200 p-4 block rounded-lg mb-2">
+                SELECT DISTINCT country
+                <br>
+                FROM Customers;
+            </code>
+    <br>
+            <a href="/query_editor?query=SELECT DISTINCT country%0AFROM Customers;"target="_blank" class="px-4 py-3 bg-blue-500 text-white rounded-lg mb-4 ">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+
+
+    <h3 class="text-xl font-semibold my-4">DISTINCT Keyword on Multiple Columns</h3>
+        <p>We can also use the DISTINCT keyword on multiple columns to retrieve all unique combinations of values across those columns. This is often used to get a summary of distinct values in multiple columns, or to eliminate redundant data.</p>
+     <div class="mt-8 p-4 bg-white rounded-md shadow-md my-4">
+            <h2 class="text-xl font-semibold mb-4">Example Query</h2>
+            <p class="text-gray-600  mb-2">SQL Statement:</p>
+            <code class="bg-gray-200 p-4 block rounded-lg mb-2">
+                SELECT DISTINCT country,city
+                <br>
+                FROM Customers;
+            </code>
+    <br>
+            <a href="/query_editor?query=SELECT DISTINCT country,city%0AFROM Customers;" target="_blank" class="px-4 py-3 bg-blue-500 text-white rounded-lg mb-4 ">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+
+        <h1 class="text-xl font-semibold my-4">DISTINCT Keyword with COUNT() Function</h1>
+
+    <p class="text-with-gap">The COUNT() function is used to get the number of records returned by the SELECT query. The DISTINCT keyword ensures that only unique values are counted.</p>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md my-4">
+
+        <h2 class="text-xl font-semibold mb-4">Example Query</h2>
+            <p class="text-gray-600  mb-2">SQL Statement:</p>
+            <code class="bg-gray-200 p-4 block rounded-lg mb-2">
+                  SELECT COUNT(DISTINCT country) AS Number_Distinct_countries
+                  <br>
+                  FROM Customers;
+            </code>
+    <br>
+            <a href="/query_editor?query=SELECT COUNT(DISTINCT country) AS Number_Distinct_countries%0AFROM Customers;"target="_blank" class="px-4 py-3 bg-blue-500 text-white rounded-lg mb-4 ">Query editor »</a>
+         </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+
+        <p class="font-semibold my-4">Explanation:</p>
+        <div class="bg-yellow-100 rounded-lg p-10 my-4">
+        <ul>
+        <li>
+            <span class="text-green-500 font-semibold">COUNT(DISTINCT country):</span> Counts the number of distinct values in the country column.
+        </li>
+        <li>
+            <span class="text-green-500 font-semibold">AS Number_Distinct_countries:</span> Aliases the result as Number of Distinct countries for better readability in the output.
+        </li>
+    </ul>
+        </div>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-select', '/sql-select')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-where', '/sql-where')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}
+
+
+

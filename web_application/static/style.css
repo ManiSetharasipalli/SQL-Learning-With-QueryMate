@@ -1,0 +1,268 @@
+*,html {
+    --primaryGradient: linear-gradient(93.12deg, #581B98 0.52%, #9C1DE7 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #581B98 -2.14%, #9C1DE7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #581B98;
+}
+
+/* CHATBOX
+=============== */
+.chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.chatbox_new {
+    bottom: -20px;
+    right: 30px;
+}
+
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.send__button::before {
+    content: "\27A2"; /* Unicode character for a right arrow symbol */
+    font-size: 30px;
+    margin-right: 3px; /* Adjust spacing between the symbol and text if needed */
+    padding: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    background: blue;
+    max-width: 80.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+}
+
+.chatbox__support {
+    background: #f9f9f9;
+    height: 500px;
+    width: 500px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+/* HEADER */
+.chatbox__header {
+
+    background:blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: var(--primaryBoxShadow);
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+}
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+/* Messages */
+.chatbox__messages {
+    padding: 0 20px;
+}
+
+.messages__item {
+    margin-top: 10px;
+    background: #E0E0E0;
+    padding: 8px 12px;
+    max-width: 70%;
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.messages__item--operator {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 13px;
+    background: blue;
+    box-shadow: var(--secondaryBoxShadow);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 20px;
+}
+
+.chatbox__footer input {
+    width: 80%;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.chatbox__send--footer {
+    color: white;
+}
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    padding: 10px;
+    background: blue;
+    border: white;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Initial state */
+li a {
+    display: block;
+    padding: 8px;
+    border-radius:4px;
+}
+
+/* Hover state */
+li a:hover {
+    background-color: #3490dc; /* Blue color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+/* "Next" button styles */
+#nextButtonContainer {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#nextButtonContainer button {
+    padding: 1rem 2rem;
+    background-color: #3490dc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#nextButtonContainer button:hover {
+    background-color: #2563eb;
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    color: #000; /* Set text color */
+    background-color: #fff; /* Set background color */
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #3490dc;
+}
+
+#searchInput::placeholder {
+    color: #ccc;
+}
+
+/* Style for close button */
+.chatbox__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #3490dc; /* Blue color on hover */
+    color: #fff; /* Text color on hover */
+}

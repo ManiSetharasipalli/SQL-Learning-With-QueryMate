@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Query Editor</title>
+    <link rel="icon" href="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+</head>
+<body class="bg-gray-100">
+    <div class="flex justify-center items-center h-20">
+        <img src="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" alt="Chatbot Icon" class="w-10 h-10 rounded-full mr-2">
+    </div>
+    <h1 class="text-xl font-semibold mb-5 text-center">Query Editor</h1>
+    <div class="flex">
+        <div class="bg-gray-300 rounded-lg p-5 m-5 w-full md:w-2/3">
+            <h1 class="p-3">Write SQL query here:</h1>
+            <div id="editor-container" style="height: 55vh;"></div>
+            <button type="button" onclick="executeQuery()" class="px-6 py-3 bg-blue-500 text-white rounded-full mt-4">Execute Query</button>
+        </div>
+        <div class="w-full md:w-1/4 bg-gray-100 p">
+            <h2 class="text-lg font-bold m-4">Your Database:</h2>
+            <table class="w-full">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-500 px-4 py-2">Table names</th>
+                        <th class="border border-gray-500 py-4 py-2">Records</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for table in database %}
+                    <tr>
+                        <td class="border border-gray-500 px-4 py-2">{{ table.table_name}}</td>
+                        <td class="border border-gray-500 px-4 py-2">{{ table.record_count }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3 class="text-xl font-semibold m-5">Result:</h3>
+    <div id="result-container" class="text-gray-500 ml-10 m-4">{{ column_names }}</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/sql/sql.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='query_editor.js') }}"></script>
+</body>
+</html>

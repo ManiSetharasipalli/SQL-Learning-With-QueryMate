@@ -1,0 +1,99 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">SQL LIKE Operator</h2>
+        <p class="my-4">The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.</p>
+        <p class="my-4">It is used along with the WHERE clause of the UPDATE, DELETE and SELECT statements, to filter the rows based on the given pattern. These patterns are specified using Wildcards.</p>
+        <p class="my-4">There are two wildcards often used in conjunction with the LIKE operator:</p>
+        <ul class="bg-yellow-100 rounded-lg p-10 my-4">
+            <li>1. The percent sign % represents zero, one, or multiple characters</li>
+            <li>2. The underscore sign _ represents one, single character</li>
+        </ul>
+        <p class="my-4">Suppose we need to submit the list of all the students whose name starts with 'K'. We can obtain this with the help of the LIKE operator as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+           WHERE student_name LIKE 'K%';
+       </pre>
+        <p class="my-4">Here, the % is a wild card which represents zero, one or multiple characters. And the expression K% specifies that it will display the list of all the students whose name starts with 'k'.</p>
+        <p class="bg-yellow-100 rounded-lg p-10 my-4">The LIKE operator can be used with strings, numbers, or date values. However, using the string values is recommended.</p>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p> The basic syntax of the SQL LIKE operator is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            SELECT column1, column2, ...
+            FROM table_name
+            WHERE columnn LIKE specified_pattern;
+       </pre>
+
+        <h3 class="text-xl font-semibold my-4">The _ Wildcard</h3>
+        <p class="my-4">The _ wildcard represents a single character.</p>
+<p class="text-with-gap">It can be any character or number, but each _ represents one, and only one, character.</p>
+        <h3 class="text-xl font-semibold my-4">Example</h3>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">Query 1</h5>
+         <code class="bg-gray-200 p-2 block mb-2">
+            SELECT * <br>
+            FROM products <br>
+            WHERE Product_name LIKE '_martwatch';
+         </code>
+       <a href="code_editor.html?query=SELECT *%0AFROM products%0AWHERE Product_name LIKE '_martwatch';" target="_blank"  class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h3 class="text-xl font-semibold my-4">The % Wildcard</h3>
+        <p class="my-4">The % wildcard represents any number of characters, even zero characters.</p>
+        <p class="my-4">The % sign represents zero or multiple characters. The '%' wildcard matches any length of a string which even includes the zero length.</p>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">Query 2</h5>
+         <code class="bg-gray-200 p-2 block mb-2">
+            SELECT * <br>
+            FROM products <br>
+            WHERE Product_name LIKE '%Fitnes%';
+         </code>
+            <div class="text-with-gap"></div>
+       <a href="/query_editor?query=SELECT *%0AFROM products%0AWHERE Product_name LIKE '%Fitnes%';" target="_blank" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h3 class="text-xl font-semibold my-4">SQL Wildcard Characters</h3>
+        <p class="my-4">A wildcard character is used to substitute one or more characters in a string</p>
+        <p class="my-4">Wildcard characters are used with the LIKE operator. The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.</p>
+        <table class="table-auto border border-gray-300">
+    <thead class="bg-gray-100 text-gray-700">
+        <tr class="px-4 py-2 text-left border-b border-gray-300">
+            <th class="px-4 py-2 text-left border-b border-gray-300">Symbol</th>
+            <th class="px-4 py-2 text-left border-b border-gray-300">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="px-4 py-2 text-left border-b border-gray-300">% </td>
+            <td class="px-4 py-2 text-left border-b border-gray-300">Represents zero or more characters</td>
+        </tr>
+        <tr>
+            <td class="px-4 py-2 text-left border-b border-gray-300">_</td>
+            <td class="px-4 py-2 text-left border-b border-gray-300">Represents a single character</td>
+        </tr>
+        <tr>
+            <td class="px-4 py-2 text-left border-b border-gray-300">[]</td>
+            <td class="px-4 py-2 text-left border-b border-gray-300">Represents any single character within the brackets *</td>
+        </tr>
+        <tr>
+            <td class="px-4 py-2 text-left border-b border-gray-300">^</td>
+            <td class="px-4 py-2 text-left border-b border-gray-300">Represents any character not in the brackets *</td>
+        </tr>
+        <tr>
+            <td class="px-4 py-2 text-left border-b border-gray-300">-</td>
+            <td class="px-4 py-2 text-left border-b border-gray-300">Represents any single character within the specified range *</td>
+        </tr>
+        <tr>
+            <td class="px-4 py-2 text-left border-b border-gray-300">{}</td>
+            <td class="px-4 py-2 text-left border-b border-gray-300">Represents any escaped character **</td>
+        </tr>
+    </tbody>
+</table>
+        <p class="my-4">* Not supported in PostgreSQL and MySQL databases.</p>
+        <p class="my-4">** Supported only in Oracle databases.</p>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-not', '/sql-not')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-limit', '/sql-limit')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}
+
+
+

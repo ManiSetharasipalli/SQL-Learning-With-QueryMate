@@ -1,0 +1,53 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL LIMIT Clause</h2>
+        <p class="my-4">The SQL LIMIT clause is used to specify the maximum number of rows that a query should return. It is particularly useful when dealing with large datasets where you want to retrieve only a subset of the results.</p>
+        <p class="my-4">The LIMIT clause restricts the number of rows returned by a query to a specified range. It is commonly used in conjunction with the ORDER BY clause to retrieve the top or bottom N rows based on certain criteria.</p>
+        <p class="my-4">The syntax for the LIMIT clause varies slightly between different database systems:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><strong>In MySQL:</strong>
+                <code>
+                <br>SELECT column1, column2
+                <br>FROM table_name
+                <br>LIMIT number_of_rows;
+            </code></li>
+            <li><strong>In PostgreSQL:</strong>
+                <code>
+                    <br>SELECT column1, column2 <br>FROM table_name
+                    <br>LIMIT number_of_rows OFFSET offset_value;</code></li>
+            <li><strong>In SQL Server:</strong>
+                <code>
+                <br>SELECT TOP number_of_rows column1, column2 <br>FROM table_name;
+                </code></li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve the first 5 rows from the 'products' table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT * FROM products
+                <br>LIMIT 5;
+            </code>
+            <a href="/query_editor?query=SELECT * FROM customers%0ALIMIT 5;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve 10 rows from the 'customers' table, starting from the 20th row:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT * FROM customers
+                <br>LIMIT 10 OFFSET 20;
+            </code>
+            <a href="/query_editor?query=SELECT * FROM customers%0ALIMIT 10 OFFSET 20;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+
+        <h2 class="text-xl font-semibold my-4">Benefits of Using the LIMIT Clause</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><strong>Improved Performance:</strong> By limiting the number of rows returned by a query, the LIMIT clause can improve query performance, especially when dealing with large datasets.</li>
+            <li><strong>Resource Efficiency:</strong> It helps conserve server resources by reducing the amount of data transmitted over the network and processed by the database engine.</li>
+            <li><strong>Enhanced Readability:</strong> The LIMIT clause makes queries more concise and easier to understand by explicitly defining the scope of the result set.</li>
+            <li><strong>Controlled Output:</strong> It allows developers to control the size of query results, making it easier to work with and manipulate the data.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-like', '/sql-like')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-in', '/sql-in')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

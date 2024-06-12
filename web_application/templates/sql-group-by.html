@@ -1,0 +1,56 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL GROUP BY Operation</h2>
+        <p class="my-4">The GROUP BY operation is used to group rows that have the same values into summary rows.</p>
+        <p class="my-4">It is often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to perform calculations on grouped data.</p>
+        <p class="my-4">Additional points about the GROUP BY operation in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The GROUP BY operation groups rows that have the same values into summary rows.</li>
+            <li>It is used with aggregate functions to perform calculations on grouped data.</li>
+            <li>Each column in the SELECT list must either be part of the GROUP BY clause or an aggregate function.</li>
+            <li>GROUP BY can significantly affect query performance, especially on large datasets.</li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <pre class="bg-gray-200 p-4 rounded-md my-4">
+            SELECT column_name(s), aggregate_function(column_name)
+            FROM table_name
+            GROUP BY column_name;
+        </pre>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Group Products by Category</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Group products by category and count the number of products in each category:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT category_id, COUNT(*) AS num_products
+                <br>FROM products
+                <br>GROUP BY category_id;
+            </code>
+            <a href="/query_editor?query=SELECT category_id, COUNT(*) AS num_products%0AFROM products%0AGROUP BY category_id;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example groups products by category and counts the number of products in each category.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Average Age of Customers by Country</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+    <p class="text-gray-600 mb-2">Group customers by country and calculate the average age for each country:</p>
+    <code class="bg-gray-200 p-2 block mb-2">
+        SELECT country, AVG(age) AS average_age
+        <br>FROM customers
+        <br>GROUP BY country;
+    </code>
+    <a href="/query_editor?query=SELECT country, AVG(age) AS average_age%0AFROM customers%0AGROUP BY country;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+</div>
+<p class="my-4">Try this example in Query editor</p>
+<p class="text-gray-600 mb-2 my-4">This example groups customers by country and calculates the average age for each country.</p>
+
+        <h2 class="text-3xl font-semibold">Benefits of GROUP BY</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Data summarization:</span> GROUP BY allows for summarizing large datasets into meaningful aggregates.</li>
+            <li><span class="text-blue-500">Data analysis:</span> It enables insightful analysis by grouping data based on specific criteria.</li>
+            <li><span class="text-blue-500">Performance optimization:</span> Proper use of GROUP BY can optimize query performance by reducing the amount of data processed.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-avg', '/sql-avg')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-having', '/sql-having')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

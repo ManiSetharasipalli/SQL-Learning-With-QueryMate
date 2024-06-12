@@ -1,0 +1,59 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL BETWEEN</h2>
+        <p class="my-4">The SQL BETWEEN operator is used to select values within a specified range.</p>
+        <p class="my-4">It allows you to specify a range of values to filter the result set.</p>
+        <p class="my-4">Additional points about SQL BETWEEN:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The BETWEEN operator selects values within a specified range.</li>
+            <li>It is inclusive, meaning it includes both the start and end values in the range.</li>
+            <li>BETWEEN is commonly used in WHERE clauses to filter data based on a range of values.</li>
+            <li>It is often used with numeric, date, or string values.</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <p class="text-with-gap">The basic syntax of the SQL BETWEEN operator is as follows:</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            SELECT column_name(s)
+            FROM table_name
+            WHERE column_name BETWEEN value1 AND value2;
+        </pre>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Filtering Orders by Order Date</h5>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve orders within a specific date range:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT order_id, order_date
+                <br>FROM orders
+                <br>WHERE order_date BETWEEN '2022-01-01' AND '2022-01-31';
+            </code>
+            <a href="/query_editor?query=SELECT order_id, order_date%0AFROM orders%0AWHERE order_date BETWEEN '2022-01-01' AND '2022-01-31';" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example retrieves orders placed within the month of January 2022 from the 'orders' table using the BETWEEN operator.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Filtering Products by Price Range</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve products within a specific price range:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT product_name, price
+                <br>FROM products
+                <br>WHERE price BETWEEN 10 AND 50;
+            </code>
+            <a href="/query_editor?query=SELECT product_name, price%0AFROM products%0AWHERE price BETWEEN 10 AND 50;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example retrieves products with prices ranging from $10 to $50 from the 'products' table using the BETWEEN operator.</p>
+
+        <h2 class="text-3xl font-semibold">Advantages of SQL BETWEEN</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Simplicity:</span> BETWEEN simplifies query construction by allowing a concise range specification.</li>
+            <li><span class="text-blue-500">Precision:</span> It provides precise filtering based on specified ranges, ensuring accurate data retrieval.</li>
+            <li><span class="text-blue-500">Flexibility:</span> BETWEEN can be used with various data types, such as numeric, date, or string values, offering versatile filtering capabilities.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-in', '/sql-in')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-max-min', '/sql-max-min')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

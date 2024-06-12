@@ -1,0 +1,109 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">The SQL Where Clause</h2>
+        <div class="my-4">
+            <p>The SQL WHERE clause is used to filter the results obtained by the DML statements such as SELECT, UPDATE and DELETE etc. We can retrieve the data from a single table or multiple tables(after join operation) using the WHERE clause.</p>
+            <p class="my-4">For instance, you can use the WHERE clause to retrieve details of employees of a department in an organization, or employees earning salary above/below certain amount, or details of students eligible for scholarships etc. This clause basically provides the specification of which records to be retrieved and which are to be neglected.</p>
+        </div>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p>The basic syntax of the SQL WHERE clause is as shown below −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            DML_Statement column1, column2,... columnN
+            FROM table_name
+            WHERE [condition];
+       </pre>
+        <p class="my-4">Here, the DML_Statement can be any statement, such as SELECT, UPDATE, DELETE etc and
+        you can specify a condition using the comparison or logical operators such as, >, <, =, LIKE, NOT, etc.</p>
+       <h3 class="text-xl font-semibold my-4">WHERE Clause with SELECT Statement</h3>
+        <p>Typically, the SELECT statement is used to retrieve data from a table. If we use the WHERE clause with the SELECT statement, we can filter the rows to be retrieved based on a specific condition (or expression). Following is the syntax for it −</p>
+                    <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            SELECT column1, column2, ...
+            FROM table_name
+            WHERE condition;
+       </pre>
+<h3 class="text-xl font-semibold my-4">Examples</h3>
+<div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">Query 1</h5>
+         <code class="bg-gray-200 p-2 block mb-2">
+           SELECT * FROM Orders
+             <br>
+           WHERE Price >=100;
+         </code>
+       <a href="/query_editor?query=SELECT * FROM Orders%0AWHERE Price >=100;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <p class="my-4">This SQL query retrieves all columns from the "orders" table where the price greater than or equal to hundred
+</p>
+
+    <h3 class="text-xl font-semibold my-4">Text Fields vs. Numeric Fields</h3>
+        <p>SQL requires single quotes around text values (most database systems will also allow double quotes).
+            However, numeric fields should not be enclosed in quotes:</p>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">Query 2:</h5>
+         <code class="bg-gray-200 p-2 block my-4">
+             SELECT * FROM Customers
+             <br>
+             WHERE Customer_name="Mani Setharasipalli";
+         </code>
+       <a href="/query_editor?query=SELECT * FROM Customers%0AWHERE Customer_name='Mani Setharasipalli';" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+
+        <h3 class="text-xl font-semibold my-4">Operators in The WHERE Clause</h3>
+        <p>You can use other operators than the = operator to filter the search.</p>
+        <p class="my-4">The following operators can be used in the WHERE clause</p>
+     <table class="table-auto  border border-gray-300">
+        <thead class="bg-gray-100 text-gray-700">
+           <tr>
+      <th class="px-4 py-2 text-left border-b border-gray-300" scope="col">Operator</th>
+      <th class="px-4 py-2 text-left border-b border-gray-300" scope="col">Description</th>
+    </tr>
+        </thead>
+         <tbody>
+            <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300">=</td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Equal</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300">></td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Greater than</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300"><</td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Less than</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300">>=</td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Greater than or equal</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300"><=</td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Less than or equal</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300"><></td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Not equal. Note: In some versions of SQL this operator may be written as !=</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300">BETWEEN</td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Between a certain range</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300">LIKE</td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">Search for a pattern</td>
+         </tr>
+         <tr>
+             <td class="px-4 py-2 text-left border-b border-gray-300">IN</td>
+             <td class="px-4 py-2 text-left border-b border-gray-300">To specify multiple possible values for a column</td>
+         </tr>
+
+        </tbody>
+    </table>
+        <div class="bg-yellow-100 rounded-lg p-10 my-4">
+    <p><span class="text-red-500" >Note: </span>The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!</p>
+</div>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-distinct', '/sql-distinct')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-order-by', '/sql-order-by')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

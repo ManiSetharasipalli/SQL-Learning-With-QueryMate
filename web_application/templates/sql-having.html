@@ -1,0 +1,59 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">SQL HAVING Clause</h2>
+        <p class="my-4">The HAVING clause in SQL is used to filter groups of rows returned by a GROUP BY clause based on specified conditions.</p>
+        <p class="my-4">It is similar to the WHERE clause but operates on aggregated data.</p>
+        <p class="my-4">Additional points about the HAVING clause in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The HAVING clause is used with the GROUP BY clause to filter grouped rows.</li>
+            <li>It is typically used with aggregate functions like COUNT, SUM, AVG, etc.</li>
+            <li>It is applied after the GROUP BY clause in a query.</li>
+            <li>It allows filtering based on aggregated values rather than individual rows.</li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <pre class="bg-gray-200 p-4 rounded-md my-4">
+            SELECT column_name(s), aggregate_function(column_name)
+            FROM table_name
+            GROUP BY column_name
+            HAVING condition;
+        </pre>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Filter Categories with More Than 3 Products</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Filter categories with more than 3 products:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT category_id, COUNT(*) AS num_products
+                <br>FROM products
+                <br>GROUP BY category_id
+                <br>HAVING COUNT(*) > 3;
+            </code>
+            <a href="/query_editor?query=SELECT category_id, COUNT(*) AS num_products%0AFROM products%0AGROUP BY category_id%0AHAVING COUNT(*) > 3;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example filters categories with more than 3 products.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Filter Customers with Total Order Value Greater Than 1000</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Filter customers with a total order value greater than 500:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT customer_id, SUM(price) AS total_order_value
+                <br>FROM orders
+                <br>GROUP BY customer_id
+                <br>HAVING SUM(price) > 500;
+            </code>
+            <a href="/query_editor?query=SELECT customer_id, SUM(price) AS total_order_value%0AFROM orders%0AGROUP BY customer_id%0AHAVING SUM(price) > 500;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example filters customers with a total order value greater than 500.</p>
+
+        <h2 class="text-3xl font-semibold">Benefits of HAVING Clause</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Advanced filtering:</span> HAVING allows for filtering aggregated results based on specific conditions.</li>
+            <li><span class="text-blue-500">Group-level analysis:</span> It enables analysis and filtering at the group level rather than individual rows.</li>
+            <li><span class="text-blue-500">Data summarization:</span> HAVING facilitates summarizing data based on grouped criteria.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-group-by', '/sql-group-by')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-insert-into', '/sql-insert-into')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

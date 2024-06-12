@@ -1,0 +1,2641 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hey",
+        "hello",
+        "hi there",
+        "hey there",
+        "hello there",
+        "greetings",
+        "what's up",
+        "how's it going?",
+        "what's new?",
+        "How are you",
+        "hii"
+      ],
+      "responses": [
+        "Hello! How can I assist you?",
+        "Hi there! How can I help?",
+        "Hey! What can I do for you?",
+        "Hi! How can I assist you today?",
+        "Hello there! How can I help you?",
+        "Greetings! What's on your mind?",
+        "Hey there! How can I assist you?",
+        "What's up? How can I help you?",
+        "How's it going? How can I assist you?",
+        "What's new? How can I help you?"
+      ]
+    },
+    {
+      "tag": "learn_sql",
+      "patterns": [
+        "how to learn SQL?",
+        "best way to learn SQL?",
+        "where to start learning SQL?",
+        "how to begin SQL?",
+        "SQL learning resources?",
+        "how to start with SQL?",
+        "steps to learn SQL?",
+        "where to find SQL tutorials?",
+        "how to become proficient in SQL?",
+        "good online courses for SQL?",
+        "recommended approach for SQL?",
+        "how to improve SQL skills?",
+        "beginner-friendly SQL methods?",
+        "good books for learning SQL?",
+        "SQL prerequisites?",
+        "effective SQL practice?",
+        "essential SQL concepts?",
+        "mastering SQL?",
+        "SQL learning tips?"
+      ],
+      "responses": [
+        "Start with online tutorials and courses on platforms like Coursera, Udemy, and Codecademy. Visit SQL Learning for clear explanations with QueryMate.",
+        "Practice with real-world databases and solve challenges on platforms like LeetCode and HackerRank. Check out SQL Learning for detailed explanations with QueryMate.",
+        "Begin with fundamental concepts such as database design and SQL syntax. SQL Learning offers interactive lessons with QueryMate.",
+        "Enroll in introductory SQL courses offered by online platforms. SQL Learning provides practical tutorials with QueryMate.",
+        "Join SQL communities, participate in forums, and attend workshops. SQL Learning offers interactive lessons with QueryMate.",
+        "Master SQL by practicing consistently and learning advanced topics. SQL Learning provides practical tutorials and guidance with QueryMate.",
+        "Enhance your SQL skills with hands-on practice and collaboration. SQL Learning offers tutorials and clear explanations with QueryMate.",
+        "Practice SQL queries on sample databases and explore SQL books. Visit SQL Learning for tutorials and concept explanations with QueryMate.",
+        "Read books like 'SQL for Dummies' and 'Learning SQL'. SQL Learning provides tutorials and clear explanations with QueryMate."
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "what's your name?",
+        "who are you",
+        "what can you do",
+        "tell me about yourself",
+        "introduce yourself",
+        "who is QueryMate",
+        "what are your capabilities",
+        "what do you do",
+        "explain QueryMate",
+        "what is QueryMate",
+        "what services do you offer",
+        "how can you help me",
+        "what's your purpose",
+        "what is your function",
+        "what do you specialize in",
+        "give me an overview of QueryMate",
+        "how do you assist with SQL",
+        "what expertise do you have",
+        "how does QueryMate work",
+        "what are your features",
+        "why should I use QueryMate",
+        "what do you know"
+      ],
+      "responses": [
+        "I'm QueryMate, an AI chatbot trained to assist you with SQL queries and concepts.",
+        "QueryMate here! I'm your personal SQL assistant, ready to help with queries and concepts.",
+        "I am QueryMate, your dedicated SQL companion, equipped to tackle your SQL-related inquiries.",
+        "Hey there! I'm QueryMate, your go-to resource for all things SQL queries and concepts.",
+        "I'm QueryMate, designed to provide you with comprehensive assistance on SQL queries and concepts.",
+        "Hi, I'm QueryMate! I specialize in guiding you through SQL queries and concepts.",
+        "Greetings! I'm QueryMate, your friendly SQL assistant, here to make your SQL journey smoother.",
+        "I am QueryMate, your AI companion for navigating SQL queries and concepts.",
+        "Hi there! I'm QueryMate, your reliable source for SQL queries and concepts assistance.",
+        "QueryMate here! Let's explore the world of SQL queries and concepts together.",
+        "I'm QueryMate, an AI designed to assist you with SQL queries and concepts.",
+        "I'm QueryMate, your virtual SQL guide, here to answer your queries and explain concepts.",
+        "I'm QueryMate, dedicated to helping you understand and master SQL queries and concepts.",
+        "Hi there! I'm QueryMate, your AI-driven SQL mentor, ready to assist you.",
+        "Greetings! I'm QueryMate, your trusted companion for navigating the world of SQL.",
+        "I'm QueryMate, your knowledgeable assistant for all things SQL-related.",
+        "QueryMate here! I'm equipped with expertise to guide you through SQL queries and concepts.",
+        "I'm QueryMate, your expert companion for unraveling the complexities of SQL.",
+        "I'm QueryMate, your go-to source for demystifying SQL queries and concepts.",
+        "Hi, I'm QueryMate! Let's dive into the world of SQL together."
+      ]
+    },
+    {
+      "tag": "expertise",
+      "patterns": [
+        "what is your expertise?",
+        "what are you good at?",
+        "what makes QueryMate special?",
+        "what can you help with?",
+        "what do you excel in?",
+        "what topics do you cover?",
+        "what is your area of specialization?",
+        "what subjects are you knowledgeable about?",
+        "what are your strengths?",
+        "what sets you apart?"
+      ],
+      "responses": [
+        "My expertise lies in providing assistance with SQL queries and concepts.",
+        "I'm good at offering guidance on SQL queries and concepts.",
+        "My expertise includes helping with SQL queries and concepts.",
+        "I specialize in assisting with SQL queries and concepts.",
+        "I excel in providing support for SQL queries and concepts.",
+        "I'm QueryMate, the SQL guru you need for your queries!",
+        "I'm your SQL expert, ready to tackle any query or concept.",
+        "I'm well-versed in SQL queries and concepts, making me your go-to resource.",
+        "I'm an expert at breaking down SQL queries and concepts for easy understanding.",
+        "I'm QueryMate, your trusted advisor for SQL queries and concepts."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "can you help me with SQL?",
+        "can you help me",
+        "need help with SQL",
+        "assist me in SQL",
+        "I'm stuck with SQL, can you assist?",
+        "struggling with SQL, can you help?",
+        "I have a SQL question, can you assist?",
+        "SQL trouble, need assistance",
+        "SQL problem, can you help?",
+        "looking for SQL guidance",
+        "help needed with SQL queries",
+        "can you assist me with SQL?",
+        "need help with SQL queries",
+        "can you help me understand SQL?",
+        "looking for SQL assistance",
+        "need guidance with SQL concepts",
+        "can I get SQL support?",
+        "could you offer SQL help?",
+        "need assistance with SQL syntax",
+        "looking for SQL query examples",
+        "can you explain SQL commands?",
+        "can you assist me?",
+        "can you help me out?",
+        "need some help",
+        "could you lend a hand?",
+        "can I get some assistance?",
+        "looking for guidance",
+        "need your support",
+        "can you provide some help?",
+        "in need of assistance",
+        "could you offer some assistance?",
+        "Do you know sql?"
+      ],
+      "responses": [
+        "Of course! I'm here to assist you with SQL queries and concepts.",
+        "Absolutely! I can help you with SQL queries and concepts.",
+        "Yes, I'm here to provide guidance on SQL queries and concepts.",
+        "Definitely! I can assist you with SQL queries and concepts.",
+        "Certainly! I'm here to help you with SQL queries and concepts.",
+        "I'm QueryMate, your SQL mentor ready to guide you!",
+        "I'm your SQL companion, ready to help you navigate queries and concepts.",
+        "I'm here to simplify SQL queries and concepts for you.",
+        "I'm QueryMate, your go-to resource for mastering SQL queries and concepts.",
+        "I'm your SQL buddy, always here to assist you with your queries!",
+        "Sure thing! How can I help you with SQL?",
+        "Of course! I'm ready to help you understand SQL.",
+        "Certainly! Let me know what SQL assistance you need.",
+        "Yes, I can provide guidance on SQL concepts. What do you need help with?",
+        "I'm here to offer SQL support. What SQL-related question do you have?",
+        "Yes, I'm available to help with SQL. What specific SQL issue are you facing?",
+        "I'm ready to provide SQL assistance. What SQL syntax do you need help with?",
+        "Sure! I can provide SQL query examples. What type of SQL queries are you interested in?",
+        "Of course! I can explain SQL commands to you. Which SQL command do you want to know about?"
+      ]
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "who developed you?",
+        "who created you?",
+        "who built you?",
+        "who made you?",
+        "who is your creator?",
+        "who's behind your creation?",
+        "who programmed you?",
+        "who designed you?",
+        "who is responsible for your existence?",
+        "who brought you to life?"
+      ],
+      "responses": [
+        "I was developed by Mani Setharasipalli.",
+        "My creator is Mani Setharasipalli.",
+        "I was built by Mani Setharasipalli.",
+        "I was made by Mani Setharasipalli.",
+        "Mani Setharasipalli is the one who created me.",
+        "My creation is credited to Mani Setharasipalli.",
+        "I was programmed by Mani Setharasipalli.",
+        "I was designed by Mani Setharasipalli.",
+        "Mani Setharasipalli is responsible for my existence.",
+        "Mani Setharasipalli brought me to life."
+      ]
+    },
+    {
+      "tag": "sql_abbreviation",
+      "patterns": [
+        "What does SQL stand for?",
+        "Expand SQL?",
+        "SQL abbreviation?",
+        "abbreviation of sql",
+        "SQL full form?",
+        "what is the full abbreviation of sql",
+        "Tell me the meaning of SQL?",
+        "Explain SQL's abbreviation?",
+        "Define SQL's abbreviation?",
+        "What's the acronym for SQL?",
+        "What is the abbreviation of SQL?",
+        "What does the term SQL expand to?",
+        "Tell me the abbreviation of SQL?",
+        "What does SQL represent?",
+        "What does SQL stand for exactly?",
+        "What does SQL expand to?"
+      ],
+      "responses": [
+        "SQL stands for Structured Query Language.",
+        "SQL is an abbreviation for Structured Query Language.",
+        "The abbreviation SQL stands for Structured Query Language.",
+        "SQL stands for Structured Query Language, it's used for managing relational databases.",
+        "Structured Query Language, abbreviated as SQL, is used for database management.",
+        "SQL stands for Structured Query Language, primarily used for querying and managing databases.",
+        "Structured Query Language, abbreviated as SQL, is the standard language for relational database management systems.",
+        "SQL stands for Structured Query Language, a powerful tool for interacting with databases.",
+        "The abbreviation SQL stands for Structured Query Language, commonly used in database management.",
+        "Structured Query Language, or SQL, is the language used to communicate with databases."
+      ]
+    },
+    {
+      "tag": "sql_definition",
+      "patterns": [
+        "What is SQL?",
+        "Define SQL.",
+        "Explain SQL.",
+        "What does SQL mean?",
+        "What is the definition of SQL?",
+        "Tell me about SQL.",
+        "I'm not familiar with SQL, what is it?",
+        "What is SQL used for?",
+        "Can you explain SQL to me?",
+        "What's SQL all about?",
+        "I need to understand SQL, can you help?",
+        "Could you provide information about SQL?",
+        "What is the purpose of SQL?",
+        "Why do we use SQL?",
+        "What are the basics of SQL?",
+        "How does SQL work?",
+        "What are the features of SQL?",
+        "What distinguishes SQL from other programming languages?",
+        "Where is SQL used?",
+        "SQL Means?",
+        "SQL"
+      ],
+      "responses": [
+        "SQL is a language used for managing and manipulating data in relational databases.",
+        "SQL is a domain-specific language used for querying, updating, and managing data in databases.",
+        "SQL is a standard language for accessing and manipulating databases.",
+        "SQL is a programming language designed for managing data in relational database management systems (RDBMS).",
+        "SQL, or Structured Query Language, is a language used to interact with databases.",
+        "SQL, or Structured Query Language, is a powerful tool for working with databases.",
+        "SQL, or Structured Query Language, is a language used to communicate with databases.",
+        "SQL, or Structured Query Language, is a language used for managing and manipulating data in databases.",
+        "SQL is a specialized programming language used for managing and manipulating data stored in relational databases.",
+        "SQL is a language used to perform tasks such as querying, updating, and deleting data stored in databases."
+      ]
+    },
+    {
+      "tag": "sql_development",
+      "patterns": [
+        "Who developed SQL?",
+        "Who invented SQL?",
+        "What company created SQL?",
+        "Who is the creator of SQL?",
+        "Who is the father of SQL?",
+        "What is the history of SQL?",
+        "Who is responsible for SQL?",
+        "What individuals contributed to the development of SQL?",
+        "Can you tell me about the origins of SQL?",
+        "Who is credited with creating SQL?",
+        "Who is the pioneer of SQL?",
+        "What team developed SQL?",
+        "when developed sql"
+      ],
+      "responses": [
+        "SQL was developed by IBM in the 1970s by a team led by Donald D. Chamberlin and Raymond F. Boyce.",
+        "SQL, or Structured Query Language, was invented by Donald D. Chamberlin and Raymond F. Boyce at IBM in the early 1970s.",
+        "IBM is credited with the creation of SQL, developed by Donald D. Chamberlin and Raymond F. Boyce.",
+        "Donald D. Chamberlin and Raymond F. Boyce are considered the creators of SQL, developed at IBM in the 1970s.",
+        "SQL was developed by a team at IBM, with Donald D. Chamberlin and Raymond F. Boyce playing key roles in its creation.",
+        "Donald D. Chamberlin and Raymond F. Boyce are often referred to as the fathers of SQL, as they played pivotal roles in its development at IBM.",
+        "The history of SQL dates back to the 1970s when it was developed by IBM engineers Donald D. Chamberlin and Raymond F. Boyce.",
+        "Donald D. Chamberlin and Raymond F. Boyce are responsible for the development of SQL, working as part of a team at IBM.",
+        "The development of SQL involved contributions from various individuals, with Donald D. Chamberlin and Raymond F. Boyce being notable figures in its creation.",
+        "SQL's origins trace back to IBM, where it was developed by Donald D. Chamberlin and Raymond F. Boyce.",
+        "Donald D. Chamberlin and Raymond F. Boyce are credited with creating SQL as part of their work at IBM in the 1970s.",
+        "SQL was developed by a team at IBM, with Donald D. Chamberlin and Raymond F. Boyce leading the effort."
+      ]
+    },
+    {
+      "tag": "rdbms",
+      "patterns": [
+        "what is an RDBMS?",
+        "explain RDBMS",
+        "define RDBMS",
+        "can you give an overview of RDBMS?",
+        "what does RDBMS stand for?",
+        "what are the key features of RDBMS?",
+        "how does an RDBMS work?",
+        "what are the advantages of using an RDBMS?",
+        "what are the components of an RDBMS?",
+        "why is RDBMS important in database management?",
+        "RDBMS stands for",
+        "rdbms exapand",
+        "abrreveation rdbms",
+        "RDBMS"
+      ],
+      "responses": [
+        "An RDBMS (Relational Database Management System) is a software system used to create, manage, and manipulate relational databases. It organizes data into tables with rows and columns, and provides mechanisms for enforcing data integrity and relationships.",
+        "An RDBMS (Relational Database Management System) is a type of database management system that stores data in a tabular format, with rows representing records and columns representing attributes. It supports the relational model of data, where data is organized into related tables.",
+        "An RDBMS (Relational Database Management System) is a software system designed to manage relational databases. It provides tools and utilities for creating, storing, retrieving, and manipulating data stored in tables.",
+        "An RDBMS (Relational Database Management System) works by storing data in tables, with each table consisting of rows and columns. It uses SQL (Structured Query Language) to interact with the database, allowing users to perform operations such as querying, inserting, updating, and deleting data.",
+        "An RDBMS (Relational Database Management System) provides a reliable and efficient way to store and manage data. It offers features such as data integrity, transaction management, and query optimization, making it suitable for a wide range of applications.",
+        "Using an RDBMS (Relational Database Management System) allows you to organize and manage your data effectively, ensuring data integrity and consistency. It provides a structured approach to storing and accessing data, making it easier to retrieve and analyze information.",
+        "Using an RDBMS (Relational Database Management System) can benefit you by providing a reliable and efficient way to store and manage your data. It offers features such as data integrity, concurrency control, and transaction management, making it suitable for various applications."
+      ]
+    },
+    {
+  "tag": "database_definition",
+  "patterns": [
+    "What is a database?",
+    "Can you define a database?",
+    "Explain the concept of a database",
+    "How would you define a database?",
+    "What does the term 'database' mean?",
+    "Define 'database'"
+  ],
+  "responses": [
+    "A database is an organized collection of structured data, typically stored electronically in a computer system. It is designed to efficiently manage, retrieve, and manipulate data according to specific requirements.",
+    "In computing, a database is a structured set of data held in a computer, especially one that is accessible in various ways.",
+    "A database is a structured collection of data that is organized and stored electronically, typically in a computer system. It enables data to be easily accessed, managed, and updated.",
+    "A database is a systematic collection of data, typically in digital form, organized to facilitate efficient retrieval, modification, and management of data.",
+    "The term 'database' refers to an organized collection of data, usually stored and accessed electronically from a computer system. It allows for efficient data storage, retrieval, and manipulation."
+  ]
+},
+    {
+  "tag": "table_definition",
+  "patterns": [
+    "What is a table?",
+    "Can you define a table?",
+    "Explain the concept of a table",
+    "How would you define a table?",
+    "What does the term 'table' mean?",
+    "Define 'table'"
+  ],
+  "responses": [
+    "In the context of databases, a table is a structured representation of data organized in rows and columns. It consists of rows, also known as records or tuples, and columns, also known as fields or attributes. Each row in a table represents a unique record, while each column represents a specific attribute or data field.",
+    "A table is a fundamental structure in a relational database, consisting of rows and columns. It organizes data into a grid-like format, where each row represents a single record and each column represents a specific attribute or data point.",
+    "A table is a collection of data organized in rows and columns, similar to a spreadsheet. It provides a structured way to store and organize related information in a database, making it easier to query and manipulate data.",
+    "A table is a fundamental component of a relational database system, representing a collection of related data organized into rows and columns. It serves as a structured format for storing and managing data.",
+    "The term 'table' refers to a structured representation of data in a database, arranged in rows and columns. It provides a systematic way to store and organize data, facilitating efficient retrieval and manipulation."
+  ]
+},
+    {
+  "tag": "dbms_definition",
+  "patterns": [
+    "What is DBMS?",
+    "Can you explain DBMS?",
+    "Define DBMS",
+    "How would you define DBMS?",
+    "What does DBMS stand for?",
+    "Explain the concept of DBMS"
+  ],
+  "responses": [
+    "DBMS stands for Database Management System. It is software that facilitates the creation, organization, retrieval, and management of data in databases. DBMS provides tools and interfaces for users and applications to interact with databases efficiently.",
+    "DBMS, or Database Management System, is a software application that enables users to manage databases effectively. It provides features for storing, organizing, retrieving, and manipulating data, ensuring data integrity and security.",
+    "A Database Management System (DBMS) is a software tool that enables users to store, retrieve, and manage data in databases. It provides functionalities for defining data structures, performing queries, and ensuring data consistency and integrity.",
+    "DBMS is a software system that facilitates the creation, maintenance, and utilization of databases. It allows users to store, retrieve, and manipulate data in a structured manner, providing mechanisms for data security, concurrency control, and recovery.",
+    "DBMS, or Database Management System, is a software suite that enables users to interact with databases. It provides tools for defining data structures, performing queries, and managing data efficiently."
+  ]
+},
+    {
+  "tag": "dbms_vs_rdbms",
+  "patterns": [
+    "What is the difference between DBMS and RDBMS?",
+    "Can you explain the distinction between DBMS and RDBMS?",
+    "Define DBMS and RDBMS and highlight their differences",
+    "How do DBMS and RDBMS differ?",
+    "What are the contrasting features of DBMS and RDBMS?"
+  ],
+  "responses": [
+    "The main difference between DBMS and RDBMS lies in their data storage and management approach.",
+    "DBMS is a software system that manages databases without enforcing a specific structure for data storage, while RDBMS is a type of DBMS that organizes data into tables with rows and columns, enforcing the relational model.",
+    "In DBMS, data is stored in files without relationships, whereas in RDBMS, data is stored in structured tables with relationships defined between them.",
+    "RDBMS provides features such as data integrity, referential integrity, and ACID properties (Atomicity, Consistency, Isolation, Durability), which are not enforced in traditional DBMS.",
+    "While DBMS allows for flexibility in data storage and retrieval, RDBMS offers a more structured approach with data integrity constraints and relational operations like JOINs and foreign keys."
+  ]
+},
+    {
+      "tag": "examples",
+      "patterns": [
+        "What are examples of RDBMS?",
+        "Can you provide RDBMS examples?",
+        "Which databases are considered RDBMS?",
+        "Name some common RDBMS systems.",
+        "Give me examples of relational database management systems.",
+        "List popular RDBMS.",
+        "Common RDBMS examples?",
+        "Well-known RDBMS products?",
+        "RDBMS platforms?",
+        "Database systems following the RDBMS model?",
+        "Examples of widely-used RDBMS?",
+        "Commonly-used RDBMS solutions?",
+        "RDBMS implementations?",
+        "Databases utilizing the RDBMS approach?",
+        "Popular RDBMS products?"
+      ],
+      "responses": [
+        "MySQL, Oracle Database, Microsoft SQL Server, PostgreSQL, SQLite, etc."
+      ]
+    },
+    {
+      "tag": "select_statement",
+      "patterns": [
+        "what is the SELECT command?",
+        "explain the SELECT keyword",
+        "define SELECT in SQL",
+        "how does the SELECT keyword work?",
+        "what does the SELECT command do?",
+        "how to use the SELECT keyword?",
+        "describe the SELECT statement",
+        "what is the purpose of the SELECT keyword?",
+        "can you tell me about the SELECT command?",
+        "when do we use the SELECT keyword?",
+        "give an overview of the SELECT command",
+        "explain the usage of SELECT keyword with examples",
+        "what are the benefits of using the SELECT keyword?",
+        "what is the SELECT clause?",
+        "how does the SELECT clause work?",
+        "what does the SELECT clause do?",
+        "how to use the SELECT clause?",
+        "why we use select clause"
+      ],
+      "responses": [
+        "The SELECT keyword retrieves specific columns or expressions from one or more tables in SQL queries.",
+        "In SQL, the SELECT command fetches data from tables based on specified criteria by defining the columns or expressions to include in the result set.",
+        "Using the SELECT keyword in SQL queries allows you to specify the data to be retrieved by specifying the columns or expressions to include in the result set.",
+        "The SELECT clause in SQL specifies the columns or expressions to be retrieved from one or more tables in a query.",
+        "The SELECT clause forms the foundation of data retrieval operations in SQL queries by specifying the dataset to be returned.",
+        "In SQL queries, the SELECT clause defines the dataset to be returned by specifying the columns or expressions to include in the result set.",
+        "The SELECT keyword is essential for querying specific data from tables in SQL databases.",
+        "By using the SELECT keyword, you can retrieve customized datasets from tables, enabling precise data retrieval.",
+        "Understanding the SELECT clause is crucial for constructing SQL queries to fetch the desired data from databases.",
+        "The SELECT statement allows you to retrieve specific information from one or more tables in a database."
+      ]
+    },
+    {
+      "tag": "select_syntax",
+      "patterns": [
+        "what is the syntax of the SELECT statement?",
+        "explain the syntax of SELECT in SQL",
+        "how is the SELECT statement structured?",
+        "what are the components of a SELECT statement?",
+        "can you break down the syntax of SELECT?",
+        "show me the structure of the SELECT statement",
+        "what does the SELECT statement look like?",
+        "how do you write a SELECT statement?",
+        "describe the SELECT statement syntax",
+        "syntax of select statement",
+        "basic syntax of select clause",
+        "syntax of select",
+        "give me syntax of select statement"
+      ],
+      "responses": [
+        "SELECT column1, column2, ... FROM table_name WHERE condition;",
+        "The basic syntax of the SELECT statement in SQL: SELECT column1, column2, ... FROM table_name WHERE condition;",
+        "Syntax of the SELECT statement: SELECT column1, column2, ... FROM table_name [WHERE condition];",
+        "The SELECT statement syntax: SELECT [column1, column2, ...] FROM table_name [WHERE condition];",
+        "In SQL, the SELECT statement looks like this: SELECT column1, column2, ... FROM table_name [WHERE condition];"
+      ]
+    },
+    {
+      "tag": "select_all",
+      "patterns": [
+        "how do you select all columns in SQL?",
+        "what is the SQL syntax to retrieve all columns?",
+        "how can I fetch all columns in SQL?",
+        "show me how to select all columns in SQL",
+        "what's the query to get all columns in SQL?",
+        "can you provide the SQL statement to select all columns?",
+        "how to select all columns"
+      ],
+      "responses": [
+        "SELECT * FROM table_name WHERE condition;",
+        "SELECT * FROM table_name WHERE condition;",
+        "SELECT * FROM table_name [WHERE condition];",
+        "SELECT * FROM table_name [WHERE condition];",
+        "In SQL, to select all columns, you can use: SELECT * FROM table_name [WHERE condition];"
+      ]
+    },
+    {
+      "tag": "select_example",
+      "patterns": [
+        "show me an example of using select in SQL",
+        "provide an example of select keyword usage",
+        "give me a sample SQL query with select",
+        "how to use select in SQL?",
+        "example of select statement",
+        "give me an example of select clause",
+        "demonstrate select command",
+        "example showcasing select keyword",
+        "select command example",
+        "show an example of select statement",
+        "provide a select keyword demonstration",
+        "example illustrating select clause usage",
+        "select statement demonstration",
+        "example SQL query with select clause"
+      ],
+      "responses": [
+        "SELECT * FROM customers;",
+        "SELECT product_id, product_name, price FROM products;",
+        "SELECT * FROM orders;",
+        "SELECT order_id, product_id, quantity FROM orderdetails;",
+        "SELECT * FROM categories;",
+        "SELECT customer_id, customer_name, age, country, city FROM customers;"
+      ]
+    },
+    {
+      "tag": "from_keyword",
+      "patterns": [
+        "what is the FROM keyword?",
+        "explain the FROM clause in SQL",
+        "define FROM in SQL",
+        "how does the FROM keyword work?",
+        "what does the FROM clause do?",
+        "how to use the FROM keyword?",
+        "describe the FROM statement",
+        "what is the purpose of the FROM keyword?",
+        "can you tell me about the FROM clause?",
+        "when do we use the FROM keyword?",
+        "give an overview of the FROM clause",
+        "what are the syntax rules for the FROM statement?",
+        "explain the usage of FROM keyword with examples",
+        "what are the benefits of using the FROM keyword?",
+        "how does the FROM clause function?",
+        "how to utilize the FROM clause in SQL?",
+        "what is the significance of the FROM keyword?"
+      ],
+      "responses": [
+        "The FROM keyword specifies the table or tables from which to retrieve data in SQL queries.",
+        "In SQL, the FROM clause indicates the source table or tables from which data is retrieved in a query.",
+        "Using the FROM keyword in SQL queries allows you to specify the table or tables to retrieve data from.",
+        "The FROM clause in SQL identifies the table or tables to be queried to obtain the desired data.",
+        "The FROM clause specifies the table or tables to query in order to retrieve data in SQL queries.",
+        "In SQL queries, the FROM clause specifies the table or tables from which to retrieve data.",
+        "The FROM keyword is essential for specifying the source table or tables from which to retrieve data in SQL queries.",
+        "By using the FROM keyword, you can designate the table or tables to query for data retrieval in SQL.",
+        "Understanding the FROM clause is crucial for identifying the source table or tables for data retrieval in SQL queries.",
+        "The FROM statement specifies the table or tables to be queried in SQL."
+      ]
+    },
+    {
+      "tag": "from_syntax",
+      "patterns": [
+        "what is the syntax of the FROM clause?",
+        "explain the syntax of FROM in SQL",
+        "how is the FROM clause structured?",
+        "what are the components of a FROM clause?",
+        "can you break down the syntax of FROM?",
+        "show me the structure of the FROM clause",
+        "give an example of the FROM clause syntax",
+        "what does the FROM clause look like?",
+        "how do you write a FROM clause?",
+        "describe the FROM clause syntax",
+        "what is the purpose of the FROM clause?",
+        "when do we use the FROM keyword?",
+        "why is the FROM clause important?",
+        "can you provide more details about the FROM clause?"
+      ],
+      "responses": [
+        "The basic syntax of the FROM clause in SQL: FROM table_name;",
+        "Syntax of the FROM clause: FROM table_name;",
+        "The FROM clause syntax: FROM table_name;",
+        "In SQL, the FROM clause looks like this: FROM table_name;"
+      ]
+    },
+    {
+      "tag": "from_example",
+      "patterns": [
+        "show me an example of using FROM in SQL",
+        "provide an example of FROM keyword usage",
+        "give me a sample SQL query with FROM",
+        "how to use FROM in SQL?",
+        "demonstrate FROM clause",
+        "example showcasing FROM keyword",
+        "FROM clause example",
+        "how to write FROM clause",
+        "show an example of FROM statement",
+        "provide a FROM keyword demonstration",
+        "example illustrating FROM clause usage",
+        "FROM statement demonstration",
+        "example SQL query with FROM clause",
+        "can you show me a practical example of using the FROM clause?",
+        "what are some real-world applications of the FROM clause?"
+      ],
+      "responses": [
+        "SELECT * FROM customers;",
+        "SELECT * FROM products;",
+        "SELECT * FROM orders;",
+        "SELECT * FROM categories;",
+        "SELECT * FROM orderdetails;"
+      ]
+    },
+    {
+      "tag": "where_syntax",
+      "patterns": [
+        "what is the syntax of the WHERE clause?",
+        "explain the syntax of WHERE in SQL",
+        "how is the WHERE clause structured?",
+        "what are the components of a WHERE clause?",
+        "can you break down the syntax of WHERE?",
+        "show me the structure of the WHERE clause",
+        "give an example of the WHERE clause syntax",
+        "describe the WHERE clause syntax",
+        "syntax of where clause",
+        "how to write where clause"
+      ],
+      "responses": [
+        "The basic syntax of the WHERE clause in SQL: SELECT * FROM table_name WHERE condition;",
+        "Syntax of the WHERE clause: SELECT * FROM table_name WHERE condition;",
+        "The WHERE clause syntax: SELECT * FROM table_name WHERE condition;",
+        "In SQL, the WHERE clause looks like this: SELECT * FROM table_name WHERE condition;"
+      ]
+    },
+    {
+      "tag": "where_operators",
+      "patterns": [
+        "what are the operators used in the WHERE clause?",
+        "explain the operators in WHERE clause",
+        "how can I use operators in the WHERE clause?",
+        "what are the different operators for WHERE in SQL?",
+        "how to use comparison operators in WHERE clause?",
+        "can you list the operators supported by WHERE?"
+      ],
+      "responses": [
+        "The operators used in the WHERE clause include =, <, >, <=, >=, !=, <>, BETWEEN, LIKE, IN, IS NULL, and logical operators such as AND, OR, and NOT.",
+        "Operators in the WHERE clause enable you to specify conditions for filtering data in SQL queries."
+      ]
+    },
+    {
+      "tag": "where_example",
+      "patterns": [
+        "show me an example of using WHERE in SQL",
+        "provide an example of WHERE keyword usage",
+        "give me an example of where clause",
+        "how to use WHERE in SQL?",
+        "demonstrate WHERE clause",
+        "example showcasing WHERE keyword",
+        "WHERE clause example",
+        "how to write WHERE clause",
+        "show an example of WHERE statement",
+        "provide a WHERE keyword demonstration",
+        "example illustrating WHERE clause usage",
+        "WHERE statement demonstration",
+        "example SQL query with WHERE clause",
+        "can you show me a practical example of using the WHERE clause?",
+        "what are some real-world applications of the WHERE clause?"
+      ],
+      "responses": [
+        "SELECT * FROM customers WHERE age > 30;",
+        "SELECT * FROM products WHERE price < 50;",
+        "SELECT * FROM orders WHERE order_date >= '2022-01-01';",
+        "SELECT * FROM categories WHERE category_name = 'Electronics';",
+        "SELECT * FROM orderdetails WHERE quantity BETWEEN 10 AND 20;",
+        "SELECT * FROM customers WHERE country LIKE 'U%';",
+        "SELECT * FROM customers WHERE customer_id IN (1, 2, 3);",
+        "SELECT * FROM orders WHERE price IS NOT NULL;"
+      ]
+    },
+    {
+      "tag": "where_keyword",
+      "patterns": [
+        "what is the WHERE keyword?",
+        "explain the WHERE clause in SQL",
+        "define WHERE in SQL",
+        "how does the WHERE keyword work?",
+        "what does the WHERE clause do?",
+        "how to use the WHERE keyword?",
+        "describe the WHERE statement",
+        "what is the purpose of the WHERE keyword?",
+        "can you tell me about the WHERE clause?",
+        "when do we use the WHERE keyword?",
+        "give an overview of the WHERE clause",
+        "explain the usage of WHERE keyword with examples",
+        "what are the benefits of using the WHERE keyword?",
+        "how does the WHERE clause function?",
+        "how to utilize the WHERE clause in SQL?",
+        "what is the significance of the WHERE keyword?",
+        "what is where clause"
+      ],
+      "responses": [
+        "The WHERE keyword filters rows based on specified conditions in SQL queries.",
+        "In SQL, the WHERE clause filters rows from the source table based on specified criteria in a query.",
+        "Using the WHERE keyword in SQL queries allows you to specify conditions to filter rows.",
+        "The WHERE clause in SQL narrows down the result set by applying specified conditions to the rows.",
+        "The WHERE clause filters rows from the source table based on specified conditions in SQL queries.",
+        "In SQL queries, the WHERE clause applies conditions to filter rows from the source table.",
+        "The WHERE keyword is essential for filtering rows based on specified criteria in SQL queries.",
+        "By using the WHERE keyword, you can apply conditions to filter rows in SQL queries.",
+        "Understanding the WHERE clause is crucial for applying conditions to filter rows in SQL queries.",
+        "The WHERE statement filters rows from the source table based on specified conditions in SQL."
+      ]
+    },
+    {
+      "tag": "sql_data_types",
+      "patterns": [
+        "what are the data types in SQL?",
+        "list SQL data types",
+        "types of data in SQL?",
+        "SQL data types?"
+      ],
+      "responses": [
+        "SQL data types include INTEGER, FLOAT, CHAR, VARCHAR, DATE, TIME, TIMESTAMP, BOOLEAN, and more."
+      ]
+    },
+    {
+      "tag": "distinct_keyword",
+      "patterns": [
+        "what is the DISTINCT keyword in SQL?",
+        "explain the DISTINCT keyword",
+        "define DISTINCT in SQL",
+        "how does the DISTINCT keyword work?",
+        "what does the DISTINCT keyword do?",
+        "how to use the DISTINCT keyword?",
+        "describe the DISTINCT keyword",
+        "what is the purpose of the DISTINCT keyword?",
+        "can you tell me about the DISTINCT keyword?",
+        "when do we use the DISTINCT keyword?",
+        "give an overview of the DISTINCT keyword",
+        "what are the syntax rules for the DISTINCT keyword?",
+        "how to apply the DISTINCT keyword?"
+      ],
+      "responses": [
+        "The DISTINCT keyword in SQL is used to retrieve unique values from a specified column or set of columns in a table.",
+        "In SQL, the DISTINCT keyword filters duplicate values from the result set, returning only unique values.",
+        "Using the DISTINCT keyword in SQL queries allows you to eliminate duplicate rows from the output.",
+        "The DISTINCT keyword is applied to the SELECT statement to ensure that only unique values are returned.",
+        "When applied to a column in a SELECT statement, the DISTINCT keyword removes duplicate values, resulting in a distinct set of values.",
+        "In SQL, the DISTINCT keyword is used to select unique values from a specified column or set of columns in a table.",
+        "The purpose of the DISTINCT keyword in SQL is to filter out duplicate values from the result set.",
+        "The DISTINCT keyword is used in SQL queries to identify and return unique values from a specified column or set of columns.",
+        "The DISTINCT keyword is employed when you want to retrieve unique values from a particular column or set of columns in a table.",
+        "In SQL, you use the DISTINCT keyword to ensure that the result set contains only unique values, eliminating duplicates.",
+        "To apply the DISTINCT keyword in SQL, you include it after the SELECT keyword followed by the column name or names from which you want to retrieve unique values."
+      ]
+    },
+    {
+      "tag": "sql_syntax_example",
+      "patterns": [
+        "show me an example of SQL syntax",
+        "provide an example of SQL syntax usage",
+        "give me a sample SQL query",
+        "how to use SQL syntax?",
+        "demonstrate SQL syntax",
+        "example showcasing SQL syntax",
+        "SQL syntax example",
+        "give me synatx of sql",
+        "show an example of SQL",
+        "provide a SQL syntax demonstration",
+        "example illustrating SQL syntax usage",
+        "SQL statement demonstration",
+        "example SQL query with syntax",
+        "can you show me a practical example of using SQL syntax?"
+      ],
+      "responses": [
+        "SELECT column1, column2 FROM table_name WHERE condition;",
+        "SELECT * FROM table_name WHERE condition;"
+      ]
+    },
+    {
+      "tag": "order_by_definition",
+      "patterns": [
+        "what is the ORDER BY clause?",
+        "explain the ORDER BY keyword",
+        "define ORDER BY in SQL",
+        "how does the ORDER BY clause work?",
+        "what does the ORDER BY keyword do?",
+        "how to use the ORDER BY clause?"
+      ],
+      "responses": [
+        "The ORDER BY clause is used in SQL queries to sort the result set based on one or more columns.",
+        "In SQL, the ORDER BY keyword is used to arrange the rows of a query result in ascending or descending order.",
+        "The ORDER BY clause in SQL is used to specify the sorting order of the result set based on specified columns.",
+        "By using the ORDER BY clause, you can arrange the rows returned by a query in ascending or descending order.",
+        "The ORDER BY keyword in SQL is used to sort the result set of a query based on the values of specified columns.",
+        "In SQL queries, the ORDER BY clause is used to sort the result set in ascending or descending order based on the values of specified columns."
+      ]
+    },
+    {
+      "tag": "order_by_example",
+      "patterns": [
+        "show me an example of using ORDER BY in SQL",
+        "provide an example of ORDER BY keyword usage",
+        "give me an example ORDER BY",
+        "how to use ORDER BY in SQL?",
+        "demonstrate ORDER BY clause",
+        "example showcasing ORDER BY keyword",
+        "ORDER BY clause example",
+        "how to write ORDER BY ",
+        "show an example of ORDER BY statement",
+        "provide an ORDER BY keyword demonstration",
+        "ORDER BY statement demonstration",
+        "example SQL query with ORDER BY clause"
+      ],
+      "responses": [
+        "SELECT * FROM products ORDER BY price DESC;",
+        "SELECT * FROM customers ORDER BY age ASC;",
+        "SELECT * FROM orders ORDER BY order_date DESC;",
+        "SELECT * FROM products ORDER BY category_id, price ASC;",
+        "SELECT * FROM customers ORDER BY country DESC, city ASC;"
+      ]
+    },
+    {
+      "tag": "order_by_syntax",
+      "patterns": [
+        "what is the syntax of ORDER BY in SQL?",
+        "explain the syntax of ORDER BY clause",
+        "how is the ORDER BY statement structured?",
+        "what are the components of an ORDER BY statement?",
+        "can you break down the syntax of ORDER BY?",
+        "show me the structure of the ORDER BY statement",
+        "give an example of the ORDER BY statement syntax",
+        "what does the ORDER BY statement look like?",
+        "how do you write an ORDER BY statement?",
+        "describe the ORDER BY statement syntax",
+        "syntax of order by"
+      ],
+      "responses": [
+        "SELECT * FROM table_name ORDER BY column_name [ASC|DESC];",
+        "The syntax of the ORDER BY statement in SQL: SELECT * FROM table_name ORDER BY column_name [ASC|DESC];",
+        "Syntax of the ORDER BY statement: SELECT * FROM table_name ORDER BY column_name [ASC|DESC];",
+        "The ORDER BY statement syntax: SELECT * FROM table_name ORDER BY column_name [ASC|DESC];",
+        "In SQL, the ORDER BY statement looks like this: SELECT * FROM table_name ORDER BY column_name [ASC|DESC];"
+      ]
+    },
+    {
+      "tag": "and_operator",
+      "patterns": [
+        "why use the AND operator in SQL?",
+        "what is the purpose of using AND keyword in SQL?",
+        "explain the usage of AND operator",
+        "when to use the AND keyword in SQL?",
+        "can you provide examples of using the AND operator?",
+        "how does the AND keyword work in SQL?",
+        "what are the benefits of using the AND operator?",
+        "how to use the AND keyword effectively?",
+        "describe the AND operator in SQL",
+        "what are some scenarios where the AND keyword is useful?"
+      ],
+      "responses": [
+        "The AND operator in SQL is used to combine multiple conditions in a WHERE clause to narrow down the result set.",
+        "Using the AND keyword allows you to specify multiple conditions in a SQL query, and all conditions must be true for the row to be included in the result set.",
+        "In SQL queries, the AND operator is used to filter rows based on multiple conditions, ensuring that all conditions are met for a row to be selected.",
+        "You use the AND keyword in SQL to create more precise queries by specifying multiple criteria that must be satisfied simultaneously.",
+        "Examples of using the AND operator: SELECT * FROM table_name WHERE condition1 AND condition2;",
+        "The AND keyword works by evaluating each condition specified in the WHERE clause and returning rows that satisfy all conditions.",
+        "Benefits of using the AND operator include the ability to construct complex queries and retrieve only the data that meets all specified criteria.",
+        "To use the AND keyword effectively, ensure that each condition logically contributes to narrowing down the result set as intended.",
+        "The AND operator in SQL allows you to create compound conditions that provide more control over the data retrieved from the database.",
+        "Scenarios where the AND keyword is useful include filtering data based on multiple attributes or criteria to retrieve specific information."
+      ]
+    },
+    {
+      "tag": "and_example",
+      "patterns": [
+        "can you show me an example using the AND operator?",
+        "give me an example of and operator",
+        "provide a sample SQL query with the AND keyword",
+        "how to use AND in a SQL query?",
+        "demonstrate the usage of the AND operator",
+        "example of using the AND keyword in SQL",
+        "show me a practical example of AND in SQL",
+        "AND operator example",
+        "how to write AND operator"
+      ],
+      "responses": [
+        "SELECT * FROM orders WHERE price > 100 AND order_date >= '2023-01-01';",
+        "SELECT * FROM products WHERE category_id = 2 AND price < 50;",
+        "SELECT * FROM customers WHERE country = 'USA' AND age > 30;",
+        "SELECT * FROM orderdetails WHERE product_id = 5 AND quantity >= 10;",
+        "SELECT * FROM orders WHERE customer_id = 3 AND price IS NOT NULL;"
+      ]
+    },
+    {
+      "tag": "sql_not",
+      "patterns": [
+        "What is the SQL NOT operator?",
+        "Explain the usage of NOT keyword in SQL",
+        "When to use the NOT operator in SQL?",
+        "Can you provide examples of using the NOT operator?",
+        "How does the NOT keyword work in SQL?",
+        "What are the benefits of using the NOT operator?",
+        "How to use the NOT keyword effectively?",
+        "Describe the NOT operator in SQL",
+        "What are some scenarios where the NOT keyword is useful?",
+        "Why use the NOT operator in SQL?"
+      ],
+      "responses": [
+        "The NOT operator in SQL is used to negate a condition in a WHERE clause, selecting rows that do not satisfy the condition.",
+        "Using the NOT keyword allows you to specify a condition that should not be met for a row to be included in the result set.",
+        "You use the NOT operator in SQL when you want to filter out rows that meet a specific condition.",
+        "Examples of using the NOT operator: SELECT * FROM table_name WHERE NOT condition;",
+        "The NOT keyword in SQL negates the result of a condition, selecting rows that don't satisfy the condition.",
+        "Benefits of using the NOT operator include the ability to filter out unwanted rows based on specific criteria.",
+        "To use the NOT keyword effectively, ensure that it logically negates the intended condition to retrieve the desired result set.",
+        "The NOT operator in SQL is used to create more precise queries by excluding rows that meet certain conditions.",
+        "Scenarios where the NOT keyword is useful include filtering data to exclude rows based on specific attributes or criteria.",
+        "You would use the NOT operator in SQL to retrieve data that does not meet a particular condition."
+      ]
+    },
+    {
+      "tag": "sql_not_example",
+      "patterns": [
+        "Can you show me an example using the NOT operator?",
+        "Provide a sample SQL query with the NOT keyword",
+        "How to use NOT in a SQL query?",
+        "Demonstrate the usage of the NOT operator",
+        "Example of using the NOT keyword in SQL",
+        "Show me a practical example of NOT in SQL",
+        "NOT  operator example",
+        "how to write NOT  operator",
+        "give me an example of not operator"
+      ],
+      "responses": [
+        "SELECT * FROM customers WHERE NOT age > 30;",
+        "SELECT * FROM products WHERE NOT category_id = 2;",
+        "SELECT * FROM orders WHERE NOT price > 100;",
+        "SELECT * FROM orderdetails WHERE NOT quantity <= 10;",
+        "SELECT * FROM categories WHERE NOT category_name LIKE 'Electronics%';",
+        "SELECT * FROM customers WHERE NOT country = 'USA';"
+      ]
+    },
+    {
+      "tag": "sql_like",
+      "patterns": [
+        "What is the purpose of SQL Like?",
+        "How to use SQL Like keyword?",
+        "When to use SQL Like operator?",
+        "Can you explain the usage of SQL Like?",
+        "What does the SQL Like operator do?",
+        "How does the SQL Like keyword work?",
+        "Why is SQL Like used?",
+        "Describe the SQL Like operator",
+        "What are some scenarios where SQL Like is useful?"
+      ],
+      "responses": [
+        "The SQL Like operator is used to search for a specified pattern in a column.",
+        "To use SQL Like, specify a pattern using wildcards such as % (percent) or _ (underscore).",
+        "SQL Like is used when you need to search for values that match a specific pattern in a column.",
+        "The SQL Like operator is used to perform pattern matching in SQL queries.",
+        "SQL Like is used to match patterns in text data stored in a column.",
+        "SQL Like works by comparing a column value with a pattern specified using wildcards.",
+        "SQL Like is used to perform pattern-based searches in SQL databases.",
+        "The SQL Like operator is employed to find values that match a specific pattern.",
+        "SQL Like is useful in scenarios where you need to search for partial matches or patterns in text data."
+      ]
+    },
+    {
+      "tag": "sql_limit",
+      "patterns": [
+        "What is the purpose of SQL Limit?",
+        "How to use SQL Limit keyword?",
+        "When to use SQL Limit clause?",
+        "Can you explain the usage of SQL Limit?",
+        "What does the SQL Limit clause do?",
+        "How does the SQL Limit keyword work?",
+        "Why is SQL Limit used?",
+        "Describe the SQL Limit clause",
+        "What are some scenarios where SQL Limit is useful?"
+      ],
+      "responses": [
+        "The SQL Limit clause is used to restrict the number of rows returned by a query.",
+        "To use SQL Limit, simply append it to the end of your SELECT statement followed by the maximum number of rows to return.",
+        "SQL Limit is used when you want to retrieve a limited number of rows from a result set.",
+        "The SQL Limit clause is used to control the number of rows returned by a query, helping to optimize performance.",
+        "SQL Limit restricts the number of rows returned in the result set to the specified limit.",
+        "SQL Limit works by instructing the database to stop fetching rows after reaching the specified limit.",
+        "SQL Limit is used to prevent large result sets from overwhelming the system or application.",
+        "The SQL Limit clause is essential for pagination and optimizing query performance.",
+        "SQL Limit is useful in scenarios where you need to retrieve only a subset of rows from a large result set."
+      ]
+    },
+    {
+      "tag": "sql_limit_example",
+      "patterns": [
+        "Can you show me an example using SQL Limit?",
+        "Provide a sample SQL query with the SQL Limit keyword",
+        "How to use SQL Limit in a SQL query?",
+        "Demonstrate the usage of the SQL Limit clause",
+        "Example of using the SQL Limit keyword in SQL",
+        "Show me a practical example of SQL Limit in SQL",
+        "SQL Limit example",
+        "how to write SQL Limit",
+        "example of limit",
+        "give me an example of Limit clause"
+      ],
+      "responses": [
+        "SELECT * FROM customers LIMIT 10;",
+        "SELECT * FROM orders LIMIT 5;",
+        "SELECT * FROM products LIMIT 20;",
+        "SELECT * FROM orderdetails LIMIT 100;",
+        "SELECT * FROM categories LIMIT 3;"
+      ]
+    },
+    {
+      "tag": "sql_like_example",
+      "patterns": [
+        "Can you show me an example using SQL Like?",
+        "Provide a sample SQL query with the SQL Like keyword",
+        "How to use SQL Like in a SQL query?",
+        "Demonstrate the usage of the SQL Like operator",
+        "Example of using the SQL Like keyword in SQL",
+        "Show me a practical example of SQL Like in SQL",
+        "SQL like example",
+        "how to write SQL like",
+        "example of like operator",
+        "give me an example of like operator"
+      ],
+      "responses": [
+        "SELECT * FROM customers WHERE customer_name LIKE 'J%';",
+        "SELECT * FROM products WHERE product_name LIKE '%laptop%';",
+        "SELECT * FROM orders WHERE order_date LIKE '2023%';",
+        "SELECT * FROM orderdetails WHERE quantity LIKE '2_';",
+        "SELECT * FROM categories WHERE category_name LIKE '%electronics%';"
+      ]
+    },
+    {
+      "tag": "sql_or_example",
+      "patterns": [
+        "Can you show me an example using SQL OR?",
+        "Provide a sample SQL query with the SQL OR keyword",
+        "How to use SQL OR in a SQL query?",
+        "Demonstrate the usage of the SQL OR operator",
+        "Example of using the SQL OR keyword in SQL",
+        "Show me a practical example of SQL OR in SQL",
+        "SQL OR operator example",
+        "how to write SQL OR operator",
+        "example of OR operator",
+        "give me example of or operator"
+      ],
+      "responses": [
+        "SELECT * FROM customers WHERE country = 'USA' OR country = 'Canada';",
+        "SELECT * FROM products WHERE category_id = 1 OR category_id = 2;",
+        "SELECT * FROM orders WHERE price > 100 OR order_date >= '2023-01-01';",
+        "SELECT * FROM orderdetails WHERE quantity >= 10 OR unit_price < 5;",
+        "SELECT * FROM categories WHERE category_name = 'Electronics' OR category_name = 'Appliances';"
+      ]
+    },
+    {
+      "tag": "sql_or",
+      "patterns": [
+        "What is the purpose of SQL OR operator?",
+        "How to use SQL OR keyword?",
+        "When to use SQL OR operator?",
+        "Can you explain the usage of SQL OR?",
+        "What does the SQL OR operator do?",
+        "How does the SQL OR keyword work?",
+        "Why is SQL OR used?",
+        "Describe the SQL OR operator",
+        "What are some scenarios where SQL OR is useful?"
+      ],
+      "responses": [
+        "The SQL OR operator is used to combine multiple conditions in a WHERE clause, where any of the conditions can be true for the row to be included in the result set.",
+        "To use SQL OR, specify multiple conditions in the WHERE clause, separated by the OR keyword.",
+        "SQL OR is used when you need to retrieve rows that meet at least one of the specified conditions.",
+        "The SQL OR operator allows you to create more flexible queries by specifying multiple criteria, where any condition can be satisfied for the row to be selected.",
+        "SQL OR retrieves rows that satisfy at least one of the specified conditions in the WHERE clause.",
+        "SQL OR works by evaluating each condition specified in the WHERE clause and returning rows that satisfy at least one of the conditions.",
+        "SQL OR is used to create queries with multiple criteria, where any of the conditions can be true for the row to be included in the result set.",
+        "The SQL OR operator is essential for constructing queries with alternative conditions, providing greater flexibility in data retrieval.",
+        "SQL OR is useful in scenarios where you need to retrieve rows that meet any of the specified conditions in the WHERE clause."
+      ]
+    },
+    {
+      "tag": "sql_in",
+      "patterns": [
+        "What is the purpose of SQL IN operator?",
+        "How to use SQL IN keyword?",
+        "When to use SQL IN operator?",
+        "Can you explain the usage of SQL IN?",
+        "What does the SQL IN operator do?",
+        "How does the SQL IN keyword work?",
+        "Why is SQL IN used?",
+        "Explain In operator",
+        "Describe the SQL IN operator",
+        "What are some scenarios where SQL IN is useful?"
+      ],
+      "responses": [
+        "The SQL IN operator is used to specify multiple values in a WHERE clause, where a column value must match any of the specified values for the row to be included in the result set.",
+        "To use SQL IN, specify the column name followed by the IN keyword and a list of values enclosed in parentheses.",
+        "SQL IN is used when you need to filter rows based on a list of predefined values for a column.",
+        "The SQL IN operator allows you to create queries that filter rows based on a predefined set of values.",
+        "SQL IN retrieves rows where the column value matches any of the specified values in the list provided.",
+        "SQL IN works by comparing the column value with each value in the list provided and returning rows that match any of the values.",
+        "SQL IN is used to simplify queries by specifying multiple values for filtering in a single statement.",
+        "The SQL IN operator is employed to create queries with conditions that involve multiple values, providing a concise way to filter data.",
+        "SQL IN is useful in scenarios where you need to filter rows based on a predefined list of values for a column."
+      ]
+    },
+    {
+      "tag": "sql_in_example",
+      "patterns": [
+        "Can you show me an example using SQL IN?",
+        "Provide a sample SQL query with the SQL IN keyword",
+        "How to use SQL IN in a SQL query?",
+        "Demonstrate the usage of the SQL IN keyword",
+        "Example of using the SQL IN operator in SQL",
+        "Show me a practical example of SQL IN in SQL",
+        "SQL IN operator example",
+        "how to write SQL IN operator",
+        "example of SQL IN",
+        "Give me example of IN operator"
+
+      ],
+      "responses": [
+        "SELECT * FROM customers WHERE country IN ('USA', 'Canada', 'UK');",
+        "SELECT * FROM products WHERE category_id IN (1, 2, 3);",
+        "SELECT * FROM orders WHERE customer_id IN (1, 2, 3, 4, 5);",
+        "SELECT * FROM orderdetails WHERE quantity IN (5, 10, 15);",
+        "SELECT * FROM categories WHERE category_name IN ('Electronics', 'Appliances', 'Furniture');"
+      ]
+    },
+    {
+      "tag": "sql_between",
+      "patterns": [
+        "What is the purpose of SQL BETWEEN operator?",
+        "How to use SQL BETWEEN keyword?",
+        "When to use SQL BETWEEN operator?",
+        "Can you explain the usage of SQL BETWEEN?",
+        "What does the SQL BETWEEN operator do?",
+        "How does the SQL BETWEEN keyword work?",
+        "Why is SQL BETWEEN used?",
+        "Describe the SQL BETWEEN operator",
+        "What are some scenarios where SQL BETWEEN is useful?"
+      ],
+      "responses": [
+        "The SQL BETWEEN operator is used to specify a range of values in a WHERE clause, where a column value must be within the specified range for the row to be included in the result set.",
+        "To use SQL BETWEEN, specify the column name followed by the BETWEEN keyword, the lower bound, and the upper bound.",
+        "SQL BETWEEN is used when you need to filter rows based on a range of values for a column.",
+        "The SQL BETWEEN operator allows you to create queries that filter rows based on a specified range of values.",
+        "SQL BETWEEN retrieves rows where the column value falls within the specified range provided.",
+        "SQL BETWEEN works by comparing the column value with the lower and upper bounds specified and returning rows that fall within the range.",
+        "SQL BETWEEN is used to simplify queries by specifying a range of values for filtering in a single statement.",
+        "The SQL BETWEEN operator is employed to create queries with conditions that involve a range of values, providing a concise way to filter data.",
+        "SQL BETWEEN is useful in scenarios where you need to filter rows based on a specified range of values for a column."
+      ]
+    },
+    {
+  "tag": "sql_aggregate_functions",
+  "patterns": [
+    "What are some common SQL aggregate functions?",
+    "How many types of SQL aggregate functions are there?",
+    "Can you list some SQL aggregate functions?",
+    "What are the different types of SQL aggregate functions?",
+    "What are the most commonly used SQL aggregate functions?",
+    "Which SQL functions are used for aggregating data?",
+    "aggregate functions in sql"
+  ],
+  "responses": [
+    "Some common SQL aggregate functions include COUNT, SUM, AVG, MAX, and MIN.",
+    "There are several types of SQL aggregate functions, including COUNT, SUM, AVG, MAX, MIN, and others.",
+    "SQL aggregate functions include COUNT, SUM, AVG, MAX, and MIN, among others.",
+    "Different types of SQL aggregate functions include COUNT, SUM, AVG, MAX, MIN, and more.",
+    "The most commonly used SQL aggregate functions are COUNT, SUM, AVG, MAX, and MIN.",
+    "SQL aggregate functions used for aggregating data include COUNT, SUM, AVG, MAX, MIN, and others.",
+    "Examples of SQL aggregate functions are COUNT, SUM, AVG, MAX, and MIN."
+  ]
+},
+
+    {
+      "tag": "sql_between_example",
+      "patterns": [
+        "Can you show me an example using SQL BETWEEN?",
+        "Provide a sample SQL query with the SQL BETWEEN operator",
+        "How to use SQL BETWEEN in a SQL query?",
+        "Demonstrate the usage of the SQL BETWEEN keyword",
+        "Example of using the SQL BETWEEN operator in SQL",
+        "Show me a practical example of SQL BETWEEN in SQL",
+        "SQL BETWEEN operator example",
+        "how to write SQL BETWEEN operator",
+        "example of SQL BETWEEN",
+        "give me an example of between"
+      ],
+      "responses": [
+        "SELECT * FROM products WHERE price BETWEEN 10 AND 50;",
+        "SELECT * FROM orders WHERE order_date BETWEEN '2023-01-01' AND '2023-12-31';",
+        "SELECT * FROM customers WHERE age BETWEEN 25 AND 40;",
+        "SELECT * FROM orderdetails WHERE quantity BETWEEN 5 AND 10;",
+        "SELECT * FROM categories WHERE category_id BETWEEN 1 AND 5;"
+      ]
+    },
+    {
+      "tag": "sql_aggregative_functions_example",
+      "patterns": [
+        "Can you show me an example using SQL aggregative functions?",
+        "Provide a sample SQL query with SQL aggregative functions",
+        "How to use SQL aggregative functions in a SQL query?",
+        "Demonstrate the usage of SQL aggregative functions",
+        "Example of using SQL aggregative functions in SQL",
+        "Show me a practical example of SQL aggregative functions in SQL",
+        "SQL aggregative functions example",
+        "example of SQL aggregative functions"
+      ],
+      "responses": [
+        "SELECT COUNT(*) FROM customers;",
+        "SELECT AVG(price) FROM products WHERE category_id = 1;",
+        "SELECT SUM(quantity) FROM orderdetails WHERE order_id = 1001;",
+        "SELECT MAX(age) FROM customers;",
+        "SELECT MIN(price) FROM products WHERE category_id = 2;"
+      ]
+    },
+    {
+  "tag": "sql_max",
+  "patterns": [
+    "What is the SQL MAX function?",
+    "How to use the SQL MAX function?",
+    "When to use SQL MAX function?",
+    "Can you explain the usage of SQL MAX function?",
+    "What does the SQL MAX function do?",
+    "How does the SQL MAX function work?",
+    "Why is SQL MAX function used?",
+    "Describe the SQL MAX function",
+    "What are some scenarios where SQL MAX function is useful?"
+  ],
+  "responses": [
+    "The SQL MAX function is used to retrieve the maximum value in a column.",
+    "To use the SQL MAX function, specify the MAX keyword followed by the column name.",
+    "SQL MAX function is used when you need to find the highest value in a column.",
+    "SQL MAX function retrieves the maximum value from a specified column.",
+    "SQL MAX function works by scanning the specified column and returning the highest value found.",
+    "SQL MAX function is used to find the maximum value in a column, providing insights into the dataset.",
+    "SQL MAX function is employed to determine the highest value in a column, helping in data analysis.",
+    "SQL MAX function is useful in scenarios where you need to identify the maximum value in a dataset.",
+    "SQL MAX function can be applied in various scenarios, such as finding the highest sales amount or the oldest customer age."
+  ]
+},
+{
+  "tag": "sql_count",
+  "patterns": [
+    "What is the SQL COUNT function?",
+    "How to use the SQL COUNT function?",
+    "When to use SQL COUNT function?",
+    "Can you explain the usage of SQL COUNT function?",
+    "What does the SQL COUNT function do?",
+    "How does the SQL COUNT function work?",
+    "Why is SQL COUNT function used?",
+    "Describe the SQL COUNT function",
+    "What are some scenarios where SQL COUNT function is useful?"
+  ],
+  "responses": [
+    "The SQL COUNT function is used to count the number of rows in a result set.",
+    "To use the SQL COUNT function, specify the COUNT keyword followed by the column name or an asterisk (*) to count all rows.",
+    "SQL COUNT function is used when you need to find the number of rows in a dataset.",
+    "SQL COUNT function calculates and returns the total number of rows in a result set.",
+    "SQL COUNT function works by scanning the specified column or all rows and counting the number of non-null values.",
+    "SQL COUNT function is used to obtain row counts in datasets, aiding in data analysis and reporting.",
+    "SQL COUNT function is employed to determine the size of a dataset by counting the number of rows returned by a query.",
+    "SQL COUNT function is useful in scenarios where you need to quantify the size or volume of data returned by a query.",
+    "SQL COUNT function can be applied in various scenarios, such as determining the number of orders, customers, or products in a dataset."
+  ]
+},
+{
+  "tag": "sql_max_example",
+  "patterns": [
+    "Can you show me an example using SQL MAX?",
+    "Provide a sample SQL query with the SQL MAX function",
+    "How to use SQL MAX in a SQL query?",
+    "Demonstrate the usage of SQL MAX function",
+    "Example of using SQL MAX in SQL",
+    "Show me a practical example of SQL MAX in SQL",
+    "SQL MAX function example",
+    "how to write SQL MAX function",
+    "example of SQL MAX"
+  ],
+  "responses": [
+    "SELECT MAX(price) FROM products;",
+    "SELECT MAX(order_date) FROM orders;",
+    "SELECT MAX(age) FROM customers;",
+    "SELECT MAX(quantity) FROM orderdetails WHERE product_id = 5;",
+    "SELECT MAX(category_id) FROM categories;"
+  ]
+},
+{
+  "tag": "sql_count_example",
+  "patterns": [
+    "Can you show me an example using SQL COUNT?",
+    "Provide a sample SQL query with the SQL COUNT function",
+    "How to use SQL COUNT in a SQL query?",
+    "Demonstrate the usage of SQL COUNT function",
+    "Example of using SQL COUNT in SQL",
+    "Show me a practical example of SQL COUNT in SQL",
+    "SQL COUNT function example",
+    "how to write SQL COUNT function",
+    "example of COUNT function"
+  ],
+  "responses": [
+    "SELECT COUNT(*) FROM customers;",
+    "SELECT COUNT(product_id) FROM orderdetails WHERE order_id = 1001;",
+    "SELECT COUNT(order_id) FROM orders WHERE customer_id = 3;",
+    "SELECT COUNT(category_id) FROM categories;",
+    "SELECT COUNT(customer_id) FROM customers WHERE age > 30;"
+  ]
+},
+    {
+  "tag": "sql_min",
+  "patterns": [
+    "What is the SQL MIN function?",
+    "How to use the SQL MIN function?",
+    "When to use SQL MIN function?",
+    "Can you explain the usage of SQL MIN function?",
+    "What does the SQL MIN function do?",
+    "How does the SQL MIN function work?",
+    "Why is SQL MIN function used?",
+    "Describe the SQL MIN function",
+    "What are some scenarios where SQL MIN function is useful?"
+  ],
+  "responses": [
+    "The SQL MIN function is used to retrieve the minimum value in a column.",
+    "To use the SQL MIN function, specify the MIN keyword followed by the column name.",
+    "SQL MIN function is used when you need to find the lowest value in a column.",
+    "SQL MIN function retrieves the minimum value from a specified column.",
+    "SQL MIN function works by scanning the specified column and returning the lowest value found.",
+    "SQL MIN function is used to find the minimum value in a column, providing insights into the dataset.",
+    "SQL MIN function is employed to determine the lowest value in a column, aiding in data analysis.",
+    "SQL MIN function is useful in scenarios where you need to identify the minimum value in a dataset.",
+    "SQL MIN function can be applied in various scenarios, such as finding the lowest price or the youngest customer age."
+  ]
+},
+{
+  "tag": "sql_sum",
+  "patterns": [
+    "What is the SQL SUM function?",
+    "How to use the SQL SUM function?",
+    "When to use SQL SUM function?",
+    "Can you explain the usage of SQL SUM function?",
+    "What does the SQL SUM function do?",
+    "How does the SQL SUM function work?",
+    "Why is SQL SUM function used?",
+    "Describe the SQL SUM function",
+    "What are some scenarios where SQL SUM function is useful?"
+  ],
+  "responses": [
+    "The SQL SUM function is used to calculate the sum of values in a column.",
+    "To use the SQL SUM function, specify the SUM keyword followed by the column name.",
+    "SQL SUM function is used when you need to find the total of numeric values in a column.",
+    "SQL SUM function calculates and returns the sum of values in a specified column.",
+    "SQL SUM function works by adding up all numeric values found in the specified column.",
+    "SQL SUM function is used to obtain the total sum of numeric values in a column, aiding in data analysis.",
+    "SQL SUM function is employed to determine the total value of a dataset, such as total sales amount or total quantity.",
+    "SQL SUM function is useful in scenarios where you need to calculate the total of numeric data in a dataset.",
+    "SQL SUM function can be applied in various scenarios, such as calculating the total revenue or the total quantity sold."
+  ]
+},
+{
+  "tag": "sql_min_example",
+  "patterns": [
+    "Can you show me an example using SQL MIN?",
+    "Provide a sample SQL query with the SQL MIN function",
+    "How to use SQL MIN in a SQL query?",
+    "Demonstrate the usage of SQL MIN function",
+    "Example of using SQL MIN in SQL",
+    "Show me a practical example of SQL MIN in SQL",
+    "SQL MIN function example",
+    "how to write SQL MIN function",
+    "example of MIN function"
+  ],
+  "responses": [
+    "SELECT MIN(price) FROM products;",
+    "SELECT MIN(order_date) FROM orders;",
+    "SELECT MIN(age) FROM customers;",
+    "SELECT MIN(quantity) FROM orderdetails WHERE product_id = 5;",
+    "SELECT MIN(category_id) FROM categories;"
+  ]
+},
+{
+  "tag": "sql_sum_example",
+  "patterns": [
+    "Can you show me an example using SQL SUM?",
+    "Provide a sample SQL query with the SQL SUM function",
+    "How to use SQL SUM in a SQL query?",
+    "Demonstrate the usage of SQL SUM function",
+    "Example of using SQL SUM in SQL",
+    "Show me a practical example of SQL SUM in SQL",
+    "SQL SUM function example",
+    "how to write SQL SUM function",
+    "example of SUM function"
+  ],
+  "responses": [
+    "SELECT SUM(price) FROM products;",
+    "SELECT SUM(quantity) FROM orderdetails WHERE order_id = 1001;",
+    "SELECT SUM(order_date) FROM orders;",
+    "SELECT SUM(age) FROM customers;",
+    "SELECT SUM(category_id) FROM categories;"
+  ]
+},
+{
+  "tag": "sql_avg",
+  "patterns": [
+    "What is the SQL AVG function?",
+    "How to use the SQL AVG function?",
+    "When to use SQL AVG function?",
+    "Can you explain the usage of SQL AVG function?",
+    "What does the SQL AVG function do?",
+    "How does the SQL AVG function work?",
+    "Why is SQL AVG function used?",
+    "Describe the SQL AVG function",
+    "What are some scenarios where SQL AVG function is useful?"
+  ],
+  "responses": [
+    "The SQL AVG function is used to calculate the average value of numeric data in a column.",
+    "To use the SQL AVG function, specify the AVG keyword followed by the column name.",
+    "SQL AVG function is used when you need to find the average value of numeric data in a column.",
+    "SQL AVG function calculates and returns the average value of numeric data in a specified column.",
+    "SQL AVG function works by summing up all numeric values in the specified column and dividing by the count of values.",
+    "SQL AVG function is used to obtain the average value of numeric data in a column, providing insights into the dataset.",
+    "SQL AVG function is employed to determine the average value of a dataset, such as average age or average price.",
+    "SQL AVG function is useful in scenarios where you need to calculate the average of numeric data in a dataset.",
+    "SQL AVG function can be applied in various scenarios, such as calculating the average sales amount or the average quantity sold."
+  ]
+},
+{
+  "tag": "sql_group_by",
+  "patterns": [
+    "What is the SQL GROUP BY clause?",
+    "How to use the SQL GROUP BY clause?",
+    "When to use SQL GROUP BY clause?",
+    "Can you explain the usage of SQL GROUP BY clause?",
+    "What does the SQL GROUP BY clause do?",
+    "How does the SQL GROUP BY clause work?",
+    "Why is SQL GROUP BY clause used?",
+    "Describe the SQL GROUP BY clause",
+    "What are some scenarios where SQL GROUP BY clause is useful?"
+  ],
+  "responses": [
+    "The SQL GROUP BY clause is used to group rows that have the same values into summary rows.",
+    "To use the SQL GROUP BY clause, specify the GROUP BY keyword followed by the column name(s) to group by.",
+    "SQL GROUP BY clause is used when you need to group rows based on certain criteria.",
+    "SQL GROUP BY clause groups rows with the same values in specified columns into summary rows.",
+    "SQL GROUP BY clause works by aggregating rows with the same values in specified columns into single rows.",
+    "SQL GROUP BY clause is used to summarize data by grouping rows, providing insights into the dataset.",
+    "SQL GROUP BY clause is employed to analyze data by grouping rows based on specific criteria.",
+    "SQL GROUP BY clause is useful in scenarios where you need to analyze data by categories or groups.",
+    "SQL GROUP BY clause can be applied in various scenarios, such as aggregating sales data by product category or grouping customer data by age group."
+  ]
+},
+{
+  "tag": "sql_avg_example",
+  "patterns": [
+    "Can you show me an example using SQL AVG?",
+    "Provide a sample SQL query with the SQL AVG function",
+    "How to use SQL AVG in a SQL query?",
+    "Demonstrate the usage of SQL AVG function",
+    "Example of using SQL AVG in SQL",
+    "Show me a practical example of SQL AVG in SQL",
+    "SQL AVG function example",
+    "how to write SQL AVG function",
+    "example of AVERAGE function"
+  ],
+  "responses": [
+    "SELECT AVG(price) FROM products;",
+    "SELECT AVG(quantity) FROM orderdetails WHERE order_id = 1001;",
+    "SELECT AVG(age) FROM customers;",
+    "SELECT AVG(unit_price) FROM orderdetails WHERE product_id = 5;",
+    "SELECT AVG(category_id) FROM categories;"
+  ]
+},
+{
+  "tag": "sql_group_by_example",
+  "patterns": [
+    "Can you show me an example using SQL GROUP BY?",
+    "Provide a sample SQL query with the SQL GROUP BY clause",
+    "How to use SQL GROUP BY in a SQL query?",
+    "Demonstrate the usage of SQL GROUP BY clause",
+    "Example of using SQL GROUP BY in SQL",
+    "Show me a practical example of SQL GROUP BY in SQL",
+    "SQL GROUP BY clause example",
+    "how to write SQL GROUP BY clause",
+    "example of GROUP BY clause"
+  ],
+  "responses": [
+    "SELECT category_id, COUNT(*) AS product_count FROM products GROUP BY category_id;",
+    "SELECT country, COUNT(*) AS customer_count FROM customers GROUP BY country;",
+    "SELECT order_id, SUM(quantity * unit_price) AS total_price FROM orderdetails GROUP BY order_id;",
+    "SELECT age_group, AVG(age) AS average_age FROM customers GROUP BY age_group;",
+    "SELECT city, COUNT(*) AS customer_count FROM customers WHERE country = 'USA' GROUP BY city;"
+  ]
+},
+{
+  "tag": "sql_having",
+  "patterns": [
+    "What is the SQL HAVING clause?",
+    "How to use the SQL HAVING clause?",
+    "When to use SQL HAVING clause?",
+    "Can you explain the usage of SQL HAVING clause?",
+    "What does the SQL HAVING clause do?",
+    "How does the SQL HAVING clause work?",
+    "Why is SQL HAVING clause used?",
+    "Describe the SQL HAVING clause",
+    "What are some scenarios where SQL HAVING clause is useful?"
+  ],
+  "responses": [
+    "The SQL HAVING clause is used to filter group rows after the GROUP BY clause.",
+    "To use the SQL HAVING clause, specify the HAVING keyword followed by a condition to filter groups.",
+    "SQL HAVING clause is used when you need to filter grouped rows based on aggregate conditions.",
+    "SQL HAVING clause filters group rows that meet specified conditions after grouping.",
+    "SQL HAVING clause works by applying conditions to groups created by the GROUP BY clause.",
+    "SQL HAVING clause is used to filter summarized data by group-level criteria.",
+    "SQL HAVING clause is employed to analyze summarized data and filter groups based on specified conditions.",
+    "SQL HAVING clause is useful in scenarios where you need to filter summarized data after grouping.",
+    "SQL HAVING clause can be applied when you need to filter group-level data based on aggregate conditions."
+  ]
+},
+{
+  "tag": "sql_insert",
+  "patterns": [
+    "What is the SQL INSERT INTO command?",
+    "How to use the SQL INSERT INTO command?",
+    "When to use SQL INSERT INTO command?",
+    "Can you explain the usage of SQL INSERT INTO command?",
+    "What does the SQL INSERT INTO command do?",
+    "How does the SQL INSERT INTO command work?",
+    "Why is SQL INSERT INTO command used?",
+    "Describe the SQL INSERT INTO command",
+    "What are some scenarios where SQL INSERT INTO command is useful?"
+  ],
+  "responses": [
+    "The SQL INSERT INTO command is used to insert new rows into a table.",
+    "To use the SQL INSERT INTO command, specify the table name followed by the values to be inserted.",
+    "SQL INSERT INTO command is used when you need to add new data rows to a table.",
+    "SQL INSERT INTO command inserts new rows with specified values into a table.",
+    "SQL INSERT INTO command works by adding new rows with specified values to the specified table.",
+    "SQL INSERT INTO command is used to populate tables with new data entries.",
+    "SQL INSERT INTO command is employed to add new records to tables, expanding the dataset.",
+    "SQL INSERT INTO command is useful in scenarios where you need to add new data entries to a table.",
+    "SQL INSERT INTO command can be applied when you need to insert new records into a database table."
+  ]
+},
+{
+  "tag": "sql_having_example",
+  "patterns": [
+    "Can you show me an example using SQL HAVING?",
+    "Provide a sample SQL query with the SQL HAVING clause",
+    "How to use SQL HAVING in a SQL query?",
+    "Demonstrate the usage of SQL HAVING clause",
+    "Example of using SQL HAVING in SQL",
+    "Show me a practical example of SQL HAVING in SQL",
+    "SQL HAVING clause example",
+    "how to write SQL HAVING clause",
+    "example of HAVING clause"
+
+  ],
+  "responses": [
+    "SELECT category_id, COUNT(*) AS product_count FROM products GROUP BY category_id HAVING COUNT(*) > 10;",
+    "SELECT country, COUNT(*) AS customer_count FROM customers GROUP BY country HAVING COUNT(*) > 5;",
+    "SELECT order_id, SUM(quantity * unit_price) AS total_price FROM orderdetails GROUP BY order_id HAVING SUM(quantity * unit_price) > 1000;",
+    "SELECT age_group, AVG(age) AS average_age FROM customers GROUP BY age_group HAVING AVG(age) > 30;",
+    "SELECT city, COUNT(*) AS customer_count FROM customers WHERE country = 'USA' GROUP BY city HAVING COUNT(*) > 2;"
+  ]
+},
+{
+  "tag": "sql_insert_example",
+  "patterns": [
+    "Can you show me an example using SQL INSERT INTO?",
+    "Provide a sample SQL query with the SQL INSERT INTO command",
+    "How to use SQL INSERT INTO in a SQL query?",
+    "Demonstrate the usage of SQL INSERT INTO command",
+    "Example of using SQL INSERT INTO in SQL",
+    "Show me a practical example of SQL INSERT INTO in SQL",
+    "SQL INSERT INTO command example",
+    "how to write SQL INSERT INTO command",
+    "example of  INSERT INTO command"
+  ],
+  "responses": [
+    "INSERT INTO customers (customer_name, age, country, city) VALUES ('John Doe', 35, 'USA', 'New York');",
+    "INSERT INTO products (product_name, category_id, price) VALUES ('Laptop', 1, 1200.00);",
+    "INSERT INTO orders (customer_id, order_date, price) VALUES (101, '2024-04-15', 500.00);",
+    "INSERT INTO orderdetails (order_id, product_id, quantity, unit_price) VALUES (1001, 3, 2, 25.00);",
+    "INSERT INTO categories (category_name) VALUES ('Furniture');"
+  ]
+},
+    {
+  "tag": "sql_update",
+  "patterns": [
+    "What is the SQL UPDATE statement?",
+    "How to use the SQL UPDATE statement?",
+    "When to use SQL UPDATE statement?",
+    "Can you explain the usage of SQL UPDATE statement?",
+    "What does the SQL UPDATE statement do?",
+    "How does the SQL UPDATE statement work?",
+    "Why is SQL UPDATE statement used?",
+    "Describe the SQL UPDATE statement",
+    "What are some scenarios where SQL UPDATE statement is useful?"
+  ],
+  "responses": [
+    "The SQL UPDATE statement is used to modify existing records in a table.",
+    "To use the SQL UPDATE statement, specify the table name followed by the SET keyword and the columns to be updated with new values.",
+    "SQL UPDATE statement is used when you need to change the existing data in a table.",
+    "SQL UPDATE statement updates existing records in a table with new values specified in the query.",
+    "SQL UPDATE statement works by identifying rows that match the specified condition and updating the columns with new values.",
+    "SQL UPDATE statement is used to edit the values of existing records in a table.",
+    "SQL UPDATE statement is employed to make changes to existing data entries in tables, updating the dataset.",
+    "SQL UPDATE statement is useful in scenarios where you need to modify existing data entries in a table.",
+    "SQL UPDATE statement can be applied when you need to correct or update information in database tables."
+  ]
+},
+{
+  "tag": "sql_delete",
+  "patterns": [
+    "What is the SQL DELETE statement?",
+    "How to use the SQL DELETE statement?",
+    "When to use SQL DELETE statement?",
+    "Can you explain the usage of SQL DELETE statement?",
+    "What does the SQL DELETE statement do?",
+    "How does the SQL DELETE statement work?",
+    "Why is SQL DELETE statement used?",
+    "Describe the SQL DELETE statement",
+    "What are some scenarios where SQL DELETE statement is useful?"
+  ],
+  "responses": [
+    "The SQL DELETE statement is used to remove existing records from a table.",
+    "To use the SQL DELETE statement, specify the table name followed by the WHERE keyword and the condition to identify the rows to be deleted.",
+    "SQL DELETE statement is used when you need to remove specific data rows from a table.",
+    "SQL DELETE statement deletes existing records from a table based on specified conditions.",
+    "SQL DELETE statement works by identifying rows that match the specified condition and removing them from the table.",
+    "SQL DELETE statement is used to delete unwanted data entries from tables, reducing the dataset.",
+    "SQL DELETE statement is employed to remove unnecessary or outdated data entries from tables.",
+    "SQL DELETE statement is useful in scenarios where you need to remove specific records or clean up data in a table.",
+    "SQL DELETE statement can be applied when you need to permanently delete unwanted data rows from database tables."
+  ]
+},
+{
+  "tag": "sql_update_example",
+  "patterns": [
+    "Can you show me an example using SQL UPDATE?",
+    "Provide a sample SQL query with the SQL UPDATE statement",
+    "How to use SQL UPDATE in a SQL query?",
+    "Demonstrate the usage of SQL UPDATE statement",
+    "Example of using SQL UPDATE in SQL",
+    "Show me a practical example of SQL UPDATE in SQL",
+    "SQL UPDATE statement example",
+    "how to write SQL UPDATE statement",
+    "example of UPDATE statement"
+  ],
+  "responses": [
+    "UPDATE customers SET age = 40 WHERE customer_id = 101;",
+    "UPDATE products SET price = 1500.00 WHERE product_id = 2;",
+    "UPDATE orders SET price = 550.00 WHERE order_id = 1001;",
+    "UPDATE orderdetails SET quantity = 3 WHERE order_id = 1001 AND product_id = 3;",
+    "UPDATE categories SET category_name = 'Electronics' WHERE category_id = 1;"
+  ]
+},
+{
+  "tag": "sql_delete_example",
+  "patterns": [
+    "Can you show me an example using SQL DELETE?",
+    "Provide a sample SQL query with the SQL DELETE statement",
+    "How to use SQL DELETE in a SQL query?",
+    "Demonstrate the usage of SQL DELETE statement",
+    "Example of using SQL DELETE in SQL",
+    "Show me a practical example of SQL DELETE in SQL",
+    "SQL DELETE statement example",
+    "how to write SQL DELETE statement",
+    "example of DELETE statement"
+  ],
+  "responses": [
+    "DELETE FROM customers WHERE customer_id = 101;",
+    "DELETE FROM products WHERE product_id = 4;",
+    "DELETE FROM orders WHERE order_id = 1001;",
+    "DELETE FROM orderdetails WHERE order_id = 1001 AND product_id = 3;",
+    "DELETE FROM categories WHERE category_id = 2;"
+  ]
+},
+{
+  "tag": "sql_aliases",
+  "patterns": [
+    "What are SQL aliases?",
+    "How to use aliases in SQL?",
+    "When to use SQL aliases?",
+    "Can you explain the usage of SQL aliases?",
+    "What are the benefits of SQL aliases?",
+    "How do SQL aliases work?",
+    "Why are SQL aliases used?",
+    "Describe SQL aliases",
+    "What are some scenarios where SQL aliases are useful?"
+  ],
+  "responses": [
+    "SQL aliases are temporary names assigned to columns or tables in SQL queries for ease of reference.",
+    "To use aliases in SQL, specify an alias name followed by the column or table name using the AS keyword.",
+    "SQL aliases are used when you want to rename columns or tables in SQL queries to make them more readable or concise.",
+    "SQL aliases help improve the readability and clarity of SQL queries by providing shorter or more meaningful names for columns or tables.",
+    "The benefits of SQL aliases include improved query readability, reduced typing effort, and simplified referencing of columns or tables.",
+    "SQL aliases work by replacing the original column or table name with the specified alias name in the query results.",
+    "SQL aliases are used to create temporary names for columns or tables in SQL queries, enhancing query readability and ease of use.",
+    "SQL aliases are employed to provide shorter or more descriptive names for columns or tables in SQL queries.",
+    "SQL aliases are useful in scenarios where you need to refer to columns or tables with shorter or more meaningful names in SQL queries."
+  ]
+},
+{
+  "tag": "sql_joins",
+  "patterns": [
+    "What are the different types of SQL joins?",
+    "How many types of SQL joins are there?",
+    "Can you list the types of SQL joins?",
+    "What are the SQL join types?",
+    "Which SQL join types are available?",
+    "Give me examples of SQL join types."
+  ],
+  "responses": [
+    "The different types of SQL joins include INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.",
+    "There are four main types of SQL joins: INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.",
+    "SQL joins can be categorized into four types: INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.",
+    "The SQL join types are INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.",
+    "The available SQL join types are INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.",
+    "Examples of SQL join types are INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN."
+  ]
+},
+    {
+  "tag": "sql_joins_definition",
+  "patterns": [
+    "What is the definition of SQL joins?",
+    "Can you define SQL joins?",
+    "Explain the concept of SQL joins.",
+    "What does SQL joins mean?",
+    "Define SQL joins."
+  ],
+  "responses": [
+    "SQL joins are used to combine rows from two or more tables based on a related column between them. They allow you to retrieve data from multiple tables simultaneously by establishing relationships between them."
+  ]
+},
+
+
+{
+  "tag": "sql_aliases_example",
+  "patterns": [
+    "Can you show me an example using SQL aliases?",
+    "Provide a sample SQL query with SQL aliases",
+    "How to use SQL aliases in a SQL query?",
+    "Demonstrate the usage of SQL aliases",
+    "Example of using SQL aliases in SQL",
+    "Show me a practical example of SQL aliases in SQL",
+    "SQL aliases example",
+    "how to write SQL aliases",
+    "example of SQL AS"
+  ],
+  "responses": [
+    "SELECT customer_name AS name, country AS location FROM customers;",
+    "SELECT p.product_name AS product, c.category_name AS category FROM products p INNER JOIN categories c ON p.category_id = c.category_id;",
+    "SELECT order_date AS date, price AS amount FROM orders;",
+    "SELECT o.order_id AS order, p.product_name AS product FROM orders o INNER JOIN products p ON o.product_id = p.product_id;",
+    "SELECT c.customer_name AS name, o.order_date AS date FROM customers c INNER JOIN orders o ON c.customer_id = o.customer_id;",
+    "SELECT order_id AS order, product_id AS product FROM orderdetails;"
+  ]
+},
+{
+  "tag": "sql_joins_example",
+  "patterns": [
+    "Can you show me an example using SQL joins?",
+    "Provide a sample SQL query with SQL joins",
+    "How to use SQL joins in a SQL query?",
+    "Demonstrate the usage of SQL joins",
+    "Example of using SQL joins in SQL",
+    "Show me a practical example of SQL joins in SQL",
+    "SQL joins example",
+    "how to write SQL joins",
+    "example of JOINS"
+  ],
+  "responses": [
+    "SELECT * FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id;",
+    "SELECT * FROM products LEFT JOIN categories ON products.category_id = categories.category_id;",
+    "SELECT * FROM orders RIGHT JOIN customers ON orders.customer_id = customers.customer_id;",
+    "SELECT * FROM products p FULL JOIN categories c ON p.category_id = c.category_id;",
+    "SELECT * FROM orderdetails od INNER JOIN products p ON od.product_id = p.product_id INNER JOIN orders o ON od.order_id = o.order_id;",
+    "SELECT * FROM orders o JOIN customers c ON o.customer_id = c.customer_id JOIN orderdetails od ON o.order_id = od.order_id;"
+  ]
+},
+{
+  "tag": "sql_inner_join",
+  "patterns": [
+    "What is an SQL INNER JOIN?",
+    "How to use INNER JOIN in SQL?",
+    "When to use SQL INNER JOIN?",
+    "Can you explain the usage of SQL INNER JOIN?",
+    "What are the benefits of SQL INNER JOIN?",
+    "How does SQL INNER JOIN work?",
+    "Why is SQL INNER JOIN used?",
+    "Describe SQL INNER JOIN",
+    "What are some scenarios where SQL INNER JOIN is useful?"
+  ],
+  "responses": [
+    "SQL INNER JOIN is used to retrieve rows from two or more tables based on a related column between them.",
+    "To use INNER JOIN in SQL, specify the tables to be joined followed by the join condition using the INNER JOIN keyword.",
+    "SQL INNER JOIN is used when you want to retrieve only the rows that have matching values in both tables being joined.",
+    "SQL INNER JOIN allows you to fetch data from multiple tables where there is a match between related columns, ensuring only matching rows are returned.",
+    "The benefits of SQL INNER JOIN include eliminating non-matching rows and returning only the rows with matching values, providing precise data retrieval.",
+    "SQL INNER JOIN works by comparing the values of related columns in two or more tables and returning rows where there is a match between the columns.",
+    "SQL INNER JOIN is used to retrieve data from multiple tables based on matching values in related columns, facilitating the retrieval of related information.",
+    "SQL INNER JOIN is employed in scenarios where you need to fetch data from multiple tables where there are matching values in the related columns."
+  ]
+},
+{
+  "tag": "sql_left_join",
+  "patterns": [
+    "What is an SQL LEFT JOIN?",
+    "How to use LEFT JOIN in SQL?",
+    "When to use SQL LEFT JOIN?",
+    "Can you explain the usage of SQL LEFT JOIN?",
+    "What are the benefits of SQL LEFT JOIN?",
+    "How does SQL LEFT JOIN work?",
+    "Why is SQL LEFT JOIN used?",
+    "Describe SQL LEFT JOIN",
+    "What are some scenarios where SQL LEFT JOIN is useful?"
+  ],
+  "responses": [
+    "SQL LEFT JOIN is used to retrieve all rows from the left table and matching rows from the right table based on a related column between them.",
+    "To use LEFT JOIN in SQL, specify the tables to be joined followed by the join condition using the LEFT JOIN keyword.",
+    "SQL LEFT JOIN is used when you want to retrieve all rows from the left table regardless of whether there are matching rows in the right table.",
+    "SQL LEFT JOIN allows you to fetch data from the left table along with matching rows from the right table, returning NULL for non-matching rows in the right table.",
+    "The benefits of SQL LEFT JOIN include ensuring that all rows from the left table are included in the result set, even if there are no matching rows in the right table.",
+    "SQL LEFT JOIN works by retrieving all rows from the left table and matching rows from the right table based on the join condition, returning NULL for non-matching rows in the right table.",
+    "SQL LEFT JOIN is used to retrieve data from the left table along with matching rows from the right table, ensuring that all rows from the left table are included in the result set.",
+    "SQL LEFT JOIN is employed in scenarios where you need to retrieve data from the left table regardless of whether there are matching rows in the right table."
+  ]
+},
+{
+  "tag": "sql_inner_join_example",
+  "patterns": [
+    "Can you show me an example using SQL INNER JOIN?",
+    "Provide a sample SQL query with SQL INNER JOIN",
+    "example of inner join",
+    "how to write inner join",
+    "Demonstrate the usage of SQL INNER JOIN",
+    "Example of using SQL INNER JOIN in SQL",
+    "Show me a practical example of SQL INNER JOIN in SQL"
+
+  ],
+  "responses": [
+    "SELECT * FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id;",
+    "SELECT p.product_name, c.category_name FROM products p INNER JOIN categories c ON p.category_id = c.category_id;",
+    "SELECT * FROM orders INNER JOIN orderdetails ON orders.order_id = orderdetails.order_id;",
+    "SELECT c.customer_name, o.order_date FROM customers c INNER JOIN orders o ON c.customer_id = o.customer_id;",
+    "SELECT p.product_name, od.quantity FROM products p INNER JOIN orderdetails od ON p.product_id = od.product_id;",
+    "SELECT * FROM orders o INNER JOIN customers c ON o.customer_id = c.customer_id INNER JOIN orderdetails od ON o.order_id = od.order_id;"
+  ]
+},
+{
+  "tag": "sql_left_join_example",
+  "patterns": [
+    "Can you show me an example using SQL LEFT JOIN?",
+    "Provide a sample SQL query with SQL LEFT JOIN",
+    "How to use SQL LEFT JOIN in a SQL query?",
+    "Demonstrate the usage of SQL LEFT JOIN",
+    "Example of using SQL LEFT JOIN in SQL",
+    "Show me a practical example of SQL LEFT JOIN in SQL",
+    "SQL LEFT JOIN example",
+    "how to write SQL LEFT JOIN",
+    "example of LEFT JOIN"
+  ],
+  "responses": [
+    "SELECT * FROM customers LEFT JOIN orders ON customers.customer_id = orders.customer_id;",
+    "SELECT p.product_name, o.quantity FROM products p LEFT JOIN orderdetails o ON p.product_id = o.product_id;",
+    "SELECT c.customer_name, o.order_date FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id;",
+    "SELECT c.customer_name, o.order_date FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id WHERE o.order_date >= '2023-01-01';",
+    "SELECT * FROM products p LEFT JOIN orderdetails o ON p.product_id = o.product_id WHERE o.quantity > 10;",
+    "SELECT * FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id LEFT JOIN orderdetails od ON o.order_id = od.order_id;"
+  ]
+},
+{
+  "tag": "sql_right_join",
+  "patterns": [
+    "What is an SQL RIGHT JOIN?",
+    "How to use RIGHT JOIN in SQL?",
+    "When to use SQL RIGHT JOIN?",
+    "Can you explain the usage of SQL RIGHT JOIN?",
+    "What are the benefits of SQL RIGHT JOIN?",
+    "How does SQL RIGHT JOIN work?",
+    "Why is SQL RIGHT JOIN used?",
+    "Describe SQL RIGHT JOIN",
+    "What are some scenarios where SQL RIGHT JOIN is useful?"
+  ],
+  "responses": [
+    "SQL RIGHT JOIN is used to retrieve all rows from the right table and matching rows from the left table based on a related column between them.",
+    "To use RIGHT JOIN in SQL, specify the tables to be joined followed by the join condition using the RIGHT JOIN keyword.",
+    "SQL RIGHT JOIN is used when you want to retrieve all rows from the right table regardless of whether there are matching rows in the left table.",
+    "SQL RIGHT JOIN allows you to fetch data from the right table along with matching rows from the left table, returning NULL for non-matching rows in the left table.",
+    "The benefits of SQL RIGHT JOIN include ensuring that all rows from the right table are included in the result set, even if there are no matching rows in the left table.",
+    "SQL RIGHT JOIN works by retrieving all rows from the right table and matching rows from the left table based on the join condition, returning NULL for non-matching rows in the left table.",
+    "SQL RIGHT JOIN is used to retrieve data from the right table along with matching rows from the left table, ensuring that all rows from the right table are included in the result set.",
+    "SQL RIGHT JOIN is employed in scenarios where you need to retrieve data from the right table regardless of whether there are matching rows in the left table."
+  ]
+},
+{
+  "tag": "sql_full_join",
+  "patterns": [
+    "What is an SQL FULL JOIN?",
+    "How to use FULL JOIN in SQL?",
+    "When to use SQL FULL JOIN?",
+    "Can you explain the usage of SQL FULL JOIN?",
+    "What are the benefits of SQL FULL JOIN?",
+    "How does SQL FULL JOIN work?",
+    "Why is SQL FULL JOIN used?",
+    "Describe SQL FULL JOIN",
+    "What are some scenarios where SQL FULL JOIN is useful?"
+  ],
+  "responses": [
+    "SQL FULL JOIN is used to retrieve all rows from both tables being joined, regardless of whether there are matching rows, and combines the results into a single result set.",
+    "To use FULL JOIN in SQL, specify the tables to be joined followed by the join condition using the FULL JOIN keyword.",
+    "SQL FULL JOIN is used when you want to retrieve all rows from both tables being joined, including non-matching rows, and combine them into a single result set.",
+    "SQL FULL JOIN allows you to fetch data from both tables being joined, ensuring that all rows from both tables are included in the result set, regardless of whether there are matching rows.",
+    "The benefits of SQL FULL JOIN include retrieving all rows from both tables, combining them into a single result set, and including both matching and non-matching rows.",
+    "SQL FULL JOIN works by combining the result sets of both tables being joined, including all rows from both tables, regardless of whether there are matching rows.",
+    "SQL FULL JOIN is used to retrieve data from both tables being joined, ensuring that all rows from both tables are included in the result set.",
+    "SQL FULL JOIN is employed in scenarios where you need to retrieve all rows from both tables being joined, including both matching and non-matching rows, and combine them into a single result set."
+  ]
+},
+{
+  "tag": "sql_right_join_example",
+  "patterns": [
+    "Can you show me an example using SQL RIGHT JOIN?",
+    "Provide a sample SQL query with SQL RIGHT JOIN",
+    "How to use SQL RIGHT JOIN in a SQL query?",
+    "Demonstrate the usage of SQL RIGHT JOIN",
+    "Example of using SQL RIGHT JOIN in SQL",
+    "Show me a practical example of SQL RIGHT JOIN in SQL",
+    "SQL RIGHT JOIN example",
+    "how to write SQL RIGHT JOIN",
+    "example of RIGHT JOIN"
+  ],
+  "responses": [
+    "SELECT * FROM orders RIGHT JOIN customers ON orders.customer_id = customers.customer_id;",
+    "SELECT * FROM orderdetails RIGHT JOIN products ON orderdetails.product_id = products.product_id;",
+    "SELECT * FROM customers RIGHT JOIN orders ON customers.customer_id = orders.customer_id;",
+    "SELECT * FROM customers RIGHT JOIN orders ON customers.customer_id = orders.customer_id WHERE orders.order_date >= '2023-01-01';",
+    "SELECT * FROM orderdetails RIGHT JOIN products ON orderdetails.product_id = products.product_id WHERE products.price > 50;",
+    "SELECT * FROM orders RIGHT JOIN customers ON orders.customer_id = customers.customer_id RIGHT JOIN orderdetails ON orders.order_id = orderdetails.order_id;"
+  ]
+},
+{
+  "tag": "sql_full_join_example",
+  "patterns": [
+    "Can you show me an example using SQL FULL JOIN?",
+    "Provide a sample SQL query with SQL FULL JOIN",
+    "How to use SQL FULL JOIN in a SQL query?",
+    "Demonstrate the usage of SQL FULL JOIN",
+    "Example of using SQL FULL JOIN in SQL",
+    "Show me a practical example of SQL FULL JOIN in SQL",
+    "SQL RIGHT JOIN example",
+    "how to write SQL RIGHT JOIN",
+    "example of RIGHT JOIN"
+  ],
+  "responses": [
+    "SELECT * FROM customers FULL JOIN orders ON customers.customer_id = orders.customer_id;",
+    "SELECT * FROM products FULL JOIN orderdetails ON products.product_id = orderdetails.product_id;",
+    "SELECT * FROM orders FULL JOIN customers ON orders.customer_id = customers.customer_id;",
+    "SELECT * FROM customers FULL JOIN orders ON customers.customer_id = orders.customer_id WHERE orders.order_date >= '2023-01-01';",
+    "SELECT * FROM orderdetails FULL JOIN products ON orderdetails.product_id = products.product_id WHERE products.price > 50;",
+    "SELECT * FROM orders FULL JOIN customers ON orders.customer_id = customers.customer_id FULL JOIN orderdetails ON orders.order_id = orderdetails.order_id;"
+  ]
+},
+{
+  "tag": "sql_union",
+  "patterns": [
+    "What is an SQL UNION?",
+    "How to use UNION in SQL?",
+    "When to use SQL UNION?",
+    "Can you explain the usage of SQL UNION?",
+    "What are the benefits of SQL UNION?",
+    "How does SQL UNION work?",
+    "Why is SQL UNION used?",
+    "Describe SQL UNION",
+    "What are some scenarios where SQL UNION is useful?"
+  ],
+  "responses": [
+    "SQL UNION is used to combine the results of two or more SELECT statements into a single result set and remove duplicate rows.",
+    "To use UNION in SQL, specify the SELECT statements to be combined using the UNION keyword.",
+    "SQL UNION is used when you want to merge the results of multiple SELECT statements into one result set.",
+    "SQL UNION allows you to concatenate the results of multiple SELECT statements, removing duplicate rows to produce a single result set.",
+    "The benefits of SQL UNION include simplifying complex queries by combining multiple result sets and eliminating duplicate rows.",
+    "SQL UNION works by stacking the results of multiple SELECT statements on top of each other to create a single result set, removing duplicate rows.",
+    "SQL UNION is used to aggregate the results of multiple SELECT statements into a single result set for analysis or reporting purposes.",
+    "SQL UNION is employed in scenarios where you need to merge data from multiple tables or queries into a unified result set.",
+    "SQL UNION is useful when you want to combine similar datasets from different tables or queries while removing duplicate records."
+  ]
+},
+{
+  "tag": "sql_constraints_definition",
+  "patterns": [
+    "What is the definition of SQL constraints?",
+    "Can you define SQL constraints?",
+    "Explain the concept of SQL constraints.",
+    "What does SQL constraints mean?",
+    "Define SQL constraints."
+  ],
+  "responses": [
+    "SQL constraints are rules or conditions enforced on columns or tables to maintain data integrity and ensure consistency in a database."
+  ]
+},
+{
+  "tag": "sql_constraints",
+  "patterns": [
+  "What are the different types of SQL constraints?",
+  "How many types of SQL constraints are there?",
+  "Can you list the types of SQL constraints?",
+  "What are the SQL constraint types?",
+  "Which SQL constraint types are available?",
+  "Give me examples of SQL constraint types."
+  ],
+  "responses": [
+  "The different types of SQL constraints include PRIMARY KEY, UNIQUE, NOT NULL, FOREIGN KEY, and CHECK constraints.",
+  "There are five main types of SQL constraints: PRIMARY KEY, UNIQUE, NOT NULL, FOREIGN KEY, and CHECK.",
+  "SQL constraints can be categorized into five types: PRIMARY KEY, UNIQUE, NOT NULL, FOREIGN KEY, and CHECK.",
+  "The SQL constraint types are PRIMARY KEY, UNIQUE, NOT NULL, FOREIGN KEY, and CHECK.",
+  "The available SQL constraint types are PRIMARY KEY, UNIQUE, NOT NULL, FOREIGN KEY, and CHECK.",
+  "Examples of SQL constraint types are PRIMARY KEY, UNIQUE, NOT NULL, FOREIGN KEY, and CHECK."
+  ]
+},
+{
+  "tag": "sql_union_example",
+  "patterns": [
+    "Can you show me an example using SQL UNION?",
+    "Provide a sample SQL query with SQL UNION",
+    "How to use SQL UNION in a SQL query?",
+    "Demonstrate the usage of SQL UNION",
+    "Example of using SQL UNION in SQL",
+    "Show me a practical example of SQL UNION in SQL",
+    "SQL SQL UNION example",
+    "how to write SQL UNION",
+    "example of UNION"
+  ],
+  "responses": [
+    "SELECT column1, column2 FROM table1 UNION SELECT column1, column2 FROM table2;",
+    "SELECT product_id, product_name FROM products UNION SELECT product_id, product_name FROM discontinued_products;",
+    "SELECT customer_id, customer_name FROM customers UNION SELECT customer_id, customer_name FROM inactive_customers;",
+    "SELECT order_id, order_date FROM orders UNION SELECT order_id, order_date FROM archived_orders;",
+    "SELECT employee_id, employee_name FROM active_employees UNION SELECT employee_id, employee_name FROM retired_employees;",
+    "SELECT category_id, category_name FROM categories UNION SELECT category_id, category_name FROM subcategories;"
+  ]
+},
+{
+  "tag": "sql_constraints_example",
+  "patterns": [
+    "Can you provide examples of SQL constraints?",
+    "Show me sample SQL queries with SQL constraints",
+    "How do you use SQL constraints in a SQL query?",
+    "Demonstrate the usage of SQL constraints",
+    "Examples of using SQL constraints in SQL",
+    "Show practical examples of SQL constraints in SQL",
+    "SQL constraints example",
+    "how to write SQL constraints",
+    "example of constraints"
+  ],
+  "responses": [
+    "CREATE TABLE employees (employee_id INT PRIMARY KEY, employee_name VARCHAR(50) NOT NULL, department_id INT REFERENCES departments(department_id));",
+    "CREATE TABLE orders (order_id INT PRIMARY KEY, order_date DATE NOT NULL, customer_id INT REFERENCES customers(customer_id), total_amount DECIMAL(10,2) CHECK (total_amount > 0));",
+    "CREATE TABLE products (product_id INT PRIMARY KEY, product_name VARCHAR(100) UNIQUE, category_id INT REFERENCES categories(category_id), unit_price DECIMAL(10,2) CHECK (unit_price > 0));",
+    "CREATE TABLE students (student_id INT PRIMARY KEY, student_name VARCHAR(50) NOT NULL, age INT CHECK (age >= 18));",
+    "CREATE TABLE books (book_id INT PRIMARY KEY, book_title VARCHAR(100) NOT NULL, author_id INT REFERENCES authors(author_id), publication_date DATE NOT NULL);",
+    "CREATE TABLE invoices (invoice_id INT PRIMARY KEY, invoice_date DATE NOT NULL, customer_id INT NOT NULL, total_amount DECIMAL(10,2) CHECK (total_amount > 0), CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id));"
+  ]
+},
+{
+  "tag": "create_tables",
+  "patterns": [
+    "What does 'CREATE TABLE' do in SQL?",
+    "How to create tables in SQL?",
+    "Explain the purpose of 'CREATE TABLE' statement",
+    "Can you describe the syntax of creating tables in SQL?",
+    "When do we use 'CREATE TABLE' in SQL?",
+    "What are the steps for creating tables in SQL?",
+    "How do you create tables in a SQL database?",
+    "Why is 'CREATE TABLE' important in SQL?",
+    "Describe the process of table creation in SQL",
+    "What are the components of a 'CREATE TABLE' statement?"
+  ],
+  "responses": [
+    "'CREATE TABLE' in SQL is a statement used to create a new table in a database.",
+    "To create tables in SQL, use the 'CREATE TABLE' statement followed by the table name and column definitions.",
+    "'CREATE TABLE' statement is used to define the structure of a new table in a SQL database.",
+    "The syntax for creating tables in SQL involves specifying the table name and defining columns along with their data types and constraints.",
+    "'CREATE TABLE' is used when you need to define a new table schema in a SQL database.",
+    "Steps for creating tables in SQL: 1. Specify table name and columns, 2. Define column data types and constraints, 3. Execute the 'CREATE TABLE' statement.",
+    "To create tables in a SQL database, you write a 'CREATE TABLE' statement specifying the table name and column definitions.",
+    "'CREATE TABLE' is important in SQL because it allows you to define the structure of tables to store data in a database.",
+    "The process of table creation in SQL involves defining column names, data types, and constraints using the 'CREATE TABLE' statement.",
+    "Components of a 'CREATE TABLE' statement include table name, column definitions, data types, constraints, and optionally table-level attributes."
+  ]
+},
+{
+  "tag": "alter_tables",
+  "patterns": [
+    "What does 'ALTER TABLE' do in SQL?",
+    "How to alter tables in SQL?",
+    "Explain the purpose of 'ALTER TABLE' statement",
+    "Can you describe the syntax of altering tables in SQL?",
+    "When do we use 'ALTER TABLE' in SQL?",
+    "What are the steps for altering tables in SQL?",
+    "How do you modify tables in a SQL database?",
+    "Why is 'ALTER TABLE' important in SQL?",
+    "Describe the process of table alteration in SQL",
+    "What are the components of an 'ALTER TABLE' statement?"
+  ],
+  "responses": [
+    "'ALTER TABLE' in SQL is a statement used to modify the structure of an existing table in a database.",
+    "To alter tables in SQL, use the 'ALTER TABLE' statement followed by the table name and specific modifications.",
+    "'ALTER TABLE' statement is used to change the structure of an existing table in a SQL database.",
+    "The syntax for altering tables in SQL involves specifying the table name and the modifications to be made, such as adding, modifying, or dropping columns.",
+    "'ALTER TABLE' is used when you need to modify the structure of an existing table in a SQL database.",
+    "Steps for altering tables in SQL: 1. Write the 'ALTER TABLE' statement, 2. Specify the table name, 3. Define the modifications to be made.",
+    "To modify tables in a SQL database, you write an 'ALTER TABLE' statement with the desired alterations.",
+    "'ALTER TABLE' is important in SQL because it allows you to change the structure of tables without losing existing data.",
+    "The process of table alteration in SQL involves specifying the table name and the modifications to be applied using the 'ALTER TABLE' statement.",
+    "Components of an 'ALTER TABLE' statement include table name, modification actions (e.g., ADD, MODIFY, DROP), column definitions, data types, and constraints."
+  ]
+},
+{
+  "tag": "create_tables_example",
+  "patterns": [
+    "Can you provide examples of creating tables in SQL?",
+    "Show me sample SQL queries for creating tables",
+    "How do you use 'CREATE TABLE' in a SQL query?",
+    "Demonstrate the usage of 'CREATE TABLE'",
+    "Examples of creating tables in SQL",
+    "Show practical examples of creating tables in SQL",
+    "How to create a table in sql",
+    "Example of create command"
+  ],
+  "responses": [
+    "CREATE TABLE employees (employee_id INT PRIMARY KEY, employee_name VARCHAR(50) NOT NULL, department_id INT REFERENCES departments(department_id));",
+    "CREATE TABLE orders (order_id INT PRIMARY KEY, order_date DATE NOT NULL, customer_id INT REFERENCES customers(customer_id), total_amount DECIMAL(10,2) CHECK (total_amount > 0));",
+    "CREATE TABLE products (product_id INT PRIMARY KEY, product_name VARCHAR(100) UNIQUE, category_id INT REFERENCES categories(category_id), unit_price DECIMAL(10,2) CHECK (unit_price > 0));",
+    "CREATE TABLE students (student_id INT PRIMARY KEY, student_name VARCHAR(50) NOT NULL, age INT CHECK (age >= 18));",
+    "CREATE TABLE books (book_id INT PRIMARY KEY, book_title VARCHAR(100) NOT NULL, author_id INT REFERENCES authors(author_id), publication_date DATE NOT NULL);",
+    "CREATE TABLE invoices (invoice_id INT PRIMARY KEY, invoice_date DATE NOT NULL, customer_id INT NOT NULL, total_amount DECIMAL(10,2) CHECK (total_amount > 0), CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id));"
+  ]
+},
+{
+  "tag": "alter_tables_example",
+  "patterns": [
+    "Can you provide examples of altering tables in SQL?",
+    "Show me sample SQL queries for altering tables",
+    "How do you use 'ALTER TABLE' in a SQL query?",
+    "Demonstrate the usage of 'ALTER TABLE'",
+    "Examples of altering tables in SQL",
+    "Show practical examples of altering tables in SQL",
+    "example of alter"
+  ],
+  "responses": [
+    "ALTER TABLE employees ADD COLUMN salary DECIMAL(10,2);",
+    "ALTER TABLE orders ADD CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id);",
+    "ALTER TABLE products MODIFY COLUMN unit_price DECIMAL(12,2);",
+    "ALTER TABLE students DROP COLUMN address;",
+    "ALTER TABLE books RENAME TO book_inventory;",
+    "ALTER TABLE invoices ADD CONSTRAINT chk_amount CHECK (total_amount >= 0);"
+  ]
+},
+{
+  "tag": "drop_tables",
+  "patterns": [
+    "What does 'DROP TABLE' do in SQL?",
+    "How to drop tables in SQL?",
+    "Explain the purpose of 'DROP TABLE' statement",
+    "Can you describe the syntax of dropping tables in SQL?",
+    "When do we use 'DROP TABLE' in SQL?",
+    "What are the steps for dropping tables in SQL?",
+    "How do you delete tables from a SQL database?",
+    "Why is 'DROP TABLE' important in SQL?",
+    "Describe the process of dropping tables in SQL",
+    "What are the components of a 'DROP TABLE' statement?"
+  ],
+  "responses": [
+    "'DROP TABLE' in SQL is a statement used to remove an existing table from a database.",
+    "To drop tables in SQL, use the 'DROP TABLE' statement followed by the table name.",
+    "'DROP TABLE' statement is used to delete an existing table from a SQL database.",
+    "The syntax for dropping tables in SQL involves specifying the table name to be dropped.",
+    "'DROP TABLE' is used when you need to permanently delete a table and all its data from a SQL database.",
+    "Steps for dropping tables in SQL: 1. Write the 'DROP TABLE' statement, 2. Specify the table name to be dropped.",
+    "To delete tables from a SQL database, you write a 'DROP TABLE' statement with the table name to be deleted.",
+    "'DROP TABLE' is important in SQL because it allows you to remove unnecessary tables and free up database space.",
+    "The process of dropping tables in SQL involves specifying the table name to be deleted using the 'DROP TABLE' statement.",
+    "Components of a 'DROP TABLE' statement include the table name to be dropped."
+  ]
+},
+{
+  "tag": "truncate_tables",
+  "patterns": [
+    "What does 'TRUNCATE TABLE' do in SQL?",
+    "How to truncate tables in SQL?",
+    "Explain the purpose of 'TRUNCATE TABLE' statement",
+    "Can you describe the syntax of truncating tables in SQL?",
+    "When do we use 'TRUNCATE TABLE' in SQL?",
+    "What are the steps for truncating tables in SQL?",
+    "How do you clear data from tables in a SQL database?",
+    "Why is 'TRUNCATE TABLE' important in SQL?",
+    "Describe the process of truncating tables in SQL",
+    "What are the components of a 'TRUNCATE TABLE' statement?"
+  ],
+  "responses": [
+    "'TRUNCATE TABLE' in SQL is a statement used to remove all rows from an existing table, while preserving the table structure.",
+    "To truncate tables in SQL, use the 'TRUNCATE TABLE' statement followed by the table name.",
+    "'TRUNCATE TABLE' statement is used to delete all rows from an existing table in a SQL database, without deleting the table itself.",
+    "The syntax for truncating tables in SQL involves specifying the table name to be truncated.",
+    "'TRUNCATE TABLE' is used when you need to remove all rows from a table but retain the table structure in a SQL database.",
+    "Steps for truncating tables in SQL: 1. Write the 'TRUNCATE TABLE' statement, 2. Specify the table name to be truncated.",
+    "To clear data from tables in a SQL database, you write a 'TRUNCATE TABLE' statement with the table name to be cleared.",
+    "'TRUNCATE TABLE' is important in SQL because it provides a faster alternative to deleting rows individually, especially for large tables.",
+    "The process of truncating tables in SQL involves specifying the table name to be cleared using the 'TRUNCATE TABLE' statement.",
+    "Components of a 'TRUNCATE TABLE' statement include the table name to be truncated."
+  ]
+},
+{
+  "tag": "drop_tables_example",
+  "patterns": [
+    "Can you provide examples of dropping tables in SQL?",
+    "Show me sample SQL queries for dropping tables",
+    "How do you use 'DROP TABLE' in a SQL query?",
+    "Demonstrate the usage of 'DROP TABLE'",
+    "Examples of dropping tables in SQL",
+    "Show practical examples of dropping tables in SQL",
+    "How to drop the table in sql"
+  ],
+  "responses": [
+    "DROP TABLE employees;",
+    "DROP TABLE orders;",
+    "DROP TABLE products;",
+    "DROP TABLE customers;",
+    "DROP TABLE categories;",
+    "DROP TABLE invoices;"
+  ]
+},
+{
+  "tag": "truncate_tables_example",
+  "patterns": [
+    "Can you provide examples of truncating tables in SQL?",
+    "Show me sample SQL queries for truncating tables",
+    "How do you use 'TRUNCATE TABLE' in a SQL query?",
+    "Demonstrate the usage of 'TRUNCATE TABLE'",
+    "Examples of truncating tables in SQL",
+    "Show practical examples of truncating tables in SQL",
+    "How to truncate the table in sql",
+    "example of truncate command"
+  ],
+  "responses": [
+    "TRUNCATE TABLE employees;",
+    "TRUNCATE TABLE orders;",
+    "TRUNCATE TABLE products;",
+    "TRUNCATE TABLE customers;",
+    "TRUNCATE TABLE categories;",
+    "TRUNCATE TABLE invoices;"
+  ]
+},
+{
+  "tag": "subqueries",
+  "patterns": [
+    "What are subqueries in SQL?",
+    "Explain the concept of subqueries",
+    "Can you define subqueries?",
+    "How do subqueries work in SQL?",
+    "When to use subqueries in SQL?",
+    "What is the purpose of subqueries?",
+    "Why are subqueries important in SQL?",
+    "What are the benefits of using subqueries?"
+  ],
+  "responses": [
+    "Subqueries in SQL are queries nested within another query, allowing you to retrieve data based on the results of an inner query.",
+    "Subqueries involve executing one query (inner query) and using its result in another query (outer query) to filter or manipulate data.",
+    "Subqueries are queries embedded within another query, typically enclosed in parentheses and used to perform a specific task.",
+    "In SQL queries, subqueries are executed first, and their results are then used by the outer query to perform further operations.",
+    "Subqueries are used in SQL when you need to perform operations based on the results of another query.",
+    "The purpose of subqueries is to simplify complex queries by breaking them down into smaller, more manageable parts.",
+    "Benefits of using subqueries include enhanced query flexibility, improved query readability, and reduced complexity."
+  ]
+},
+{
+  "tag": "window_functions",
+  "patterns": [
+    "Can you define window functions?",
+    "How do window functions work in SQL?",
+    "When to use window functions in SQL?",
+    "What is the purpose of window functions?",
+    "Why are window functions important in SQL?",
+    "What are the benefits of using window functions?"
+  ],
+  "responses": [
+    "Window functions in SQL perform calculations across a set of rows related to the current row, known as a window, without grouping rows into a single output row.",
+    "Window functions are applied to a set of rows defined by a window, allowing you to perform calculations or aggregations over specific subsets of data.",
+    "Window functions are special SQL functions that operate on a subset of rows called a window or frame.",
+    "In SQL, window functions perform calculations over a set of rows determined by the window specification, without reducing the result set.",
+    "Window functions are used in SQL when you need to perform calculations or aggregations over a specific range of rows.",
+    "The purpose of window functions is to perform advanced analytics and calculations over ordered sets of data within a window or partition.",
+    "Window functions are important in SQL because they enable advanced analytical queries, such as calculating moving averages or running totals.",
+    "Benefits of using window functions include enhanced analytical capabilities, improved query performance, and simplified SQL code."
+  ]
+},
+    {
+  "tag": "window_functions",
+  "patterns": [
+  "What are some examples of window functions in SQL?",
+  "Can you list some common window functions in SQL?",
+  "Give me examples of window functions.",
+  "Which window functions are commonly used in SQL?",
+  "Provide some instances of window functions."
+  ],
+  "responses": [
+  "ROW_NUMBER(), RANK(), DENSE_RANK(), NTILE(), LAG(), LEAD(), FIRST_VALUE(), LAST_VALUE(), SUM() OVER()"
+  ]
+},
+{
+  "tag": "subqueries_example",
+  "patterns": [
+    "Can you provide examples of subqueries in SQL?",
+    "Show me sample SQL queries with subqueries",
+    "How do you use subqueries in a SQL query?",
+    "Demonstrate the usage of subqueries",
+    "example of subqueries",
+    "how to write subqueries"
+  ],
+  "responses": [
+    "SELECT * FROM customers WHERE age > (SELECT AVG(age) FROM customers);",
+    "SELECT product_name, price FROM products WHERE category_id IN (SELECT category_id FROM categories WHERE category_name = 'Electronics');",
+    "SELECT * FROM orders WHERE customer_id IN (SELECT customer_id FROM customers WHERE country = 'USA');",
+    "SELECT * FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);"
+  ]
+},
+{
+  "tag": "window_functions_example",
+  "patterns": [
+    "Can you provide examples of window functions in SQL?",
+    "Show me sample SQL queries with window functions",
+    "How do you use window functions in a SQL query?",
+    "Demonstrate the usage of window functions"
+  ],
+  "responses": [
+    "SELECT product_id, product_name, price, SUM(price) OVER (PARTITION BY category_id ORDER BY product_id) AS total_price FROM products;",
+    "SELECT customer_id, order_id, order_date, SUM(price) OVER (PARTITION BY customer_id ORDER BY order_date) AS total_spent FROM orders;",
+    "SELECT employee_id, salary, AVG(salary) OVER (ORDER BY salary) AS average_salary FROM employees;",
+    "SELECT product_id, product_name, price, AVG(price) OVER (PARTITION BY category_id) AS avg_price FROM products;"
+  ]
+},
+{
+  "tag": "case_statements",
+  "patterns": [
+    "What are case statements in SQL?",
+    "Explain the concept of case statements",
+    "Can you define case statements?",
+    "How do case statements work in SQL?",
+    "When to use case statements in SQL?",
+    "What is the purpose of case statements?",
+    "Why are case statements important in SQL?",
+    "What are the benefits of using case statements?"
+  ],
+  "responses": [
+    "Case statements in SQL are conditional expressions that allow you to perform different actions based on specified conditions.",
+    "Case statements evaluate a list of conditions and return a result based on the first condition that is true.",
+    "Case statements provide a way to perform conditional logic within SQL queries, similar to switch or if-else statements in other programming languages.",
+    "In SQL, case statements compare an expression with a series of conditions and return a result when a condition is met.",
+    "Case statements are used in SQL when you need to perform conditional processing or transform data based on specific criteria.",
+    "The purpose of case statements is to handle conditional logic within SQL queries, making them more flexible and expressive.",
+    "Case statements are important in SQL because they allow you to customize query results based on various conditions, enhancing data manipulation capabilities.",
+    "Benefits of using case statements include improved query readability, reduced complexity, and the ability to handle conditional processing directly within SQL queries."
+  ]
+},
+{
+  "tag": "sql_functions",
+  "patterns": [
+    "Explain the concept of SQL functions",
+    "Can you define SQL functions?",
+    "How do SQL functions work?",
+    "When to use SQL functions?",
+    "What is the purpose of SQL functions?",
+    "What are the benefits of using SQL functions?"
+  ],
+  "responses": [
+    "SQL functions are built-in or user-defined routines that perform specific tasks, such as calculations, data manipulation, or string operations, on data stored in a database.",
+    "SQL functions encapsulate reusable logic to perform common operations on data, simplifying queries and reducing code duplication.",
+    "SQL functions are invoked within SQL statements to perform predefined operations on data, such as calculating values, formatting strings, or extracting information.",
+    "In SQL, functions accept input parameters, perform operations, and return results, which can be used in various parts of SQL queries.",
+    "SQL functions are used when you need to perform repetitive tasks or complex computations on data stored in a database.",
+    "The purpose of SQL functions is to encapsulate logic and provide reusable routines for performing common tasks in SQL queries.",
+    "SQL functions are important because they enhance query capabilities, promote code reusability, and simplify data manipulation tasks.",
+    "Benefits of using SQL functions include improved query performance, reduced development time, and enhanced code readability."
+  ]
+},
+    {
+"tag": "sql_functions",
+"patterns": [
+"What are the different types of SQL functions?",
+"Can you list the categories of SQL functions?",
+"Give me an overview of SQL function categories.",
+"What are the main categories of SQL functions?"
+],
+"responses": [
+"SQL functions can be categorized into several types, including aggregate functions, string functions, numeric functions, date/time functions, and conversion functions.",
+"The main categories of SQL functions include aggregate functions, string functions, numeric functions, date/time functions, and conversion functions.",
+"SQL functions are typically classified into aggregate functions, string functions, numeric functions, date/time functions, and conversion functions.",
+"Common types of SQL functions encompass aggregate functions, string manipulation functions, mathematical functions, date and time manipulation functions, and data conversion functions.",
+"The categories of SQL functions cover a broad range of operations, such as data aggregation, string manipulation, numerical calculations, date/time operations, and data type conversions.",
+"Common SQL functions include SUM(), AVG(), MAX(), MIN(), COUNT(), UPPER(), LOWER(), CONCAT(), and DATE_FORMAT()."
+]
+},
+{
+  "tag": "case_statements_example",
+  "patterns": [
+    "Can you provide examples of case statements in SQL?",
+    "Show me sample SQL queries with case statements",
+    "How do you use case statements in a SQL query?",
+    "Demonstrate the usage of case statements",
+    "SQL case statements example",
+    "how to write case statements",
+    "example of case statements"
+
+  ],
+  "responses": [
+    "SELECT product_name, price, CASE WHEN price < 50 THEN 'Low' WHEN price BETWEEN 50 AND 100 THEN 'Medium' ELSE 'High' END AS price_category FROM products;",
+    "SELECT customer_name, age, CASE WHEN age < 30 THEN 'Young' WHEN age BETWEEN 30 AND 50 THEN 'Middle-aged' ELSE 'Senior' END AS age_category FROM customers;",
+    "SELECT order_id, quantity, CASE WHEN quantity > 10 THEN 'High' ELSE 'Low' END AS quantity_category FROM orderdetails;",
+    "SELECT product_id, product_name, CASE WHEN product_id IN (1, 2, 3) THEN 'Popular' ELSE 'Not Popular' END AS popularity FROM products;"
+  ]
+},
+{
+  "tag": "sql_functions_example",
+  "patterns": [
+    "Can you provide examples of SQL functions in SQL?",
+    "Show me sample SQL queries using SQL functions",
+    "How do you use SQL functions in a SQL query?",
+    "Demonstrate the usage of SQL functions",
+    "give me examples on sql functions",
+    "sql functions examples"
+  ],
+  "responses": [
+    "SELECT customer_name, UPPER(customer_name) AS uppercase_name FROM customers;",
+    "SELECT product_name, LOWER(product_name) AS lowercase_name FROM products;",
+    "SELECT order_id, order_date, DATE_FORMAT(order_date, '%Y-%m-%d') AS formatted_date FROM orders;",
+    "SELECT customer_id, COUNT(*) AS order_count FROM orders GROUP BY customer_id;"
+  ]
+},
+{
+  "tag": "sql_query",
+  "patterns": [
+    "Write a simple SQL query",
+    "Can you provide a basic SQL query?",
+    "Give me an example of a straightforward SQL query",
+    "Show me a simple SQL statement",
+    "give an sql query"
+  ],
+  "responses": [
+    "SELECT * FROM customers;",
+    "SELECT product_name, price FROM products WHERE price < 100;",
+    "SELECT order_id, order_date FROM orders WHERE order_date >= '2023-01-01';",
+    "SELECT customer_name, age FROM customers WHERE country = 'USA' AND age > 30;"
+  ]
+},
+    {
+  "tag": "sql_examples",
+  "patterns": [
+    "What are some examples of SQL queries?",
+    "Can you provide sample SQL queries?",
+    "How do you write SQL queries?",
+    "Give me examples of SQL statements",
+    "Show me examples of SQL queries",
+    "Provide sample SQL queries",
+    "Demonstrate SQL query examples",
+    "How do you use SQL queries in practice?"
+  ],
+  "responses": [
+    "SELECT * FROM customers WHERE age > 30;",
+    "SELECT product_name, price FROM products WHERE category_id = 1;",
+    "SELECT customer_id, customer_name, country FROM customers WHERE city = 'New York';",
+    "SELECT order_id, order_date, price FROM orders WHERE price > 1000;",
+    "SELECT * FROM products WHERE price < 50;",
+    "SELECT customer_name, age FROM customers WHERE age BETWEEN 20 AND 40;",
+    "SELECT product_name, price FROM products WHERE category_id IN (1, 2, 3);",
+    "SELECT order_id, SUM(quantity*unit_price) AS total_price FROM orderdetails GROUP BY order_id;"
+  ]
+},
+    {
+  "tag": "basic_sql_concepts",
+  "patterns": [
+    "What are the basic concepts to learn in SQL?",
+    "Can you list some fundamental SQL concepts?",
+    "What are the essential topics in SQL?",
+    "Which SQL concepts should I start with?",
+    "basic sql concepts"
+  ],
+  "responses": [
+    "Some fundamental SQL concepts to learn include data types, SELECT statements, WHERE clause, ORDER BY clause, GROUP BY clause, and basic SQL functions.",
+    "You should start by understanding data types, table creation, SELECT queries, WHERE conditions, and simple aggregation functions like COUNT, SUM, and AVG.",
+    "Basic SQL concepts to learn include data manipulation (SELECT, INSERT, UPDATE, DELETE), data querying (WHERE, ORDER BY, GROUP BY), and table creation and modification.",
+    "Start with learning about SQL data types, SELECT statements, WHERE clause for filtering data, and simple aggregation functions like COUNT and SUM."
+  ]
+},
+{
+  "tag": "intermediate_sql_concepts",
+  "patterns": [
+    "What are some intermediate SQL concepts?",
+    "Can you list some SQL topics beyond the basics?",
+    "Which SQL concepts are considered intermediate level?",
+    "What should I learn after mastering basic SQL?",
+    "medium sql concepts"
+  ],
+  "responses": [
+    "Intermediate SQL concepts include joins (INNER JOIN, LEFT JOIN, RIGHT JOIN), subqueries, window functions, CASE statements, and complex WHERE conditions.",
+    "Once you've mastered basic SQL, you can move on to intermediate concepts such as joins, subqueries, window functions, and advanced filtering and aggregation techniques.",
+    "SQL topics beyond the basics include advanced join operations, subquery usage, window functions, and handling complex data manipulations.",
+    "After mastering basic SQL, you should progress to intermediate concepts like joins, subqueries, and window functions to enhance your data querying and manipulation skills."
+  ]
+},
+{
+  "tag": "advanced_sql_concepts",
+  "patterns": [
+    "What are some advanced SQL concepts?",
+    "Can you list advanced topics in SQL?",
+    "Which SQL concepts are considered advanced level?",
+    "What should I learn after mastering intermediate SQL?"
+  ],
+  "responses": [
+    "Advanced SQL concepts include recursive queries, common table expressions (CTEs), dynamic SQL, user-defined functions (UDFs), and advanced indexing techniques.",
+    "Once you've mastered intermediate SQL, you can delve into advanced topics such as recursive queries, CTEs, dynamic SQL generation, and advanced optimization strategies.",
+    "SQL concepts at an advanced level encompass topics like recursive queries, window functions, materialized views, and complex stored procedures.",
+    "After mastering intermediate SQL, you should explore advanced concepts like recursive queries, CTEs, and advanced optimization techniques to tackle complex data challenges."
+  ]
+},
+    {
+  "tag": "sql_interview_questions",
+  "patterns": [
+    "What are some common SQL interview questions?",
+    "Can you provide examples of SQL interview questions?",
+    "Which SQL questions are frequently asked in interviews?",
+    "What kind of SQL problems should I prepare for in interviews?"
+  ],
+  "responses": [
+    "Common SQL interview questions include finding the second highest salary, removing duplicates from a table, calculating the total number of rows in a table, and finding the nth highest salary.",
+    "In SQL interviews, you may encounter questions such as finding the top N records, identifying duplicate records, performing joins between tables, and optimizing query performance.",
+    "Frequently asked SQL interview questions cover topics like aggregate functions, subqueries, joins, indexing strategies, and database normalization.",
+    "For SQL interviews, it's essential to prepare for tasks like calculating running totals, implementing pivot/unpivot operations, identifying common table expressions, and optimizing query execution plans."
+  ]
+},
+{
+  "tag": "second_highest_salary",
+  "patterns": [
+    "How to find the second highest salary in SQL?",
+    "What is the SQL query to retrieve the second highest salary?",
+    "Can you show me an example of finding the second highest salary in SQL?"
+  ],
+  "responses": [
+    "To find the second highest salary in SQL, you can use the following query: SELECT MAX(salary) FROM employees WHERE salary NOT IN (SELECT MAX(salary) FROM employees);",
+    "The SQL query to retrieve the second highest salary is: SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees);",
+    "Here's an example of finding the second highest salary in SQL: SELECT TOP 1 salary FROM (SELECT TOP 2 salary FROM employees ORDER BY salary DESC) AS sub ORDER BY salary ASC;"
+  ]
+},
+    {
+  "tag": "user_satisfaction",
+  "patterns": [
+    "Great!",
+    "Okay!",
+    "Good!",
+    "Thank you!",
+    "Awesome!",
+    "Perfect!",
+    "Helpful!",
+    "Clear!",
+    "Informative!",
+    "Satisfactory!"
+  ],
+  "responses": [
+    "I'm glad you found it helpful!",
+    "Thanks for the feedback!",
+    "Glad I could assist you!",
+    "You're welcome!",
+    "Happy to help!",
+    "If you have any more questions, feel free to ask!",
+    "Let me know if there's anything else I can assist you with!",
+    "If you need further assistance, just let me know!",
+    "Don't hesitate to reach out if you have more questions!",
+    "If there's anything else you'd like to know, feel free to ask!"
+  ]
+},
+{
+  "tag": "exit_messages",
+  "patterns": [
+    "bye",
+    "okay",
+    "see you soon",
+    "exit",
+    "goodbye",
+    "take care",
+    "farewell",
+    "see you later"
+  ],
+  "responses": [
+    "Goodbye! If you have any more questions, feel free to ask.",
+    "Okay, see you next time!",
+    "Take care! Feel free to return if you need assistance in the future.",
+    "Sure, goodbye! Have a great day.",
+    "Farewell! Don't hesitate to return if you need help.",
+    "Alright, goodbye!",
+    "Okay, bye! Have a great day."
+  ]
+}
+  ]
+}
+

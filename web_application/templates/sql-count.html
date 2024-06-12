@@ -1,0 +1,75 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">The SQL COUNT() Function</h2>
+        <p class="my-4">The COUNT() function returns the number of rows that match a specified criterion.</p>
+        <p class="my-4">Aggregate functions are often used with the GROUP BY clause of the SELECT statement. The GROUP BY clause splits the result-set into groups of values and the aggregate function can be used to return a single value for each group.</p>
+        <p class="my-4">Additional points about the COUNT() function in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>COUNT() returns the number of rows in a set</li>
+            <li>You can specify a column name instead of the asterisk symbol (*).</li>
+            <li> If you specify a column name instead of (*), NULL values will not be counted.</li>
+            <li>You can add a WHERE clause to specify conditions.</li>
+            <li>You can ignore duplicates by using the DISTINCT keyword in the COUNT() function.</li>
+            <li>You can give the counted column a name by using the AS keyword.</li>
+            <li>Use COUNT() with GROUP BY to count records for each group.</li>
+        </ul>
+
+        <p class="my-4">The <span class="text-red-500">COUNT() </span> returns the number of rows that match a specified criterion.</p>
+
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p> The basic syntax of the SQL COUNT Function is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+                SELECT COUNT(column_name)<br>
+                FROM table_name<br>
+                WHERE condition;
+       </pre>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Counting Total Rows</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Find the total number of rows in the Products table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT COUNT(*)<br>
+                FROM Products;
+            </code>
+            <a href="/query_editor?query=SELECT COUNT(*)%0AFROM Products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class=" font-semibold text-gray-600 mb-2">Example 2: Specifying Column and Adding WHERE Clause</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Find the number of products where the ProductName is not null and the Price is higher than 20:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT COUNT(Product_ID)<br>
+                FROM Products<br>
+                WHERE Product_Name IS NOT NULL AND Price >20;
+            </code>
+            <a href="/query_editor?query=SELECT COUNT(Product_ID)%0AFROM Products%0AWHERE Product_Name IS NOT NULL AND Price > 20;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 3: Ignoring Duplicates</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">How many different prices are there in the Products table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT COUNT(DISTINCT Price)<br>
+                FROM Products;
+            </code>
+            <a href="/query_editor?query=SELECT COUNT(DISTINCT Price)%0AFROM Products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 4: Use an Alias and COUNT() with GROUP BY</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Return the number of records for each category in the Products table:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT COUNT(*) AS Number_of_records,<br>
+                       Category_ID<br>
+                FROM Products<br>
+                GROUP BY Category_ID;
+            </code>
+            <a href="/query_editor?query=SELECT COUNT(*) AS Number_of_records,%0ACategory_ID%0AFROM Products%0AGROUP BY Category_ID;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-max-min', '/sql-max-min')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-sum', '/sql-sum')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

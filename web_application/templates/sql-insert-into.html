@@ -1,0 +1,60 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">SQL INSERT INTO</h2>
+        <p class="my-4">The SQL INSERT INTO statement is used to add new records (rows) to a table in a database.</p>
+        <p class="my-4">It allows you to specify the table name and the values to be inserted into each column of the table.</p>
+        <p class="my-4">Additional points about SQL INSERT INTO:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The INSERT INTO statement is used to add new rows to a table.</li>
+            <li>You can specify the table name and the columns for which you want to insert data.</li>
+            <li>The VALUES keyword is used to specify the values to be inserted into the columns.</li>
+            <li>You can insert data into one or multiple rows in a single INSERT INTO statement.</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <p class="my-4">The basic syntax of the SQL INSERT INTO statement is as follows:</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            INSERT INTO table_name (column1, column2, column3, ...)
+            VALUES (value1, value2, value3, ...);
+        </pre>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Inserting a Single Record</h5>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Insert a single record into the 'customers' table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                INSERT INTO customers (customer_name, age, country, city)
+                <br>VALUES ('John Doe', 35, 'USA', 'New York');
+            </code>
+            <div class="my-4"></div>
+            <a href="/query_editor?query=INSERT INTO customers (customer_name, age, country, city)%0AVALUES ('John Doe', 35, 'USA', 'New York');" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example inserts a single record into the 'customers' table with the specified values for the columns.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Inserting Multiple Records</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Insert all values into the 'customers' table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                INSERT INTO customers
+                <br>VALUES (101, 'John Doe', 35, 'USA', 'New York'),
+                <br>       (102, 'Jane Smith', 28, 'Canada', 'Toronto'),
+                <br>       (103, 'Michael Johnson', 42, 'UK', 'London');
+            </code>
+            <div class="my-4"></div>
+            <a href="/query_editor?query=INSERT INTO orders (customer_id, order_date, price)%0AVALUES (101, '2022-03-15', 250.00),%0A       (102, '2022-03-16', 180.50),%0A       (103, '2022-03-17', 300.75);" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example inserts multiple records into the 'orders' table with the specified values for the columns.</p>
+
+        <h2 class="text-3xl font-semibold">Benefits of SQL INSERT INTO</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Efficiency:</span> INSERT INTO allows for efficient addition of new data records into database tables.</li>
+            <li><span class="text-blue-500">Flexibility:</span> It provides flexibility in inserting data into specific columns or multiple rows in a single statement.</li>
+            <li><span class="text-blue-500">Accuracy:</span> SQL INSERT INTO ensures accurate insertion of data into the designated columns, minimizing errors.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-having', '/sql-having')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-update', '/sql-update')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

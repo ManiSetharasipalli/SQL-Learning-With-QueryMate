@@ -1,0 +1,60 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">Create Table in SQL</h2>
+        <p class="my-4">In SQL, the CREATE TABLE statement is used to create a new table in a database.</p>
+        <p class="my-4">It specifies the table name and defines the columns and their data types.</p>
+        <p class="my-4">Additional points about creating tables in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The CREATE TABLE statement is used to create a new table in a database.</li>
+            <li>It specifies the table name, column names, and data types for each column.</li>
+            <li>Constraints such as PRIMARY KEY, FOREIGN KEY, NOT NULL, etc., can be added to the columns.</li>
+            <li>The table can also have additional properties like indexes, triggers, and permissions.</li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <pre class="bg-gray-200 p-4 rounded-md my-4">
+            CREATE TABLE table_name (
+                column1 datatype constraint,
+                column2 datatype constraint,
+                ...
+            );
+        </pre>
+        <h2 class="text-xl font-semibold mb-4">Example</h2>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Example of creating a "Students" table:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                CREATE TABLE Students
+                <br>(student_id INT PRIMARY KEY,
+                <br>student_name VARCHAR(50) NOT NULL,
+                <br>age INT,
+                <br>gender VARCHAR(10),
+                <br>city VARCHAR(50)
+                );
+            </code>
+            <a href="/query_editor?query=CREATE TABLE Students (%0A    student_id INT PRIMARY KEY,%0A    student_name VARCHAR(50) NOT NULL,%0A    age INT,%0A    gender VARCHAR(10),%0A    city VARCHAR(50)%0A);" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example creates a "Students" table with columns for student ID, name, age, gender, and city.</p>
+
+        <h2 class="text-3xl font-semibold">Benefits of CREATE TABLE</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Structured data storage:</span> CREATE TABLE enables the creation of structured tables for storing data.</li>
+            <li><span class="text-blue-500">Data integrity:</span> It allows defining constraints to maintain data integrity, such as primary keys and foreign keys.</li>
+            <li><span class="text-blue-500">Flexibility:</span> Tables can be customized with various data types, constraints, and additional properties to suit specific requirements.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold">Review of SQL Data Types</h2>
+        <p class="my-4">SQL data types define the type of data that can be stored in a column of a database table. Some common SQL data types include:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">INT:</span> Used for storing integer values.</li>
+            <li><span class="text-blue-500">VARCHAR(n):</span> Used for storing variable-length character strings with a maximum length of 'n' characters.</li>
+            <li><span class="text-blue-500">DATE:</span> Used for storing date values in the format 'YYYY-MM-DD'.</li>
+            <li><span class="text-blue-500">FLOAT:</span> Used for storing floating-point numbers.</li>
+            <li><span class="text-blue-500">BOOLEAN:</span> Used for storing boolean values ('TRUE' or 'FALSE').</li>
+        </ul>
+        <p class="my-4">For more details on SQL data types, you can review the <a href="/sql-data-types" class="text-blue-500 underline">SQL Data Types page</a>.</p>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-constraints', '/sql-constraints')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-alter-table', '/sql-alter-table')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

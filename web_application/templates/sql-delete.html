@@ -1,0 +1,54 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL DELETE Operation</h2>
+        <p class="my-4">The DELETE operation is used to remove existing records from a table in a database.</p>
+        <p class="my-4">It allows you to delete one or more rows based on specified conditions.</p>
+        <p class="my-4">Additional points about the DELETE operation in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The DELETE operation is used to remove one or more rows from a table.</li>
+            <li>You can use conditions in the WHERE clause to specify which rows to delete.</li>
+            <li>Always use a WHERE clause with DELETE to avoid unintentional deletion of all rows.</li>
+        </ul>
+
+         <div class="bg-red-200 rounded-md p-4 mb-4">
+            <p class="text-red-700 font-semibold">Important:</p>
+            <p class="text-red-700">Once data is deleted, it cannot be recovered. Use caution when executing DELETE statements.</p>
+        </div>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 my-4">Example 1: Delete Customer Record</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Delete a specific customer record:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                DELETE FROM customers
+                <br>WHERE customer_id = 1001;
+            </code>
+            <a href="/query_editor?query=DELETE FROM customers%0AWHERE customer_id = 1001;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example deletes the customer record with 'customer_id' 1 from the 'customers' table.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Delete Expired Order</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Delete the oldest expired order:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                DELETE FROM orders
+                <br>ORDER BY order_date ASC
+                <br>LIMIT 1;
+            </code>
+            <a href="/query_editor?query=DELETE FROM orders%0AORDER BY order_date ASC%0ALIMIT 1;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example deletes the oldest expired order from the 'orders' table by ordering them by date in ascending order and limiting the deletion to only one row.</p>
+
+        <h2 class="text-3xl font-semibold">Best Practices for DELETE</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Always use a WHERE clause:</span> To avoid unintentional deletion of all rows, always use a WHERE clause to specify which rows to delete.</li>
+            <li><span class="text-blue-500">Test deletions before running:</span> Test your DELETE statements in a development environment before applying them to a production database.</li>
+            <li><span class="text-blue-500">Back up data:</span> Before performing mass deletions, ensure you have a backup of the data to avoid accidental loss of important information.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-update', '/sql-update')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-aliases', '/sql-aliases')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

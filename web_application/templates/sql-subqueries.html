@@ -1,0 +1,53 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">Subqueries in SQL</h2>
+        <p class="my-4">In SQL, a subquery is a query nested within another query. It allows you to perform operations using the result of another query.</p>
+        <p class="my-4">Subqueries can be used in various parts of a SQL statement, such as SELECT, FROM, WHERE, HAVING, and EXISTS clauses.</p>
+        <p class="my-4">Additional points about subqueries in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>A subquery is a query nested within another query.</li>
+            <li>It can be used to retrieve data from tables based on conditions specified in the outer query.</li>
+            <li>Subqueries can return single or multiple values and can be used with comparison operators such as IN, NOT IN, EXISTS, etc.</li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <pre class="bg-gray-200 p-4 rounded-md my-4">
+            SELECT column_name(s)
+            FROM table_name
+            WHERE column_name OPERATOR (SELECT column_name FROM table_name WHERE condition);
+        </pre>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">1. Subquery in WHERE Clause</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve customers who have placed orders:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT customer_name
+                <br>FROM customers
+                <br>WHERE customer_id IN (SELECT DISTINCT customer_id FROM orders);
+            </code>
+            <a href="/query_editor?query=SELECT customer_name%0AFROM customers%0AWHERE customer_id IN (SELECT DISTINCT customer_id FROM orders);" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">2. Subquery in SELECT Clause</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Get the total number of orders for each customer:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT customer_name,
+                <br>(SELECT COUNT(*) FROM orders WHERE orders.customer_id = customers.customer_id) AS num_orders
+                <br>FROM customers;
+            </code>
+            <a href="/query_editor?query=SELECT customer_name,%0A(SELECT COUNT(*) FROM orders WHERE orders.customer_id = customers.customer_id) AS num_orders%0AFROM customers;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h2 class="text-3xl font-semibold">Benefits of Subqueries</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Modularity:</span> Subqueries allow for breaking down complex queries into smaller, more manageable parts.</li>
+            <li><span class="text-blue-500">Flexibility:</span> They offer flexibility by enabling dynamic filtering and conditional logic based on the result of inner queries.</li>
+            <li><span class="text-blue-500">Expressiveness:</span> Subqueries enhance the expressiveness of SQL queries, allowing for more sophisticated data retrieval and manipulation.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-truncate', '/sql-truncate')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-window-functions', '/sql-window-functions')" class="px-6 py-3 bg-blue-500 text-white ml-auto  rounded-full">Next</button>
+{% endblock button %}

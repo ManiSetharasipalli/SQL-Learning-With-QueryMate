@@ -1,0 +1,110 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL Data types</h2>
+        <div class="my-4">
+    <p>An SQL data type refers to the type of data that can be stored in a column of a database table.</p>
+    <p>By defining data types, users can specify the kind of information (numeric, string, binary, etc.) that can be stored in a column.</p>
+    <p>Examples of data types include: integer data, character data, monetary data, date and time data, binary strings, and so on.</p>
+    <h4 class="text-lg font-semibold mb-2 my-4">Defining Table Columns</h4>
+    <p>When creating a database table, two attributes are required to define a table column:</p>
+    <ul class="list-disc ml-8 my-4">
+        <li><b>Column Name:</b> A unique identifier for the column within the table.</li>
+        <li><b>Data Type:</b> Specifies the type of data the column can store (e.g., integer, string, date).</li>
+    </ul>
+    <br>
+        </div>
+        <h3 class="text-xl font-semibold my-4">Defining a Data Type</h3>
+<p class="my-4">SQL Data types are defined during the creation of a table in a database. While creating a table, it is required to specify its respective data type and size along with the name of the column.</p>
+        <p>Following is the syntax to specify a data type in MySQL −</p>
+       <pre class="bg-gray-50 p-5 my-4">
+           CREATE TABLE table_name(column1 datatype, column2 datatype....)
+       </pre>
+        <p>Let us look at an example query below to understand better.</p>
+        <pre class="bg-gray-50 p-5 my-4">
+        CREATE TABLE Customers (Name VARCHAR (25), Age INT);
+        </pre>
+        <h3 class="text-xl font-semibold my-4">Types of SQL Data Types</h3>
+        <p>There are three main types of SQL data types available in any RDBMS. They are listed below −</p>
+
+        <ul class="bg-green-100 p-10">
+            <li>String</li>
+            <li>Numeric</li>
+            <li>Date and Time</li>
+       </ul>
+       <h4 class="text-lg font-semibold my-4">Common SQL Data Types</h4>
+<table class="table-auto w-full border border-gray-200">
+  <thead class="bg-gray-100 text-gray-700">
+    <tr>
+      <th class="px-4 py-2 text-left">Data Type</th>
+      <th class="px-4 py-2 text-left">Use</th>
+      <th class="px-4 py-2 text-left">Example</th>
+      <th class="px-4 py-2 text-left">RDBMS Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">INT</td>
+      <td class="px-4 py-2 border-b border-gray-200">Integer numbers</td>
+      <td class="px-4 py-2 border-b border-gray-200">Employee_ID INT</td>
+      <td class="px-4 py-2 border-b border-gray-200">All</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">VARCHAR</td>
+      <td class="px-4 py-2 border-b border-gray-200">Variable-length character strings</td>
+      <td class="px-4 py-2 border-b border-gray-200">Customer_name VARCHAR(50)</td>
+      <td class="px-4 py-2 border-b border-gray-200">All</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">DATE</td>
+      <td class="px-4 py-2 border-b border-gray-200">Date</td>
+      <td class="px-4 py-2 border-b border-gray-200">Order_date DATE</td>
+      <td class="px-4 py-2 border-b border-gray-200">All</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">FLOAT</td>
+      <td class="px-4 py-2 border-b border-gray-200">Floating-point numbers</td>
+      <td class="px-4 py-2 border-b border-gray-200">Product_price FLOAT</td>
+      <td class="px-4 py-2 border-b border-gray-200">All</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">BOOLEAN</td>
+      <td class="px-4 py-2 border-b border-gray-200">True/False values</td>
+      <td class="px-4 py-2 border-b border-gray-200">Is_active BOOLEAN</td>
+      <td class="px-4 py-2 border-b border-gray-200">MySQL, SQL Server, PostgreSQL, Oracle</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">BLOB</td>
+      <td class="px-4 py-2 border-b border-gray-200">Binary Large Object (large binary data)</td>
+      <td class="px-4 py-2 border-b border-gray-200">Product_image BLOB</td>
+      <td class="px-4 py-2 border-b border-gray-200">MySQL, PostgreSQL</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">CLOB</td>
+      <td class="px-4 py-2 border-b border-gray-200">Character Large Object (large text data)</td>
+      <td class="px-4 py-2 border-b border-gray-200">Product_description CLOB</td>
+      <td class="px-4 py-2 border-b border-gray-200">Oracle, PostgreSQL</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">DECIMAL</td>
+      <td class="px-4 py-2 border-b border-gray-200">Precise decimal numbers</td>
+      <td class="px-4 py-2 border-b border-gray-200">Product_weight DECIMAL(5,2)</td>
+        <td class="px-4 py-2 border-b border-gray-200">MySQL, SQL Server, PostgreSQL, Oracle</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b border-gray-200">CHAR</td>
+      <td class="px-4 py-2 border-b border-gray-200">Fixed-length character string (padded with spaces)</td>
+      <td class="px-4 py-2 border-b border-gray-200">security_number CHAR(11)</td>
+        <td class="px-4 py-2 border-b border-gray-200">MySQL, SQL Server, PostgreSQL, Oracle</td>
+
+    </tr>
+    </tbody>
+</table>
+        <div class="bg-yellow-100 rounded-lg p-10 my-4">
+    <p><span class="text-red-500" >Note: </span> Data types might have different names and details across different database systems. Always refer to the specific database <b>documentation</b> for accurate information.</p>
+</div>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-syntax', '/sql-syntax')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-select', '/sql-select')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}
+

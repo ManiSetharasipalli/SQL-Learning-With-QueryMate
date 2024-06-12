@@ -1,0 +1,52 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">Window Functions in SQL</h2>
+        <p class="my-4">Window functions perform a calculation across a set of table rows that are related to the current row.</p>
+        <p class="my-4">They are used in conjunction with the OVER() clause to define the window or set of rows that the function operates on.</p>
+        <p class="my-4">Here are simple examples of common window functions:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><strong>ROW_NUMBER():</strong> Assigns a unique sequential number to each row within a partition of a result set.</li>
+            <li><strong>RANK():</strong> Assigns a rank to each row within a partition of a result set, with gaps in the ranking sequence in case of ties.</li>
+            <li><strong>DENSE_RANK():</strong> Assigns a rank to each row within a partition of a result set, without leaving gaps in the ranking sequence in case of ties.</li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: ROW_NUMBER()</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Assign a unique sequential number to each product based on their price:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT product_id, product_name, price,<br>
+                       ROW_NUMBER() OVER (ORDER BY price) AS row_num<br>
+                FROM products;
+            </code>
+            <a href="/query_editor?query=SELECT product_id, product_name, price,%0A       ROW_NUMBER() OVER (ORDER BY price) AS row_num%0AFROM products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+       <h5 class="font-semibold text-gray-600 mb-2">Example 2: RANK()</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Assign a rank to each product based on their price:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT product_id, product_name, price,<br>
+                       RANK() OVER (ORDER BY price) AS 'rank'<br>
+                FROM products;
+            </code>
+            <a href="/query_editor?query=SELECT product_id, product_name, price%2C%0A%20%20%20%20%20%20%20%20%20%20RANK()%20OVER%20(ORDER%20BY%20price)%20AS%20'rank'%0AFROM%20products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 3: DENSE_RANK()</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Assign a dense rank to each product based on their price:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT product_id, product_name, price,<br>
+                       DENSE_RANK() OVER (ORDER BY price) AS 'dense_rank'<br>
+                FROM products;
+            </code>
+            <a href="/query_editor?query=SELECT product_id, product_name, price%2C%0A%20%20%20%20%20%20%20%20%20%20DENSE_RANK()%20OVER%20(ORDER%20BY%20price)%20AS%20'dense_rank'%0AFROM%20products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-subqueries', '/sql-subqueries')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-case-statements', '/sql-case-statements')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

@@ -1,0 +1,37 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">DROP TABLE in SQL</h2>
+        <p class="my-4">In SQL, the DROP TABLE statement is used to remove an existing table from the database.</p>
+        <p class="my-4">It permanently deletes the table structure along with all its data and indexes.</p>
+        <p class="my-4">Additional points about dropping tables in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The DROP TABLE statement is used to remove an existing table from the database.</li>
+            <li>It deletes the table structure along with all its data and indexes.</li>
+            <li>Be cautious when using DROP TABLE as it's irreversible and can lead to loss of important data.</li>
+        </ul>
+        <h2 class="text-xl font-semibold mb-4">Syntax</h2>
+        <pre class="bg-gray-200 p-4 rounded-md my-4">
+            DROP TABLE table_name;
+        </pre>
+        <h2 class="text-xl font-semibold mb-4">Example</h2>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Drop the "Students" table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                DROP TABLE Students;
+            </code>
+            <a href="/query_editor?query=DROP TABLE Students;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+
+        <h2 class="text-3xl font-semibold">Instructions</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><strong>Beware:</strong> The DROP TABLE statement permanently deletes the table and all its data from the database.</li>
+            <li>Ensure that you have backed up any important data before executing the DROP TABLE statement.</li>
+            <li>Double-check the table name before dropping to prevent accidental deletion of the wrong table.</li>
+            <li>Use DROP TABLE with caution, especially in production environments, to avoid data loss.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-alter-table', '/sql-alter-table')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-truncate', '/sql-truncate')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

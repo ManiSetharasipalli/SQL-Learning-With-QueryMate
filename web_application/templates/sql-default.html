@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pageStyles.css')}}">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-8 text-with-gap">
+        {% block content %}
+        <div class="container mx-auto mt-8">
+            <h2 class="text-3xl font-semibold">SQL Tutorial</h2>
+        </div>
+      <div class="bg-green-100 rounded-lg p-10 mb-10 mt-4">
+            <p>SQL, or Structured Query Language, is a specialized programming language designed for managing and manipulating relational databases.<br>
+               </p>
+      <div class="mb-4">
+            <p>Our SQL tutorial helps you learn SQL (Structured Query Language) in simple and easy steps so that you can start your database programming quickly.
+                It covers most of the important concepts related to SQL for a basic to advanced understanding of SQL and to get a feel of how SQL works.</p>
+          <div class="mb-4"></div>
+          <p>SQL is not a database management system, but it is a query language which is used to store and retrieve the data from a database or in simple words SQL is a language that communicates with databases.</p>
+        </div>
+      </div>
+        <h2 class="text-xl font-semibold my-4">QueryMate</h2>
+        <p  class="mt-2 paragraph-gap my-4">QueryMate, a chatbot designed for SQL learners and it is a helpful tool for those learning SQL. It's great for answering questions and showing examples to help you understand SQL better.
+         While it excels in SQL-related queries and explanations, it may struggle with unrelated topics or advanced SQL inquiries and very advanced questions.</p>
+        <h2 class="text-xl font-semibold my-4">Query Editor</h2>
+        <p  class="mt-2 my-4">In our SQL learning web application, we offer a query editor for executing SQL queries along with example tables. You can practice SQL queries and learn with our provided examples on the page, as well as interact with QueryMate, our chatbot specialized in assisting with SQL-related questions.</p>
+<div class="mt-8 p-4 bg-white rounded-md shadow-md my-4">
+            <h2 class="text-xl font-semibold mb-4">Example Query</h2>
+            <p class="text-gray-600  mb-2">SQL Statement:</p>
+            <code class="bg-gray-200 p-4 block rounded-lg mb-2">SELECT * FROM Customers;</code>
+    <br>
+<a href="/query_editor?query=SELECT * FROM Customers;" target="_blank" class="px-4 py-3 bg-blue-500 text-white rounded-lg my-4">Query editor »</a>
+</div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+{% endblock content%}
+        <h2 class="text-xl font-semibold my-4 ">SQL Quiz</h2>
+        <div id="quiz-container">
+            <form id="Quiz" action="/Quiz" method="POST" class="mt-8 p-10 bg-white rounded-md shadow-md">
+                <h1 class="text-lg font-semibold mb-4">{{ question.question }}</h1>
+                <input type="hidden"  name="question" value="{{ question.question }}">
+                {% for option in answers %}
+                    <label class="flex items-center m-1">
+                        <input type="radio" name="answer" value="{{option.answer}} " class="mr-2">
+                        <span class="text-gray-800">{{ option.answer }}</span>
+                    </label>
+                {% endfor %}
+                <input type="submit" value="Submit"
+                class="w-full bg-blue-500 text-white font-semibold px-4 py-2 mt-4 rounded-lg cursor-pointer transition-colors duration-300 hover:bg-blue-600">
+            </form>
+        </div>
+        <h2 class="text-xl font-semibold my-4 ">SQL Exercise</h2>
+        <div id="exercise-container">
+            <form id="Exercise" action="/exercise" method="POST" class="mt-8 p-10 bg-white rounded-md shadow-md">
+                <h1 id="exerciseQuestion" class="text-lg font-semibold mb-4">{{ exercise.question }}</h1>
+                <input type="hidden" id="exerciseQuestionInput" name="question" value="{{ exercise.question }}">
+                <input type="text" name="answer" class="border border-gray-300 p-2 w-full box-border rounded-md focus:outline-none focus:border-green-500" required>
+                <input type="submit" value="Submit" class="w-full bg-blue-500 text-white font-semibold px-4 py-2 mt-4 rounded-lg cursor-pointer transition-colors duration-300 hover:bg-blue-600">
+
+                <button type="button" id="hintButton" class="w-20 bg-yellow-500 text-white font-semibold px-4 py-2 mt-4 rounded-lg cursor-pointer transition-colors duration-300 hover:bg-yellow-600">
+                    Hint
+                </button>
+                <button type="button" id="ansButton" class="w-20 bg-green-500 text-white font-semibold px-4 py-2 mt-4 rounded-lg cursor-pointer transition-colors duration-300 hover:bg-green-600">
+                    Answer
+                </button>
+                <p id="hintText" class="m-4 text-yellow-700 font-serif text-lg hidden">{{ exercise.hint }}</p>
+                <p id="ansText" class="m-4 text-green-700 font-serif text-lg hidden">{{ exercise.answer }}</p>
+            </form>
+        </div>
+        </div>
+    <div class="px-5 py-10 flex items-center justify-end">
+        {% block button %}
+        <button onclick="navigateTo('/sql-intro', '/sql-intro')" class="px-6 py-3 bg-blue-500 text-white rounded-full next-btn">Next</button>
+        {% endblock button %}
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='pages.js') }}"></script>
+</body>
+</html>

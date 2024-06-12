@@ -1,0 +1,26 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL Constraints</h2>
+        <p class="my-4">SQL constraints are rules defined on a column or a table that enforce data integrity and accuracy.</p>
+        <p class="my-4">They ensure that data entered into a table adheres to certain criteria, preventing invalid or inconsistent data from being stored.</p>
+        <p class="my-4">Commonly used SQL constraints include:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><strong>NOT NULL:</strong> Ensures that a column cannot contain NULL values.</li>
+            <li><strong>UNIQUE:</strong> Ensures that all values in a column are unique, i.e., no duplicate values are allowed.</li>
+            <li><strong>PRIMARY KEY:</strong> A combination of NOT NULL and UNIQUE constraints, uniquely identifies each row in a table.</li>
+            <li><strong>FOREIGN KEY:</strong> Establishes a relationship between two tables, ensuring referential integrity.</li>
+            <li><strong>CHECK:</strong> Defines a condition that must be satisfied for values entered into a column.</li>
+            <li><strong>DEFAULT:</strong> Specifies a default value for a column if no value is provided during insertion.</li>
+        </ul>
+        <h2 class="text-3xl font-semibold">Benefits of SQL Constraints</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Data Integrity:</span> Constraints ensure that only valid and consistent data is stored in the database.</li>
+            <li><span class="text-blue-500">Data Accuracy:</span> They help maintain accurate data by enforcing rules at the database level.</li>
+            <li><span class="text-blue-500">Error Prevention:</span> Constraints prevent incorrect data from being inserted, updated, or deleted.</li>
+            <li><span class="text-blue-500">Improved Performance:</span> By ensuring data integrity, constraints contribute to improved query performance and reliability.</li>
+        </ul>
+{% endblock content %}
+        {% block button %}
+        <button onclick="navigateTo('/sql-union', '/sql-union')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-create-table', '/sql-create-table')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+        {% endblock button %}

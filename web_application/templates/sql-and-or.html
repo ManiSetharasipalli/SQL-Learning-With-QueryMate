@@ -1,0 +1,70 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold">SQL - AND and OR Conjunctive Operators</h2>
+        <p class="my-4">Operators are reserved words primarily used in SQL to perform various operations on data, like addition (+), subtraction (-), or comparison (==).</p>
+        <p class="my-4">Conjunctive operators, specifically used in boolean logic, combines two conditions in an SQL statement. The most common conjunctive operators are: AND (&&), which returns true if both conditions are true, and OR (||), which returns true if at least one condition is true.</p>
+        <h2 class="text-xl font-semibold">The SQL AND Operator</h2>
+        <p class="my-4">The SQL AND returns true or 1, if both its operands evaluates to true. We can use it to combine two conditions in the WHERE clause of an SQL statement.</p>
+        <p class="my-4">The WHERE clause can contain one or many AND operators.</p>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p>The basic syntax of the SQL AND operator with a WHERE clause is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            SELECT column1, column2, ...
+            FROM table_name
+            WHERE condition1 AND condition2;
+       </pre>
+        <p class="my-4">Where, condition1, condition2 are the conditions we want to apply to the query.</p>
+        <p class="my-4">You can combine N number of conditions using the AND operator. For an action to be taken by the SQL statement, whether it be a transaction or a query, all the specified conditions (separated by the AND operator) must be TRUE.</p>
+
+<h3 class="text-xl font-semibold my-4">Example</h3>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">SQL Statement</h5>
+         <code class="bg-gray-200 p-2 block my-4">
+             SELECT * FROM Customers
+             <br>
+             WHERE Customer_name='Vivek Singh' AND country='India';
+
+         </code>
+       <a href="/query_editor?query=SELECT * FROM Customers%0AWHERE Customer_name='Vivek Singh' AND country='India';" target="_blank"  class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+
+        <h3 class="text-xl font-semibold my-4">The SQL OR Operator</h3>
+        <p class="text-with-gap">The OR operator returns true if at least one its operands evaluates to true, and false otherwise. We can combine two conditions in an SQL statement's WHERE clause using the OR operator.</p>
+        <p class="text-with-gap">The WHERE clause can contain one or many OR operators.</p>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p>The basic syntax of the SQL OR operator with a WHERE clause is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            SELECT column1, column2, ...
+            FROM table_name
+            WHERE condition1 OR condition2;
+       </pre>
+        <p class="my-4">Where, condition1, condition2 are the conditions we want to apply to the query. Each condition is separated by the OR operator.</p>
+        <p class="my-4">You can combine N number of conditions using the OR operator. For an action to be taken by the SQL statement, whether it be a transaction or query, at least of the conditions separated by the OR operator must be TRUE.</p>
+<h3 class="text-xl font-semibold my-4">Example</h3>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">SQL Statement</h5>
+         <code class="bg-gray-200 p-2 block my-4">
+             SELECT * FROM Customers
+             <br>
+             WHERE Customer_name="Mani Setharasipalli" OR Customer_name="Arjun Kumar";
+         </code>
+       <a href="/query_editor?query=SELECT * FROM Customers%0AWHERE Customer_name='Mani Setharasipalli' OR Customer_name='Arjun Kumar';" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+
+        <p class="font-semibold my-4">OR vs AND</p>
+     <div class="bg-yellow-100 rounded-lg p-10 my-4">
+    <p>The <span class="text-red-500" >OR </span>operator displays a record if any of the conditions are TRUE.</p>
+             <p>The <span class="text-red-500" >AND </span>operator displays a record if all the conditions are TRUE.</p>
+</div>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-order-by', '/sql-order-by')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-not', '/sql-not')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}
+
+
+
+
+

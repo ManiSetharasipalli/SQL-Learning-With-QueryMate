@@ -1,0 +1,51 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold">SQL Aliases</h2>
+        <p class="my-4">SQL aliases are temporary names assigned to columns or tables for the purpose of clarity and brevity in SQL queries.</p>
+        <p class="my-4">They are especially useful in complex queries involving multiple tables or columns with long names.</p>
+        <p class="my-4">Additional points about SQL aliases:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>Aliases can be used to make column or table names more readable.</li>
+            <li>They are commonly used when the column or table names are lengthy or when multiple tables are being joined.</li>
+            <li>Aliases are specified using the AS keyword.</li>
+            <li>They can be used in SELECT, FROM, and WHERE clauses of SQL queries.</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Alias for Column Name</h5>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Assign an alias to a column:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT product_name AS name
+                <br>FROM products;
+            </code>
+            <a href="/query_editor?query=SELECT product_name AS name%0AFROM products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example assigns an alias "name" to the "product_name" column in the 'products' table.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Alias for Table Name</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Assign an alias to a table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT p.product_name, c.category_name
+                <br>FROM products AS p
+                <br>INNER JOIN categories AS c
+                <br>ON p.category_id = c.category_id;
+            </code>
+            <a href="/query_editor?query=SELECT p.product_name, c.category_name%0AFROM products AS p%0AINNER JOIN categories AS c%0AON p.category_id = c.category_id;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example assigns aliases "p" and "c" to the 'products' and 'categories' tables, respectively, for brevity in the query.</p>
+
+        <h2 class="text-3xl font-semibold">Benefits of SQL Aliases</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500"> Improved readability:</span> Aliases make SQL queries easier to understand, especially for complex queries involving multiple tables or columns.</li>
+            <li><span class="text-blue-500">Brevity:</span> They help reduce the length of SQL queries, making them more concise and easier to manage.</li>
+            <li><span class="text-blue-500">Clarity:</span> Aliases provide clarity by giving descriptive names to columns or tables, enhancing the overall understanding of the query.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-delete', '/sql-delete')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-joins', '/sql-joins')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

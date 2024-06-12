@@ -1,0 +1,71 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">The SQL SUM() Function</h2>
+        <p class="my-4">The SUM() function sums up all the values in a given column or the values returned by an expression.</p>
+        <p class="my-4">It’s a good introduction to SQL’s aggregate functions, so let’s dive right in!</p>
+        <p class="my-4">Additional points about the SUM() function in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>SUM() sums up all the values in a given column or the values returned by an expression.</li>
+            <li>You can add a WHERE clause to specify conditions.</li>
+            <li>Give the summarized column a name by using the AS keyword.</li>
+            <li>Use SUM() with GROUP BY to sum values for each group.</li>
+            <li>The parameter inside the SUM() function can also be an expression.</li>
+        </ul>
+        <p class="my-4">The <span class="text-red-500">SUM()</span> function sums up all the values in a given column or the values returned by an expression.</p>
+
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p> The basic syntax of the SQL SUM Function is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+                SELECT SUM(column_name)
+                FROM table_name
+                WHERE condition;
+       </pre>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Summing Total Quantity</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Return the sum of all Quantity fields in the OrderDetails table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT SUM(Quantity)<br>
+                FROM OrderDetails;
+            </code>
+            <a href="/query_editor?query=SELECT SUM(Quantity)%0AFROM OrderDetails;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Specifying Column and Adding WHERE Clause</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Return the sum of the Quantity field for the product with ProductID 11:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT SUM(Quantity)<br>
+                FROM OrderDetails<br>
+                WHERE Product_Id = 11;
+            </code>
+            <a href="/query_editor?query=SELECT SUM(Quantity)%0AFROM OrderDetails%0AWHERE Product_Id = 11;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 3: SUM() with GROUP BY</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Use SUM() function and GROUP BY clause to return the Quantity for each OrderID:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT Order_ID,<br>
+                       SUM(Quantity) AS Total_Quantity<br>
+                FROM OrderDetails<br>
+                GROUP BY Order_ID;
+            </code>
+            <a href="/query_editor?query=SELECT OrderID, SUM(Quantity) AS [Total Quantity]%0AFROM OrderDetails%0AGROUP BY OrderID;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 4: Using an Expression inside SUM()</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Use an expression inside the SUM() function to calculate total earnings:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT SUM(Quantity * 10)<br>
+                FROM OrderDetails;
+            </code>
+            <a href="/query_editor?query=SELECT SUM(Quantity * 10)%0AFROM OrderDetails;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-count', '/sql-count')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-avg', '/sql-avg')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

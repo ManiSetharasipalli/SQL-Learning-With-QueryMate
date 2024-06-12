@@ -1,0 +1,35 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">SQL NOT Operator</h2>
+        <p class="my-4">The NOT operator is used in combination with other operators to give the opposite result, also called the negative result.</p>
+        <p class="my-4">SQL NOT is a logical operator/connective used to negate a condition or Boolean expression in a WHERE clause. That is, TRUE becomes FALSE and vice versa.</p>
+        <p class="my-4">The most common scenario where this operator can be used occurs when there is a specification of what NOT to include in the result table, instead of what to include.</p>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p>Following is the syntax for SQL NOT operator −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            SELECT column1, column2, ...
+            FROM table_name
+            WHERE NOT condition;
+       </pre>
+
+        <h3 class="text-xl font-semibold my-4">Example</h3>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">SQL Statement</h5>
+         <code class="bg-gray-200 p-2 block mb-2">
+             SELECT *
+             <br>
+             FROM Customers<br>
+             WHERE NOT Customer_name='Rahul Patel';
+         </code>
+       <a href="/query_editor?query=SELECT *%0AFROM Customers%0AWHERE NOT Customer_name='Rahul Patel';" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <p class="my-4">In the example above, the NOT operator is used in combination with the = operator, but it can be used in combination with other comparison and/or logical operators. </p>
+        <p class="my-4">Most of the times, there is a need to use two or more conditions to filter required records from a table; but sometimes satisfying one of the conditions would be enough. There are also scenarios when you need to retrieve records that do not satisfy the conditions specified. SQL provides logical connectives for this purpose.</p>
+        <p class="my-4">With the help of these logical connectives, one can retrieve records that are required and also create exceptions for the records that are not needed to be retrieved.</p>
+{% endblock content %}
+{% block button %}
+    <button onclick="navigateTo('/sql-and-or', '/sql-and-or')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+    <button onclick="navigateTo('/sql-like', '/sql-like')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}
+

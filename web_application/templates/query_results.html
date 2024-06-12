@@ -1,0 +1,32 @@
+<body class="bg-gray-100">
+<div id="table-container" class="bg-gray-100 p-5 mt-8 overflow-auto border border-gray-800 p-4 max-h-80">
+    <table id="result-table" class="table-auto w-full border border-gray-600">
+        <thead class="bg-gray-100 text-gray-500">
+            <tr>
+                {% for column in column_names %}
+                    <th class="px-4 py-2 text-left border-b border-gray-600">{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for value in row %}
+                        <td class="px-4 py-2 text-left border-b border-gray-600">{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        {% if sql_error %}
+                    <tr>
+                        <td colspan="{{ column_names|length }}">
+                            <div class="alert alert-danger">
+                                {{ sql_error }}
+                            </div>
+                        </td>
+                    </tr>
+                {% endif %}
+    </table>
+</div>
+</body>
+
+

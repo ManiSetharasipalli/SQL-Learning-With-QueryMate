@@ -1,0 +1,89 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+<h2 class="text-3xl font-semibold my-4">SQL Syntax</h2>
+ <h2 class="text-2xl font-semibold my-4">What is SQL Syntax?</h2>
+<p>SQL syntax is a unique set of rules and guidelines to be followed while writing SQL statements. This tutorial gives you a quick start with SQL by listing all the basic SQL Syntax.</p>
+<p class="my-4">All the SQL statements start with any of the keywords like SELECT, INSERT, UPDATE, DELETE, ALTER, DROP, CREATE, USE, SHOW and all the statements end with a semicolon (;).</p>
+        <h2 class="text-2xl font-semibold my-4">Case Sensitivity in SQL</h2>
+<p>SQL statements are generally case-insensitive. This means `SELECT` and `Select` have the same meaning.</p>
+<p class="my-4">However, MySQL, a popular database management system, is case-sensitive for table names. So, ensure table names match their exact casing in the database.</p>
+        <div class="my-4">
+        <h2 class="text-2xl font-semibold">SQL Statements</h2>
+        <p>This tutorial introduces various SQL statements, commonly compatible with MySQL, Oracle, Postgres, and SQL Server databases.</p>
+        <p>Most statements require a semicolon (;) at the end, acting as a separator. This allows including multiple statements on a single line.</p>
+        </div>
+
+    <h2 class="text-2xl font-semibold my-4">SQL Commands</h2>
+    <h4 class="text-xl font-semibold my-4">Data Manipulation Language (DML):</h4>
+    <ul>
+        <li>
+            <span class="text-blue-700">SELECT:</span> Retrieves data from a table.
+        </li>
+        <li>
+            <span class="text-blue-700">UPDATE:</span> Modifies existing data in a table.
+        </li>
+        <li>
+            <span class="text-blue-700">DELETE:</span> Removes rows from a table.
+        </li>
+        <li>
+            <span class="text-blue-700">INSERT INTO:</span> Inserts new rows of data into a table.
+        </li>
+    </ul>
+
+    <h4 class="text-xl font-semibold my-4">Data Definition Language (DDL):</h4>
+
+    <ul>
+        <li>
+            <span class="text-green-500">CREATE DATABASE:</span> Creates a new database.
+        </li>
+        <li>
+            <span class="text-green-500">ALTER DATABASE:</span> Modifies a database.
+        </li>
+        <li>
+            <span class="text-green-500">CREATE TABLE:</span> Creates a new table.
+        </li>
+        <li>
+            <span class="text-green-500">ALTER TABLE:</span> Modifies a table.
+        </li>
+        <li>
+            <span class="text-green-500">DROP TABLE:</span> Deletes a table.
+        </li>
+        <li>
+            <span class="text-green-500">CREATE INDEX:</span> Creates an index (search key) to improve performance.
+        </li>
+        <li>
+            <span class="text-green-500">DROP INDEX:</span> Deletes an index.
+        </li>
+    </ul>
+
+    <h4 class="text-xl font-semibold my-4">Data Control Language (DCL):</h4>
+    <ul>
+        <li>
+            <span class="text-purple-500">GRANT:</span> Grants permissions to users or roles to access and manipulate database objects.
+        </li>
+        <li>
+            <span class="text-purple-500">REVOKE:</span> Revokes previously granted permissions.
+        </li>
+    </ul>
+
+    <h4 class="text-xl font-semibold my-4">Data Query Language (DQL):</h4>
+    <ul>
+        <li>
+            <span class="text-yellow-500">SHOW:</span> Retrieves information about the database itself, such as tables, users, and permissions.
+        </li>
+    </ul>
+
+    <h4 class="text-xl font-semibold my-4">Transaction Control Language (TCL):</h4>
+    <ul>
+        <li>
+            <span class="text-red-500">COMMIT:</span> Saves the changes made within a transaction permanently.
+        </li>
+        <li>
+            <span class="text-red-500">ROLLBACK:</span> Undoes the changes made within a transaction, reverting to the state before the transaction began.
+        </li>
+    </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-intro', '/sql-intro')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-data-types', '/sql-data-types')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

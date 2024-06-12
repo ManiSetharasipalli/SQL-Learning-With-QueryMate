@@ -1,0 +1,72 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL INNER JOIN Operation</h2>
+        <p class="my-4">The INNER JOIN operation is used to combine rows from two or more tables based on a related column between them.</p>
+        <p class="my-4">It retrieves rows when there is at least one match in both tables.</p>
+        <p class="my-4">Additional points about the INNER JOIN operation in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The INNER JOIN operation is used to retrieve rows from multiple tables based on a related column.</li>
+            <li>It combines rows from two tables where there is a match between the specified columns.</li>
+            <li>You can add conditions using the WHERE clause to further filter the result set.</li>
+            <li>Aliases can be used for table names to make the SQL code more readable.</li>
+            <li>INNER JOIN is commonly used in scenarios where data needs to be combined from multiple tables.</li>
+             <li>Aliases are used to provide temporary names for database tables or columns.</li>
+             <li>The ON keyword specifies the condition for joining the tables.</li>
+        </ul>
+
+        <p class="my-4">The <span class="text-red-500">INNER JOIN</span> operation is used to retrieve rows from multiple tables based on a related column.</p>
+
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p> The basic syntax of the SQL INNER JOIN Operation is as follows:</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+                SELECT column_name(s)
+                FROM table1
+                INNER JOIN table2
+                ON table1.column_name = table2.column_name;
+       </pre>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Retrieving Product Details with Categories</h5>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve product details along with their categories:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT p.product_id, p.product_name, p.price, c.category_name
+                <br>FROM products p
+                <br>INNER JOIN categories c
+                <br>ON p.category_id = c.category_id;
+            </code>
+            <a href="/query_editor?query=SELECT p.product_id, p.product_name, p.price, c.category_name%0AFROM products p%0AINNER JOIN categories c%0AON p.category_id = c.category_id;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+            <p class="text-gray-600 mb-2 my-4">In this example, we retrieve product details from the 'products' table and category names from the 'categories' table. The INNER JOIN operation is used to combine rows from both tables where the 'category_id' in the 'products' table matches the 'category_id' in the 'categories' table.</p>
+                    <h5 class="font-semibold text-gray-600 mb-2">Example 2: Retrieving Order Details with Products</h5>
+       <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve order details along with the products ordered:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT o.order_id, p.product_name, od.quantity, od.unit_price
+                <br>FROM orderdetails od
+                <br>INNER JOIN orders o
+                <br>ON od.order_id = o.order_id
+                <br>INNER JOIN products p
+                <br>ON od.product_id = p.product_id;
+            </code>
+            <a href="/query_editor?query=SELECT o.order_id, p.product_name, od.quantity, od.unit_price%0AFROM orderdetails od%0AINNER JOIN orders o%0AON od.order_id = o.order_id%0AINNER JOIN products p%0AON od.product_id = p.product_id;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">This example retrieves order details along with the products ordered by joining the `orderdetails`, `orders`, and `products` tables based on the `order_id` and `product_id` columns.</p>
+            <h5 class="font-semibold text-gray-600 mb-2">Example 3: Retrieving Customer Details with Orders</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Retrieve customer details along with their orders:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT c.customer_id, c.customer_name, o.order_id, o.order_date
+                <br>FROM customers c
+                <br>INNER JOIN orders o
+                <br>ON c.customer_id = o.customer_id;
+            </code>
+            <a href="/query_editor?query=SELECT c.customer_id, c.customer_name, o.order_id, o.order_date%0AFROM customers c%0AINNER JOIN orders o%0AON c.customer_id = o.customer_id;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">This example retrieves customer details along with their orders by joining the `customers` and `orders` tables based on the `customer_id` column.</p>
+
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-joins', '/sql-joins')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-left-join', '/sql-left-join')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

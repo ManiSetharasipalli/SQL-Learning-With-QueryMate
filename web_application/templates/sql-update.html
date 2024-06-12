@@ -1,0 +1,50 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">SQL UPDATE Operation</h2>
+        <p class="my-4">The UPDATE operation is used to modify existing records in a table in a database.</p>
+        <p class="my-4">It allows you to change the values of one or more columns in one or more rows based on specified conditions.</p>
+        <p class="my-4">Additional points about the UPDATE operation in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The UPDATE operation is used to modify existing records in a table.</li>
+            <li>You can update one or more columns in one or more rows.</li>
+            <li>Conditions can be added using the WHERE clause to specify which rows to update.</li>
+            <li>Always use a WHERE clause with UPDATE to avoid unintentional updates to all rows.</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Update Customer Age</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Update the age of a customer:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                UPDATE customers
+                <br>SET age = 30
+                <br>WHERE customer_id = 1001;
+            </code>
+            <a href="/query_editor?query=UPDATE customers%0ASET age = 30%0AWHERE customer_id = 1001;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example updates the age of a customer with 'customer_id' 1001 to 30.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Increase Product Price</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Increase the price of all products by 10%:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                UPDATE products
+                <br>SET price = price * 1.1;
+            </code>
+            <a href="/query_editor?query=UPDATE products%0ASET price = price * 1.1;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example increases the price of all products by 10%.</p>
+
+        <h2 class="text-3xl font-semibold">Best Practices for UPDATE</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li><span class="text-blue-500">Always use a WHERE clause:</span> To avoid unintentional updates, always use a WHERE clause to specify which rows to update.</li>
+            <li><span class="text-blue-500">Test updates before running:</span> Test your UPDATE statements in a development environment before applying them to a production database.</li>
+            <li><span class="text-blue-500">Be cautious with mass updates:</span> Be cautious when updating a large number of rows at once to avoid performance issues and unintended consequences.</li>
+        </ul>
+{% endblock content %}
+        {% block button %}
+        <button onclick="navigateTo('/sql-insert-into', '/sql-insert-into')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-delete', '/sql-delete')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+        {% endblock button %}

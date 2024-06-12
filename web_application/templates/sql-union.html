@@ -1,0 +1,57 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">SQL UNION Operation</h2>
+        <p class="my-4">The UNION operation is used to combine the result sets of two or more SELECT statements into a single result set.</p>
+        <p class="my-4">It removes duplicate rows between the various SELECT statements.</p>
+        <p class="my-4">Additional points about the UNION operation in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The UNION operation is used to combine the result sets of two or more SELECT statements.</li>
+            <li>It removes duplicate rows between the SELECT statements.</li>
+            <li>The number and order of columns must be the same in all SELECT statements.</li>
+            <li>Column names from the first SELECT statement are used as the column names for the result set.</li>
+        </ul>
+
+        <p class="my-4">The <span class="text-red-500">UNION</span> operation is used to combine the result sets of two or more SELECT statements.</p>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Combining Product Categories</h5>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Combine product categories from two tables:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT category_name
+                <br>FROM categories
+                <br>UNION
+                <br>SELECT product_name AS category_name
+                <br>FROM products;
+            </code>
+            <a href="/query_editor?query=SELECT category_name%0AFROM categories%0AUNION%0ASELECT product_name AS category_name%0AFROM products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example combines product categories from the 'categories' table and product names from the 'products' table using the UNION operation.</p>
+
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Combining Customer and Product Names</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Combine customer names and product names:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT customer_name
+                <br>FROM customers
+                <br>UNION
+                <br>SELECT product_name
+                <br>FROM products;
+            </code>
+            <a href="/query_editor?query=SELECT customer_name%0AFROM customers%0AUNION%0ASELECT product_name%0AFROM products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="my-4">Try this example in Query editor</p>
+        <p class="text-gray-600 mb-2 my-4">This example combines customer names from the 'customers' table and product names from the 'products' table using the UNION operation.</p>
+
+        <h2 class="text-3xl font-semibold">UNION Rules</h2>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The number and order of columns must be the same in all SELECT statements.</li>
+            <li>By default, UNION operation removes duplicate rows between the SELECT statements.</li>
+            <li>Use UNION ALL if you want to include duplicate rows.</li>
+        </ul>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-full-join', '/sql-full-join')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-constraints', '/sql-constraints')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

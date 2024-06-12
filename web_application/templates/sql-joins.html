@@ -1,0 +1,35 @@
+{% extends 'sql-default.html' %}
+    {% block content %}
+        <h2 class="text-3xl font-semibold my-4">Understanding Different SQL Joins</h2>
+        <p class="my-4">SQL joins are fundamental operations used to combine data from multiple tables in a relational database. Each type of join serves a specific purpose and is useful in different scenarios.</p>
+        <h2 class="text-3xl font-semibold">Explanation of SQL Joins</h2>
+
+        <h3 class="text-xl font-semibold my-4">1. INNER JOIN</h3>
+        <p class="my-4">An INNER JOIN returns rows when there is at least one match in both tables being joined. It filters the result set to include only the rows that have matching values in both tables based on the specified join condition.</p>
+        <p class="my-4">Use INNER JOIN when you need to retrieve data from two or more tables where there is a common key between them. It is commonly used to fetch related information from multiple tables.</p>
+
+        <h3 class="text-xl font-semibold my-4">2. LEFT JOIN</h3>
+        <p class="my-4">A LEFT JOIN returns all rows from the left table (the table specified before the LEFT JOIN keyword), along with matching rows from the right table. If there are no matches in the right table, NULL values are included for the columns from the right table in the result set.</p>
+        <p class="my-4">Use LEFT JOIN when you want to retrieve all records from the left table, regardless of whether there is a matching record in the right table. It is useful for situations where you need to include all records from one table and matching records from another table.</p>
+
+        <h3 class="text-xl font-semibold my-4">3. RIGHT JOIN</h3>
+        <p class="my-4">A RIGHT JOIN returns all rows from the right table (the table specified after the RIGHT JOIN keyword), along with matching rows from the left table. If there are no matches in the left table, NULL values are included for the columns from the left table in the result set.</p>
+        <p class="my-4">Use RIGHT JOIN when you want to retrieve all records from the right table, regardless of whether there is a matching record in the left table. It is less commonly used than LEFT JOIN but can be useful in specific scenarios where the right table's data is the primary focus.</p>
+
+        <h3 class="text-xl font-semibold my-4">4. FULL JOIN</h3>
+        <p class="my-4">A FULL JOIN returns all rows from both tables being joined, regardless of whether there is a match. If there are no matching rows in one of the tables, NULL values are included for the columns from the table without a match.</p>
+        <p class="my-4">Use FULL JOIN when you want to retrieve all records from both tables, including unmatched rows. It is useful for situations where you need to combine data from two tables and include all records, whether they have matches in the other table or not.</p>
+
+        <h3 class="text-xl font-semibold my-4">5. CROSS JOIN</h3>
+        <p class="my-4">A CROSS JOIN returns the Cartesian product of the sets of rows from the joined tables. It generates all possible combinations of rows from both tables, resulting in a potentially large result set.</p>
+        <p class="my-4">Use CROSS JOIN when you need to generate combinations of rows from two or more tables. It is often used in scenarios where you need to create a matrix of all possible combinations of data.</p>
+
+        <h3 class="text-xl font-semibold my-4">6. SELF JOIN</h3>
+        <p class="my-4">A SELF JOIN is a join operation where a table is joined with itself. It is useful for comparing rows within the same table, typically when establishing relationships between different records within the table.</p>
+        <p class="my-4">Use SELF JOIN when you need to compare records within the same table, such as when you want to find related records or hierarchical relationships within the table.</p>
+
+   {% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-aliases', '/sql-aliases')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-inner-join', '/sql-inner-join')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

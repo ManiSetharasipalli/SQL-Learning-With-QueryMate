@@ -1,0 +1,84 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold">The SQL AVG() Function</h2>
+        <p class="my-4">The AVG() function returns the average value of a numeric column.</p>
+        <p class="my-4">It's commonly used to calculate the mean of a set of values in SQL.</p>
+        <p class="my-4">Additional points about the AVG() function in SQL:</p>
+        <ul class="bg-green-100 rounded-lg p-10 my-4">
+            <li>The AVG() function returns the average value of a numeric column.</li>
+            <li>You can add a WHERE clause to specify conditions.</li>
+            <li>Give the AVG column a name by using the AS keyword.</li>
+            <li>To list all records with a higher price than average, you can use the AVG() function in a subquery.</li>
+            <li>Use AVG() with GROUP BY to return the average value for each group.</li>
+            <li>Note: NULL values are ignored.</li>
+        </ul>
+
+
+        <p class="my-4">The <span class="text-red-500">AVG()</span> function returns the average value of a numeric column.</p>
+
+        <h3 class="text-xl font-semibold mb-2">Syntax</h3>
+        <p> The basic syntax of the SQL AVG Function is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 mb-2">
+                SELECT AVG(column_name)
+                FROM table_name
+                WHERE condition;
+       </pre>
+
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 1: Calculating Average Price</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Find the average price of all products:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT AVG(Price)<br>
+                FROM Products;
+            </code>
+            <a href="/query_editor?query=SELECT AVG(Price)%0AFROM Products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 2: Adding WHERE Clause</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Return the average price of products in category 1:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT AVG(Price)<br>
+                FROM Products<br>
+                WHERE Category_ID = 1;
+            </code>
+            <a href="/query_editor?query=SELECT AVG(Price)%0AFROM Products%0AWHERE Category_ID = 1;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 3: Using an Alias</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Give the AVG column a name by using the AS keyword:</p>
+            <code class="bg-gray-200 p-2 block my-4">
+                SELECT AVG(Price) AS Average_Price<br>
+                FROM Products;
+            </code>
+            <a href="/query_editor?query=SELECT AVG(Price) AS [Average_Price]%0AFROM Products;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 4: Higher Than Average</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">To list all records with a higher price than the average price:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT * FROM Products<br>
+                WHERE Price > (SELECT AVG(Price) FROM Products);
+            </code>
+            <a href="/query_editor?query=SELECT * FROM Products%0AWHERE Price > (SELECT AVG(Price) FROM Products);" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md my-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <h5 class="font-semibold text-gray-600 mb-2">Example 5: Using AVG() with GROUP BY</h5>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <p class="text-gray-600 mb-2">Use AVG() function and GROUP BY clause to return the average price for each category:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT AVG(Price) AS Average_Price, Category_ID<br>
+                FROM Products<br>
+                GROUP BY Category_ID;
+            </code>
+            <a href="/query_editor?query=SELECT AVG(Price) AS Average_Price, Category_ID%0AFROM Products%0AGROUP BY Category_ID;" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+{% endblock content %}
+        {% block button %}
+        <button onclick="navigateTo('/sql-sum', '/sql-sum')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-group-by', '/sql-group-by')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}

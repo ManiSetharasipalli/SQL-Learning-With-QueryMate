@@ -1,0 +1,85 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+            <h2 class="text-3xl font-semibold my-4">SQL Aggregate Functions</h2>
+        <p class="my-4">An aggregate function is a function that performs a calculation on a set of values, and returns a single value.</p>
+        <p class="my-4">Aggregate functions are often used with the GROUP BY clause of the SELECT statement. The GROUP BY clause splits the result-set into groups of values and the aggregate function can be used to return a single value for each group.</p>
+        <p class="my-4">The most commonly used SQL aggregate functions are:</p>
+        <ul class="bg-red-100 rounded-lg p-10 my-4">
+            <li><span class="text-red-500">MIN()</span> - returns the smallest value within the selected column</li>
+            <li><span class="text-red-500">MAX()</span> - returns the largest value within the selected column</li>
+            <li><span class="text-red-500">COUNT()</span> - returns the number of rows in a set</li>
+            <li><span class="text-red-500">SUM()</span> - returns the total sum of a numerical column</li>
+            <li><span class="text-red-500">AVG()</span> - returns the average value of a numerical column</li>
+        </ul>
+
+        <ul>
+            <li>As functions, they are used with the GROUP BY clause of the SELECT statement.</li>
+            <li>As expressions, they are used with a subquery and HAVING clause of SELECT statement.</li>
+          </ul>
+        <p class="my-4">Aggregate functions ignore null values (except for COUNT()).</p>
+        <h2 class="text-3xl font-semibold">The SQL MIN() and MAX() Functions</h2>
+        <p class="my-4">The <span class="text-red-500">MIN() </span> returns the smallest value of the selected column.</p>
+        <p class="my-4">The <span class="text-red-500">MAX() </span> returns the largest value of the selected column.</p>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p> The basic syntax of the SQL MAX Function is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+                SELECT MAX(column_name)
+                FROM table_name
+                WHERE condition;
+       </pre>
+        <p> The basic syntax of the SQL MIN Function is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+                SELECT MIN(column_name)
+                FROM table_name
+                WHERE condition;
+        </pre>
+        <h2 class="text-xl font-semibold mb-4">Examples</h2>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <h5 class="text-gray-600 mb-2">MIN Example</h5>
+            <p class="text-gray-600 mb-2">Find the lowest price in the Price column:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT MIN(Price)<br>
+                FROM Products;
+            </code>
+        <a href="/query_editor?query=SELECT MIN(Price)%0AFROM Products;" target="_blank"  class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+         <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <h5 class="text-gray-600 mb-2">MAX Example</h5>
+            <p class="text-gray-600 mb-2">Find the highest price in the Price column:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT MAX(Price)<br>
+                FROM Products;
+            </code>
+             <a href="/query_editor?query=SELECT MAX(Price)%0AFROM Products;" target="_blank"  class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+         </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+            <h5 class="text-gray-600 mb-2">Set Column Name (Alias)</h5>
+            <p class="text-gray-600 mb-2">To give the column a descriptive name, use the AS keyword:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT MIN(Price) AS SmallestPrice<br>
+                FROM Products;
+            </code>
+             <a href="/query_editor?query=SELECT MIN(Price) AS SmallestPrice%0AFROM Products;" target="_blank"  class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+        </div>
+                <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+                    <h5 class="text-gray-600 mb-2">Use MIN() with GROUP BY</h5>
+            <p class="text-gray-600 mb-2">Return the smallest price for each category in the Products table:</p>
+            <code class="bg-gray-200 p-2 block mb-2">
+                SELECT MIN(Price) AS SmallestPrice,<br>
+                       Category_ID<br>
+                FROM Products<br>
+                GROUP BY Category_ID;
+            </code>
+             <a href="/query_editor?query=SELECT MIN(Price) AS SmallestPrice,%0ACategory_ID%0AFROM Products%0AGROUP BY Category_ID;" target="_blank"  class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor » </a>
+                </div>
+                <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+{% endblock content %}
+{% block button %}
+        <button onclick="navigateTo('/sql-between', '/sql-between')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+        <button onclick="navigateTo('/sql-count', '/sql-count')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}
+
+

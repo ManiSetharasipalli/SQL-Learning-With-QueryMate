@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Learning</title>
+    <link rel="icon" href="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="font-sans bg-gray-100 min-h-screen flex">
+
+<header class="bg-blue-500 text-white p-3 flex justify-between fixed w-full z-10">
+    <nav class="flex items-center">
+        <img src="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" alt="Chatbot Icon" class="w-10 h-10 rounded-full mr-2">
+        <span class="text-lg font-bold">SQL Learning</span>
+    </nav>
+    <nav class="flex items-center">
+        {% if username %}
+            <div class="bg-white text-blue-500 px-4 py-2 rounded-full">
+                    <a  href="/profile">{{ username }}</a>
+                </div>
+        {% else %}
+            <a href="/login" class="bg-white text-blue-500 px-4 py-2 rounded-lg">Login</a>
+        {% endif %}
+    </nav>
+</header>
+
+
+<main class="flex flex-grow mt-16">
+    <nav class="sidebar bg-gray-200 p-4 shadow hover:shadow-2xl overflow-y-auto max-h-screen w-60" >
+        <h2 class="text-3xl font-bold mb-4">SQL Tutorial</h2>
+
+        <!-- Search bar -->
+        <div class="search-bar-middle mb-4">
+            <input type="text" id="searchInput" placeholder="Search SQL concepts" class="w-full px-4 py-2  border border-gray-300">
+        </div>
+
+        <!-- SQL Concepts list with links -->
+        <section class="space-y-6">
+            <h2 class="font-bold mb-4">SQL Basics</h2>
+            <ul>
+                <li><a class="active" href="/sql-default" target="content-frame">SQL HOME</a></li>
+                <li><a href="/sql-intro" target="content-frame">SQL Intro</a></li>
+                <li><a href="/sql-syntax" target="content-frame">SQL Syntax</a></li>
+                <li><a href="/sql-data-types" target="content-frame">SQL Data Types</a> </li>
+            </ul>
+
+            <h2 class="font-bold mb-4">Retrieving Data</h2>
+            <ul>
+                <li><a href="/sql-select" target="content-frame">SQL Select</a></li>
+                <li><a href="/sql-distinct" target="content-frame">SQL Select Distinct</a></li>
+                <li><a href="/sql-where" target="content-frame">SQL Where</a></li>
+                <li><a href="/sql-order-by" target="content-frame">SQL Order By</a></li>
+                <li><a href="/sql-and-or" target="content-frame">SQL And & Or </a></li>
+                <li><a href="/sql-not" target="content-frame">SQL Not</a></li>
+                <li><a href="/sql-like" target="content-frame">SQL Like</a></li>
+                <li><a href="/sql-limit" target="content-frame">SQL Limit</a></li>
+                <li><a href="/sql-in" target="content-frame">SQL In</a></li>
+                <li><a href="/sql-between" target="content-frame">SQL Between</a></li>
+            </ul>
+
+            <h2 class="font-bold mb-4">Aggregate Functions</h2>
+            <ul>
+                <li><a href="/sql-max-min" target="content-frame">SQL Max and Min</a></li>
+                <li><a href="/sql-count" target="content-frame">SQL Count</a></li>
+                <li><a href="/sql-sum" target="content-frame">SQL Sum</a></li>
+                <li><a href="/sql-avg" target="content-frame">SQL Avg</a></li>
+            </ul>
+             <h2 class="font-bold mb-4">Grouping and Filtering Grouped Data</h2>
+            <ul>
+                <li><a href="/sql-group-by" target="content-frame">SQL Group By</a></li>
+                <li><a href="/sql-having" target="content-frame">SQL Having</a></li>
+            </ul>
+
+            <h2 class="font-bold mb-4">Data Manipulation</h2>
+            <ul>
+                <li><a href="/sql-insert-into" target="content-frame">SQL Insert Into</a></li>
+                <li><a href="/sql-update" target="content-frame">SQL Update</a></li>
+                <li><a href="/sql-delete" target="content-frame">SQL Delete</a></li>
+            </ul>
+            <h2 class="font-bold mb-4">Joining Tables</h2>
+            <ul>
+                <li><a href="/sql-aliases" target="content-frame">SQL Aliases</a></li>
+                <li><a href="/sql-joins" target="content-frame">SQL Joins</a></li>
+                <li><a href="/sql-inner-join" target="content-frame">SQL Inner Join</a></li>
+                <li><a href="/sql-left-join" target="content-frame">SQL Left Join</a></li>
+                <li><a href="/sql-right-join" target="content-frame">SQL Right Join</a></li>
+                <li><a href="/sql-full-join" target="content-frame">SQL Full Join</a></li>
+                <li><a href="/sql-union" target="content-frame">SQL Union</a></li>
+            </ul>
+
+            <h2 class="font-bold mb-4">Table Management</h2>
+     <ul>
+        <li><a href="/sql-constraints" target="content-frame">SQL Constraints</a></li>
+        <li><a href="/sql-create-table" target="content-frame">Create Tables</a></li>
+        <li><a href="/sql-alter-table" target="content-frame">Alter Tables</a></li>
+        <li><a href="/sql-drop-table" target="content-frame">Drop Tables</a></li>
+        <li><a href="/sql-truncate" target="content-frame">TRUNCATE Tables</a></li>
+     </ul>
+    <h2 class="font-bold mb-4">Advanced SQL Techniques</h2>
+    <ul>
+        <li><a href="/sql-subqueries" target="content-frame">Subqueries</a></li>
+        <li><a href="/sql-window-functions" target="content-frame">Window Functions</a></li>
+        <li><a href="/sql-case-statements" target="content-frame">CASE Statements</a></li>
+        <li><a href="/sql-functions" target="content-frame" class="mb-20">SQL Functions</a></li>
+    </ul>
+        </section>
+    </nav>
+
+    <section class="flex-grow p-8">
+        <!-- Content will be dynamically loaded here -->
+        <iframe name="content-frame" src="/sql-default" title="Tutorials_pages" frameborder="0" width="95%" height="92%"></iframe>
+    </section>
+
+    <aside class="chatbox__support container fixed chatbox_new bottom-0">
+        <div class="chatbox__header">
+            <div class="chatbox__image--header chatbox__close">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZHAgmf2XwKgv4oVjX0x8KGQUS9-y0_q_iUZYB9pWeM5VDSp42HzsAQ6pyIPHbzlaSGfM&usqp=CAU" class="w-10 h-10 rounded-full cursor-point mr-2">
+            </div>
+
+            <div>
+                <img src="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" class="w-10 h-10 rounded-full mr-2" alt="image">
+            </div>
+
+            <div class="chatbox__content--header">
+                <h4 class="chatbox__heading--header">QueryMate</h4>
+            </div>
+        </div>
+        <div class="chatbox__messages">
+            <div></div>
+        </div>
+        <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message...">
+            <button class="chatbox__send--footer send__button"></button>
+        </div>
+    </aside>
+    <div class="chatbox__button chatbox bottom-2 right-0 ">
+        <button>
+            <img src='https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg' class="w-10 h-10 rounded-full">
+        </button>
+    </div>
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends 'sql-default.html' %}
+{% block content %}
+        <h2 class="text-3xl font-semibold my-4">The SQL ORDER BY</h2>
+        <p class="my-4">The SQL ORDER BY clause is used to sort the data in ascending or descending order, based on one or more columns. By default, some databases sort the query results in an ascending order.</p>
+        <h3 class="text-xl font-semibold my-4">Syntax</h3>
+        <p>The basic syntax of the ORDER BY clause which would be used to sort the result in an ascending or descending order is as follows −</p>
+        <pre class="bg-gray-50 rounded-lg p-2 my-4">
+            SELECT column1, column2, ...
+            FROM table_name
+            ORDER BY column1, column2, ... ASC|DESC;
+       </pre>
+       <p class="my-4">You can use more than one column in the ORDER BY clause. Make sure that whatever column you are using to sort, that column should be in the column-list.</p>
+
+<h3 class="text-xl font-semibold my-4">Sorting Results in Ascending Order</h3>
+        <p class="my-4">Using Order By Clause in SQL, the records in a database table can be sorted in ascending order, either by default or by specifying the "ASC" keyword in the clause condition. Let us see an example to understand this.</p>
+<h3 class="text-xl font-semibold my-4">Example</h3>
+        <p class="my-4">Following is an example, which would sort the result in ascending order by Price</p>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">SQL Statement</h5>
+         <code class="bg-gray-200 p-2 block mb-2">
+             SELECT * <br>
+             FROM Orders <br>
+             ORDER BY Price;
+         </code>
+       <a href="/query_editor?query=SELECT *%0AFROM Orders%0AORDER BY Price;"  target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <p class="my-4">The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.</p>
+        <h3 class="text-xl font-semibold my-4">Sorting Results in Descending Order</h3>
+        <p class="my-4">But, to sort the records in a database table in descending order, we need to specify the "DESC" keyword in the clause condition. Let us see an example to understand this.</p>
+        <div class="mt-8 p-4 bg-white rounded-md shadow-md">
+        <h5 class="text-gray-600 mb-2">ORDER BY Several Columns</h5>
+         <code class="bg-gray-200 p-2 block mb-2">
+             SELECT * <br>
+             FROM Orders <br>
+             ORDER BY order_date ASC,Price DESC;
+         </code>
+       <a href="/query_editor?query=SELECT *%0AFROM Orders%0AORDER BY order_date ASC,Price DESC" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-md mb-4">Query editor »</a>
+        </div>
+        <p class="text-gray-600 mb-2 my-4">Try this example in Query editor.</p>
+        <p class="my-4">The following SQL statement selects all orders from the "Orders" table, sorted by the "order_date" and  "Price" column. This means that it sorted by the ascending order by order_date and descending order by price:</p>
+{% endblock content %}
+{% block button %}
+    <button onclick="navigateTo('/sql-where', '/sql-where')" class="px-6 py-3 bg-blue-500 text-white rounded-full">Previous</button>
+    <button onclick="navigateTo('/sql-and-or', '/sql-and-or')" class="px-6 py-3 bg-blue-500 text-white ml-auto rounded-full">Next</button>
+{% endblock button %}
+
+

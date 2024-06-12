@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" type="image/jpeg">
+    <title>SQL Learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="flex font-sans bg-sky-200 min-h-screen">
+<header class="bg-blue-500 text-white p-3 fixed w-full">
+    <div class="flex justify-center items-center">
+         <a href="/" class="logo flex items-center">
+            <img src="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" alt="Chatbot Icon" class="w-10 h-10 rounded-full mr-2">
+        </a>
+        <h1 class="text-lg font-bold">SQL Learning</h1>
+    </div>
+</header>
+<main class="flex flex-grow mt-16">
+    <nav class="bg-teal-100 p-4 hover:shadow-2xl w-40">
+        <ul class="text-indigo-600 font-bold space-y-4">
+            <li><a href='/profile'>Profile</a> </li>
+            <li><a href='/logout'>Logout</a></li>
+        </ul>
+    </nav>
+    <div class="max-w-3xl w-full mx-auto bg-sky-200 rounded-lg  overflow-hidden mt-8 mb-8 p-6">
+        <div class="flex flex-col items-center mb-8">
+            <div class="rounded-full bg-blue-500 h-16 w-16 flex items-center justify-center mb-4">
+                <span class="text-white text-2xl font-bold">{{ logo }}</span>
+            </div>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">UserName: {{ username }}</h3>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Email: {{ user_email }}</h3>
+        <h3 class="text-xl font-semibold text-blue-800 mb-4 items-center">Completed Concepts</h3>
+        {% for concepts in completed_concepts %}
+            <div class="bg-teal-100 rounded-lg shadow-md mb-6 p-4">
+                <h2 class="font-bold m-2 cursor-pointer text-indigo-600  concept-name">{{ concepts.ConceptName }}</h2>
+                <div class="concept-details hidden">
+                    {% if concepts.quiz_result is not none %}
+                        {% if concepts.quiz_result %}
+                            <ul class="list-disc pl-5">
+                                <li class="text-green-500"><i class="fas fa-check-circle text-green-500"></i> You attempted the quiz and it is correct</li>
+                            </ul>
+                        {% else %}
+                            <ul class="list-disc pl-5">
+                                <li class="text-red-500"><i class="fas fa-times-circle text-red-500"></i> You attempted the quiz and it is incorrect</li>
+                            </ul>
+                        {% endif %}
+                    {% else %}
+                        <p class="text-red-500">You did not attempt the quiz</p>
+                    {% endif %}
+                    {% if concepts.exercise_result is not none %}
+                        {% if concepts.exercise_result %}
+                            <ul class="list-disc pl-5 mt-2">
+                                <li class="text-green-500"><i class="fas fa-check-circle text-green-500"></i> You attempted the exercise and it is correct</li>
+                            </ul>
+                        {% else %}
+                            <ul class="list-disc pl-5 mt-2">
+                                <li class="text-red-500"><i class="fas fa-times-circle text-red-500"></i> You attempted the exercise and it is incorrect</li>
+                            </ul>
+                        {% endif %}
+                    {% else %}
+                        <p class="text-red-500">You did not attempt the exercise</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const conceptNames = document.querySelectorAll('.concept-name');
+        conceptNames.forEach(conceptName => {
+            conceptName.addEventListener('click', function() {
+                const conceptDetails = this.nextElementSibling;
+                conceptDetails.classList.toggle('hidden');
+            });
+        });
+    });
+</script>
+</body>
+</html>
