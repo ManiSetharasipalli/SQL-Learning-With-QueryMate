@@ -46,4 +46,15 @@ The user profile section provides users with insights into their learning progre
 
 ![image](https://github.com/ManiSetharasipalli/SQL-Learning-With-QueryMate/assets/135498038/48e57ef4-19da-4fd4-97b9-9fb58978bb6f)
 
+## Tools Used
+
+SQL Learning With QueryMate was built using the following tools:
+
+- **Frontend**: HTML, CSS, Tailwind CSS, JavaScript, CodeMirror
+- **Programming Language**: Python
+- **Backend Development**: Flask
+- **Database Interaction**: MySQL Workbench
+- **Chatbot**: PyTorch, NLTK (Natural Language Toolkit)
+
+
 
