@@ -56,5 +56,14 @@ SQL Learning With QueryMate was built using the following tools:
 - **Database Interaction**: MySQL Workbench
 - **Chatbot**: PyTorch, NLTK (Natural Language Toolkit)
 
+## Conclusion
+
+SQL Learning With QueryMate empowers users to master SQL concepts in an interactive and personalized environment. With features such as interactive learning, personalized experiences, and a powerful query editor, users can embark on a journey of SQL proficiency with confidence.
+
+Join us on this exciting adventure of SQL learning and take your skills to new heights with SQL Learning With QueryMate!
+
+---
+
+
 
 
