@@ -22,7 +22,8 @@ SQL Learning With QueryMate covers a wide range of SQL concepts, each accompanie
 
 QueryMate is the main pillar of this project, providing users with an exceptional learning experience. It offers clear explanations, examples, and syntax guidance, providing users with a personalized learning experience.
 
-![image](https://github.com/ManiSetharasipalli/SQL-Learning-With-QueryMate/assets/135498038/b9d7902e-ffba-43e2-a67f-90c231bdb2b1)
+![image](https://github.com/ManiSetharasipalli/SQL-Learning-With-QueryMate/assets/135498038/b4462e49-9777-4895-9cc4-408427785ffe)
+
 
 ### 3. Quizzes and Exercises
 
@@ -36,8 +37,8 @@ Each SQL concept includes quizzes and exercises to reinforce learning and assess
 
 The Query Editor allows users to write, modify, and execute different SQL queries on example tables, providing a hands-on learning experience.
 
+![image](https://github.com/ManiSetharasipalli/SQL-Learning-With-QueryMate/assets/135498038/b24af1a6-89ee-44f9-a354-641029a938e6)
 
-![image](https://github.com/ManiSetharasipalli/SQL-Learning-With-QueryMate/assets/135498038/85aba748-dcda-47bd-b941-1edd1d89d5b0)
 
 ### 5. User Profile
 
