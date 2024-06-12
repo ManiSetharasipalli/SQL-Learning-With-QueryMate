@@ -9,8 +9,9 @@ db=SQLAlchemy()
 
 def create_app():
     app=Flask(__name__)
-    app.config['SECRET_KEY']="Dreams2030ManiS"
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:5555@localhost/sql_learning'
+    app.config['SECRET_KEY']="*************"
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://******:**********@******/*******'
+    #'mysql+mysqlconnector://username:password@localhost/database_name'
     db.init_app(app)
     # Initialize Flask-Login
     login_manager = LoginManager()
