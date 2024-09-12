@@ -78,11 +78,10 @@ def display_data():
 @routes.route("/profile")
 def userProfile():
     username = current_user.username
-    logo = username[0].upper()
     user_email = current_user.email
     completed_concepts = UserInteraction.query.filter_by(userid=current_user.userid).all()
     return render_template("profile.html", username=username, user_email=user_email,
-                           completed_concepts=completed_concepts, logo=logo)
+                           completed_concepts=completed_concepts)
 
 
 

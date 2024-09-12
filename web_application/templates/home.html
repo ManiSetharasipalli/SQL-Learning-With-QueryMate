@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="font-sans bg-gray-100 min-h-screen flex">
-
 <header class="bg-blue-500 text-white p-3 flex justify-between fixed w-full z-10">
     <nav class="flex items-center">
         <img src="https://www.shutterstock.com/image-vector/chatbot-icon-concept-chat-bot-600nw-2132342911.jpg" alt="Chatbot Icon" class="w-10 h-10 rounded-full mr-2">
@@ -19,7 +18,7 @@
         {% if username %}
             <div class="bg-white text-blue-500 px-4 py-2 rounded-full">
                     <a  href="/profile">{{ username }}</a>
-                </div>
+            </div>
         {% else %}
             <a href="/login" class="bg-white text-blue-500 px-4 py-2 rounded-lg">Login</a>
         {% endif %}

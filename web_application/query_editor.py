@@ -1,10 +1,21 @@
 import mysql.connector
+from dotenv import load_dotenv
+import os
+
+# Load .env file
+load_dotenv()
+
+# Access the variables
+db_host = os.getenv('DB_HOST')
+db_user = os.getenv('DB_USER')
+db_password = os.getenv('DB_PASSWORD')
+db_name = os.getenv('DB_NAME')
 
 connection = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='5555',
-    database='online_shopping'
+    host=db_host,
+    user=db_user,
+    password=db_password,
+    database=db_name
 )
 
 
